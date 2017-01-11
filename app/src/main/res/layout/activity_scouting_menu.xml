@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pollo.madtownscouting2017.ScoutingMenu">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Team Number"
+        android:id="@+id/teamNumberTextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/teamNumberEditText"
+        android:layout_toLeftOf="@+id/teamNumberEditText" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/teamNumberEditText"
+        android:hint="Ex. 1323"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Match Number"
+        android:id="@+id/matchNumberTextView"
+        android:layout_below="@+id/teamNumberEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/matchNumberEditText"
+        android:layout_below="@+id/teamNumberEditText"
+        android:layout_alignRight="@+id/teamNumberEditText"
+        android:layout_alignEnd="@+id/teamNumberEditText"
+        android:hint="Ex. 12" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Team Color"
+        android:id="@+id/teamColorTextView"
+        android:layout_below="@+id/matchNumberEditText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamColorEditText"
+        android:layout_below="@+id/matchNumberEditText"
+        android:layout_alignLeft="@+id/matchNumberEditText"
+        android:layout_alignStart="@+id/matchNumberEditText"
+        android:hint="Blue or Red" />
+
+</RelativeLayout>
