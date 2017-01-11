@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class StartMenu extends AppCompatActivity {
-
     EditText searchMenuSearchBox;
     Button searchButton;
     Button scoutButton;
@@ -14,7 +13,6 @@ public class StartMenu extends AppCompatActivity {
     Button teamsView;
     Button addPhoto;
     Button viewPhoto;
-
 
 
     @Override
