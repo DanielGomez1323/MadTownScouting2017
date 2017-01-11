@@ -8,7 +8,7 @@ import android.widget.EditText;
 public class StartMenu extends AppCompatActivity {
 
     EditText searchMenuSearchBox;
-    Button seacrhButton;
+    Button searchButton;
     Button scoutButton;
     Button uploadData;
     Button teamsView;
