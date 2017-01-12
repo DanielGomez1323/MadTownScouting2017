@@ -99,4 +99,43 @@
         android:layout_alignLeft="@+id/pickedUpGearsTextView"
         android:layout_alignStart="@+id/pickedUpGearsTextView" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gears Placed"
+        android:id="@+id/gearsPlacedTextView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increaseGearsPlacedButton"
+        android:layout_below="@+id/gearsPlacedTextView"
+        android:layout_alignLeft="@+id/increaseGearsDroppedButton"
+        android:layout_alignStart="@+id/increaseGearsDroppedButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decreaseGearsPlacedButton"
+        android:layout_alignBottom="@+id/increaseGearsPlacedButton"
+        android:layout_alignLeft="@+id/desceaseGearsDroppedButton"
+        android:layout_alignStart="@+id/desceaseGearsDroppedButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/placedGearsTextView"
+        android:layout_alignBottom="@+id/decreaseGearsPlacedButton"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
