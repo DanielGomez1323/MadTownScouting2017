@@ -20,7 +20,8 @@
         <activity android:name=".addPhoto" />
         <activity android:name=".teamsView" />
         <activity android:name=".viewPhotos" />
-        <activity android:name=".AutoPeriod"></activity>
+        <activity android:name=".AutoPeriod" />
+        <activity android:name=".TeleopPeriod"></activity>
     </application>
 
 </manifest>
