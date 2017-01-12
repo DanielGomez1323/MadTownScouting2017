@@ -19,7 +19,8 @@
         <activity android:name=".DataUpload" />
         <activity android:name=".addPhoto" />
         <activity android:name=".teamsView" />
-        <activity android:name=".viewPhotos"></activity>
+        <activity android:name=".viewPhotos" />
+        <activity android:name=".AutoPeriod"></activity>
     </application>
 
 </manifest>
