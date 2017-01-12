@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -21,6 +22,8 @@ public class StartMenu extends AppCompatActivity {
         Button teamsView = (Button) findViewById(R.id.teamsView);
         Button addPhoto = (Button) findViewById(R.id.addPhoto);
         Button viewPhoto = (Button) findViewById(R.id.viewPhoto);
+
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
