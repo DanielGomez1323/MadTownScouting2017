@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class ScoutingMenu extends AppCompatActivity {
 
@@ -16,7 +17,6 @@ public class ScoutingMenu extends AppCompatActivity {
         setContentView(R.layout.activity_scouting_menu);
         final EditText teamNumberEditText = (EditText)findViewById(R.id.teamNumberEditText);
         final EditText matchNumberEditText = (EditText)findViewById(R.id.matchNumberEditText);
-        EditText teamColorEditTesxt = (EditText)findViewById(R.id.teamColorEditText);
         Button startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
         final CheckBox redCheckBox = (CheckBox) findViewById(R.id.redCheckBox);
         final CheckBox blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
@@ -25,11 +25,17 @@ public class ScoutingMenu extends AppCompatActivity {
             public void onClick(View v) {
                 if(teamNumberEditText.getText().toString().length() <=4){
                     if(matchNumberEditText.getText().toString().length() > 0){
-                        if(redCheckBox.isChecked() || blueCheckBox.isChecked()){
+                        if((redCheckBox.isChecked() || blueCheckBox.isChecked()) && !(redCheckBox.isChecked() && blueCheckBox.isChecked())){
                             Intent autoIntent = new Intent(getApplicationContext(), AutoPeriod.class);
                             startActivity(autoIntent);
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Select a team color.", Toast.LENGTH_SHORT).show();
                         }
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Enter a match number.", Toast.LENGTH_SHORT).show();
                     }
+                }else{
+                    Toast.makeText(getApplicationContext(),"Enter a valid team number por favor", Toast.LENGTH_SHORT).show();
                 }
             }
         });
