@@ -45,6 +45,10 @@ public class AutoPeriod extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent teleIntent = new Intent(getApplicationContext(), TeleopPeriod.class);
+                Intent previousIntent = getIntent();
+                teleIntent.putExtra("teamNumber", previousIntent.getStringExtra("teamNumber"));
+                teleIntent.putExtra("matchNumber", previousIntent.getStringExtra("matchNumber"));
+                teleIntent.putExtra("teamColor", previousIntent.getStringExtra("teamColor"));
                 startActivity(teleIntent);
             }
         });
