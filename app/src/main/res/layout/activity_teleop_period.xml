@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pollo.madtownscouting2017.TeleopPeriod">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=" Teleoperated Period"
+        android:id="@+id/teleopPeriodTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gears Picked Up:"
+        android:id="@+id/gearsPickedUpTextView"
+        android:layout_below="@+id/teleopPeriodTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increasePickedUpGearButton"
+        android:layout_below="@+id/gearsPickedUpTextView"
+        android:layout_alignLeft="@+id/teleopPeriodTextView"
+        android:layout_alignStart="@+id/teleopPeriodTextView" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decreasePickedUpGearsButton"
+        android:layout_alignBottom="@+id/pickedUpGearsTextView"
+        android:layout_alignRight="@+id/teleopPeriodTextView"
+        android:layout_alignEnd="@+id/teleopPeriodTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/pickedUpGearsTextView"
+        android:layout_alignBottom="@+id/increasePickedUpGearButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gears Dropped:"
+        android:id="@+id/gearsDroppedTextView"
+        android:layout_below="@+id/increasePickedUpGearButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increaseGearsDroppedButton"
+        android:layout_below="@+id/gearsDroppedTextView"
+        android:layout_alignLeft="@+id/increasePickedUpGearButton"
+        android:layout_alignStart="@+id/increasePickedUpGearButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/desceaseGearsDroppedButton"
+        android:layout_alignBottom="@+id/increaseGearsDroppedButton"
+        android:layout_alignLeft="@+id/decreasePickedUpGearsButton"
+        android:layout_alignStart="@+id/decreasePickedUpGearsButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/droppedGearsTextView"
+        android:layout_alignBottom="@+id/increaseGearsDroppedButton"
+        android:layout_alignLeft="@+id/pickedUpGearsTextView"
+        android:layout_alignStart="@+id/pickedUpGearsTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gears Placed"
+        android:id="@+id/gearsPlacedTextView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increaseGearsPlacedButton"
+        android:layout_below="@+id/gearsPlacedTextView"
+        android:layout_alignLeft="@+id/increaseGearsDroppedButton"
+        android:layout_alignStart="@+id/increaseGearsDroppedButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decreaseGearsPlacedButton"
+        android:layout_alignBottom="@+id/increaseGearsPlacedButton"
+        android:layout_alignLeft="@+id/desceaseGearsDroppedButton"
+        android:layout_alignStart="@+id/desceaseGearsDroppedButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/placedGearsTextView"
+        android:layout_alignBottom="@+id/decreaseGearsPlacedButton"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

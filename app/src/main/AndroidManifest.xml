@@ -15,7 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScoutingMenu"></activity>
+        <activity android:name=".ScoutingMenu" />
+        <activity android:name=".DataUpload" />
+        <activity android:name=".addPhoto" />
+        <activity android:name=".teamsView" />
+        <activity android:name=".viewPhotos" />
+        <activity android:name=".AutoPeriod" />
+        <activity android:name=".TeleopPeriod"></activity>
     </application>
 
 </manifest>
