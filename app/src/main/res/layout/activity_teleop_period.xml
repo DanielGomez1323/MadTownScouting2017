@@ -26,6 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Teleoperated Period"
         android:id="@+id/teleopPeriodTextView"
+        android:layout_marginTop="64dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
