@@ -19,10 +19,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toStartOf="@+id/teamNumberEditText"
-        android:layout_toLeftOf="@+id/teamNumberEditText" />
+        android:layout_toLeftOf="@+id/teamNumberEditText"
+        android:textSize="25sp" />
 
     <EditText
-        android:layout_width="150dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
@@ -30,7 +31,9 @@
         android:hint="Ex. 1323"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:elegantTextHeight="false"
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="150dp"
@@ -40,10 +43,11 @@
         android:id="@+id/matchNumberTextView"
         android:layout_below="@+id/teamNumberEditText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="25sp" />
 
     <EditText
-        android:layout_width="150dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
@@ -51,7 +55,8 @@
         android:layout_below="@+id/teamNumberEditText"
         android:layout_alignRight="@+id/teamNumberEditText"
         android:layout_alignEnd="@+id/teamNumberEditText"
-        android:hint="Ex. 12" />
+        android:hint="Ex. 12"
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="150dp"
@@ -61,16 +66,18 @@
         android:id="@+id/teamColorTextView"
         android:layout_below="@+id/matchNumberEditText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textSize="25sp" />
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:text="Start"
         android:id="@+id/startScoutingButton"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/matchNumberEditText"
-        android:layout_alignEnd="@+id/matchNumberEditText" />
+        android:layout_alignEnd="@+id/matchNumberEditText"
+        android:textSize="30sp" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -78,16 +85,17 @@
         android:text="Blue"
         android:id="@+id/blueCheckBox"
         android:layout_below="@+id/teamColorTextView"
-        android:layout_alignRight="@+id/teamColorTextView"
-        android:layout_alignEnd="@+id/teamColorTextView" />
+        android:layout_marginLeft="200dp"
+        android:textSize="25sp" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Red"
         android:id="@+id/redCheckBox"
-        android:layout_below="@+id/teamColorTextView"
+        android:layout_alignTop="@+id/blueCheckBox"
         android:layout_toRightOf="@+id/blueCheckBox"
-        android:layout_toEndOf="@+id/blueCheckBox" />
+        android:layout_toEndOf="@+id/blueCheckBox"
+        android:textSize="25sp" />
 
 </RelativeLayout>
