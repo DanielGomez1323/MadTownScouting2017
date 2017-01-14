@@ -21,7 +21,11 @@
         <activity android:name=".teamsView" />
         <activity android:name=".viewPhotos" />
         <activity android:name=".AutoPeriod" />
-        <activity android:name=".TeleopPeriod"></activity>
+        <activity android:name=".TeleopPeriod" />
+        <activity
+            android:name=".ScoutingTabbed"
+            android:label="@string/title_activity_scouting_tabbed"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
