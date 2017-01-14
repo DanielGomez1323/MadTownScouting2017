@@ -68,11 +68,11 @@
       <file leaf-file-name="AutoPeriod.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pollo/madtownscouting2017/AutoPeriod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.039035592">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.21469575">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
               <folding>
-                <element signature="e#1742#2335#0" expanded="true" />
-                <element signature="e#2334#2335#0" expanded="true" />
+                <element signature="e#1951#2544#0" expanded="true" />
+                <element signature="e#2543#2544#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2090,8 +2090,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding>
-            <element signature="e#1742#2335#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
+            <element signature="e#1951#2544#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2470,11 +2470,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pollo/madtownscouting2017/AutoPeriod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.039035592">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.21469575">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding>
-            <element signature="e#1742#2335#0" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
+            <element signature="e#1951#2544#0" expanded="true" />
+            <element signature="e#2543#2544#0" expanded="true" />
           </folding>
         </state>
       </provider>
