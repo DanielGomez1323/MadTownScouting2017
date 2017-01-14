@@ -15,7 +15,6 @@ public class AutoPeriod extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_period);
-
         CheckBox baselineCheckBox = (CheckBox) findViewById(R.id.baselineCheckBox);
         CheckBox gearAttemptCheckBox = (CheckBox) findViewById(R.id.gearAttemptCheckBox);
         CheckBox gearSuccessCheckBox = (CheckBox) findViewById(R.id.gearSuccessCheckBox);
