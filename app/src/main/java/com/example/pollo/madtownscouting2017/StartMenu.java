@@ -9,8 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class StartMenu extends AppCompatActivity {
-
-
+    EditText searchMenuSearchBox;
+    Button searchButton;
+    Button scoutButton;
+    Button uploadData;
+    Button teamsView;
+    Button addPhoto;
+    Button viewPhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
