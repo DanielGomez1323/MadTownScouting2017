@@ -10,6 +10,13 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class AutoPeriod extends AppCompatActivity {
+    CheckBox baselineCheckBox;
+    CheckBox gearAttemptCheckBox;
+    CheckBox gearSuccessCheckBox;
+    CheckBox highCheckBox;
+    CheckBox lowCheckBox;
+    SeekBar autoBallsSeekBar;
+    Button continueButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
