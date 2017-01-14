@@ -10,20 +10,26 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class AutoPeriod extends AppCompatActivity {
+    CheckBox baselineCheckBox;
+    CheckBox gearAttemptCheckBox;
+    CheckBox gearSuccessCheckBox;
+    CheckBox highCheckBox;
+    CheckBox lowCheckBox;
+    SeekBar autoBallsSeekBar;
+    Button continueButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_period);
-
-        CheckBox baselineCheckBox = (CheckBox) findViewById(R.id.baselineCheckBox);
-        CheckBox gearAttemptCheckBox = (CheckBox) findViewById(R.id.gearAttemptCheckBox);
-        CheckBox gearSuccessCheckBox = (CheckBox) findViewById(R.id.gearSuccessCheckBox);
-        CheckBox highCheckBox = (CheckBox) findViewById(R.id.highCheckBox);
-        CheckBox lowCheckBox = (CheckBox) findViewById(R.id.lowCheckBox);
-        SeekBar autoBallsSeekBar = (SeekBar) findViewById(R.id.autoBallsSeekBar);
-        final TextView ballCountTextView = (TextView) findViewById(R.id.ballCountTextView);
-        Button continueButton = (Button) findViewById(R.id.continueButton);
+        baselineCheckBox = (CheckBox)findViewById(R.id.baselineCheckBox);
+        gearAttemptCheckBox = (CheckBox)findViewById(R.id.gearAttemptCheckBox);
+        gearSuccessCheckBox = (CheckBox)findViewById(R.id.gearSuccessCheckBox);
+        highCheckBox = (CheckBox)findViewById(R.id.highCheckBox);
+        lowCheckBox = (CheckBox)findViewById(R.id.lowCheckBox);
+        autoBallsSeekBar = (SeekBar)findViewById(R.id.autoBallsSeekBar);
+        final TextView ballCountTextView = (TextView)findViewById(R.id.ballCountTextView);
+        continueButton = (Button)findViewById(R.id.continueButton);
 
         autoBallsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

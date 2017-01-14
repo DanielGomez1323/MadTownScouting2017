@@ -9,20 +9,25 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class StartMenu extends AppCompatActivity {
-
-
+    EditText searchMenuSearchBox;
+    Button searchButton;
+    Button scoutButton;
+    Button uploadData;
+    Button teamsView;
+    Button addPhoto;
+    Button viewPhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_menu);
-        EditText searchMenuSearchBox = (EditText) findViewById(R.id.searchMenuSearchBox);
-        Button searchButton = (Button) findViewById(R.id.searchButton);
-        Button scoutButton = (Button) findViewById(R.id.scoutButton);
-        Button uploadData = (Button) findViewById(R.id.uploadData);
-        Button teamsView = (Button) findViewById(R.id.teamsView);
-        Button addPhoto = (Button) findViewById(R.id.addPhoto);
-        Button viewPhoto = (Button) findViewById(R.id.viewPhoto);
+        searchMenuSearchBox = (EditText) findViewById(R.id.searchMenuSearchBox);
+        searchButton = (Button) findViewById(R.id.searchButton);
+        scoutButton = (Button) findViewById(R.id.scoutButton);
+        uploadData = (Button) findViewById(R.id.uploadData);
+        teamsView = (Button) findViewById(R.id.teamsView);
+        addPhoto = (Button) findViewById(R.id.addPhoto);
+        viewPhoto = (Button) findViewById(R.id.viewPhoto);
 
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
