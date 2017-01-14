@@ -86,8 +86,8 @@
         android:layout_height="wrap_content"
         android:text="Red"
         android:id="@+id/redCheckBox"
-        android:layout_below="@+id/teamColorTextView"
-        android:layout_toRightOf="@+id/blueCheckBox"
-        android:layout_toEndOf="@+id/blueCheckBox" />
+        android:layout_alignTop="@+id/blueCheckBox"
+        android:layout_toRightOf="@+id/teamNumberTextView"
+        android:layout_toEndOf="@+id/teamNumberTextView" />
 
 </RelativeLayout>
