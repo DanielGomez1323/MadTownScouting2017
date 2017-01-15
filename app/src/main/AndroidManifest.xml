@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_madtown"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -23,9 +23,14 @@
         <activity android:name=".AutoPeriod" />
         <activity android:name=".TeleopPeriod" />
         <activity
-            android:name=".ScoutingTabbed"
-            android:label="@string/title_activity_scouting_tabbed"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".TabbedScouting"
+            android:label="@string/title_activity_tabbed_scouting"
+            android:parentActivityName=".ScoutingMenu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.pollo.madtownscouting2017.ScoutingMenu" />
+        </activity>
     </application>
 
 </manifest>

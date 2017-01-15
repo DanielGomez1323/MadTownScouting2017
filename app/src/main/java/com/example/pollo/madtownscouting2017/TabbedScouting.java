@@ -1,5 +1,6 @@
 package com.example.pollo.madtownscouting2017;
 
+import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -18,8 +19,15 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class ScoutingTabbed extends AppCompatActivity {
+<<<<<<< Updated upstream
+import java.util.ArrayList;
+=======
+>>>>>>> Stashed changes
+import java.util.List;
 
+public class TabbedScouting extends AppCompatActivity {
+
+    int autoID;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -38,10 +46,11 @@ public class ScoutingTabbed extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scouting_tabbed);
+        setContentView(R.layout.activity_tabbed_scouting);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -50,13 +59,18 @@ public class ScoutingTabbed extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+               //         .setAction("Action", null).show();
+                List<Fragment> f = getSupportFragmentManager().getFragments();
+                AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentByTag(f.get(0).getTag());
+                Bundle b = autoFragment.getData();
             }
         });
 
@@ -66,7 +80,7 @@ public class ScoutingTabbed extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_scouting_tabbed, menu);
+        getMenuInflater().inflate(R.menu.menu_tabbed_scouting, menu);
         return true;
     }
 
@@ -113,7 +127,7 @@ public class ScoutingTabbed extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_scouting_tabbed, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_tabbed_scouting, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
@@ -139,9 +153,10 @@ public class ScoutingTabbed extends AppCompatActivity {
                     return AutoFragment.newInstance();
                 case 1:
                     return TeleopFragment.newInstance();
-                default:
-                    return PlaceholderFragment.newInstance(position+1);
+                case 2:
+                    return PlaceholderFragment.newInstance(position + 1);
             }
+            return PlaceholderFragment.newInstance(position + 1);
         }
 
         @Override

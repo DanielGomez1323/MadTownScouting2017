@@ -26,7 +26,7 @@ public class ScoutingMenu extends AppCompatActivity {
                 if(teamNumberEditText.getText().toString().length() <=4){
                     if(matchNumberEditText.getText().toString().length() > 0){
                         if((redCheckBox.isChecked() || blueCheckBox.isChecked()) && !(redCheckBox.isChecked() && blueCheckBox.isChecked())){
-                            Intent autoIntent = new Intent(getApplicationContext(), ScoutingTabbed.class);
+                            Intent autoIntent = new Intent(getApplicationContext(), TabbedScouting.class);
                             autoIntent.putExtra("teamNumber", teamNumberEditText.getText().toString());
                             autoIntent.putExtra("matchNumber", matchNumberEditText.getText().toString());
                             if(redCheckBox.isChecked()){
