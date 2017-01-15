@@ -19,7 +19,10 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+<<<<<<< Updated upstream
 import java.util.ArrayList;
+=======
+>>>>>>> Stashed changes
 import java.util.List;
 
 public class TabbedScouting extends AppCompatActivity {
