@@ -19,6 +19,9 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TabbedScouting extends AppCompatActivity {
 
     int autoID;
@@ -62,10 +65,9 @@ public class TabbedScouting extends AppCompatActivity {
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                //         .setAction("Action", null).show();
-                autoID = mSectionsPagerAdapter.getItem(0).getId();
-                AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentById(autoID);
+                List<Fragment> f = getSupportFragmentManager().getFragments();
+                AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentByTag(f.get(0).getTag());
                 Bundle b = autoFragment.getData();
-                System.out.println(b.getString("autoBallsMade"));
             }
         });
 
