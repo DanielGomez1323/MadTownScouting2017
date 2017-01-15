@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class ScoutingMenu extends AppCompatActivity {
+    Button startScoutingButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +18,7 @@ public class ScoutingMenu extends AppCompatActivity {
         setContentView(R.layout.activity_scouting_menu);
         final EditText teamNumberEditText = (EditText)findViewById(R.id.teamNumberEditText);
         final EditText matchNumberEditText = (EditText)findViewById(R.id.matchNumberEditText);
-        Button startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
+        startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
         final CheckBox redCheckBox = (CheckBox) findViewById(R.id.redCheckBox);
         final CheckBox blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
         startScoutingButton.setOnClickListener(new View.OnClickListener() {
