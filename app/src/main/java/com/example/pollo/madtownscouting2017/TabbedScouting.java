@@ -147,9 +147,7 @@ public class TabbedScouting extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch(position){
                 case 0:
-                    AutoFragment autoFragment = AutoFragment.newInstance();
-                    autoID = autoFragment.getId();
-                    return autoFragment;
+                    return AutoFragment.newInstance();
                 case 1:
                     return TeleopFragment.newInstance();
                 case 2:
