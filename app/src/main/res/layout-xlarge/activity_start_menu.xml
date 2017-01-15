@@ -15,65 +15,77 @@
     tools:context="com.example.pollo.madtownscouting2017.StartMenu">
 
     <EditText
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:id="@+id/searchMenuSearchBox"
         android:layout_toLeftOf="@+id/searchButton"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:hint="Ex. Team 1323" />
+        android:hint="Ex. Team 1323"
+        android:textSize="30sp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:text="Search"
         android:id="@+id/searchButton"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textSize="15sp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:text="Scout"
         android:id="@+id/scoutButton"
         android:layout_below="@+id/searchButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:text="Upload"
         android:id="@+id/uploadData"
         android:layout_below="@+id/scoutButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:text="Teams"
         android:id="@+id/teamsView"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/uploadData"/>
+        android:layout_below="@+id/uploadData"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:text="Add Photo"
         android:id="@+id/addPhoto"
         android:layout_alignRight="@+id/teamsView"
-        android:layout_below="@+id/teamsView" />
+        android:layout_below="@+id/teamsView"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
         android:text="View Photos"
         android:id="@+id/viewPhoto"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/addPhoto" />
+        android:layout_below="@+id/addPhoto"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"/>
 
 </RelativeLayout>
 </ScrollView>
