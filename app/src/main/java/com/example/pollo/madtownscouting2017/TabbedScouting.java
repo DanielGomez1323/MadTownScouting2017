@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 public class TabbedScouting extends AppCompatActivity {
 
+    int autoID;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -59,8 +60,11 @@ public class TabbedScouting extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+               //         .setAction("Action", null).show();
+                AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentById(autoID);
+                Bundle b = autoFragment.getData();
+                System.out.println(b.getString("autoBallsMade"));
             }
         });
 
@@ -140,7 +144,9 @@ public class TabbedScouting extends AppCompatActivity {
             // Return a PlaceholderFragment (defined as a static inner class below).
             switch(position){
                 case 0:
-                    return AutoFragment.newInstance();
+                    AutoFragment autoFragment = AutoFragment.newInstance();
+                    autoID = autoFragment.getId();
+                    return autoFragment;
                 case 1:
                     return TeleopFragment.newInstance();
                 case 2:

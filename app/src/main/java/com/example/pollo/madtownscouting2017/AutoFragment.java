@@ -21,7 +21,7 @@ public class AutoFragment extends android.support.v4.app.Fragment {
     CheckBox lowCheckBox;
     SeekBar autoBallsSeekBar;
     TextView ballCountTextView;
-    Button continueButton;
+    int autoBallsMade = 0;
 
     public static AutoFragment newInstance() {
         AutoFragment fragment = new AutoFragment();
@@ -43,12 +43,12 @@ public class AutoFragment extends android.support.v4.app.Fragment {
         lowCheckBox = (CheckBox) rootView.findViewById(R.id.lowCheckBox);
         autoBallsSeekBar = (SeekBar) rootView.findViewById(R.id.autoBallsSeekBar);
         ballCountTextView = (TextView) rootView.findViewById(R.id.ballCountTextView);
-        continueButton = (Button) rootView.findViewById(R.id.continueButton);
 
         autoBallsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 ballCountTextView.setText("Balls made: " + progress);
+                autoBallsMade = progress;
             }
 
             @Override
@@ -61,13 +61,38 @@ public class AutoFragment extends android.support.v4.app.Fragment {
 
             }
         });
-        continueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         return rootView;
+    }
+
+    public Bundle getData(){
+        Bundle b = new Bundle();
+        if(baselineCheckBox.isChecked()){
+            b.putString("baselineCrossed", "1");
+        }else{
+            b.putString("baselineCrossed", "0");
+        }
+        if(gearAttemptCheckBox.isChecked()){
+            b.putString("gearAttempt", "1");
+        }else{
+            b.putString("gearAttempt", "0");
+        }
+        if(gearSuccessCheckBox.isChecked()){
+            b.putString("gearSuccess", "1");
+        }else{
+            b.putString("gearSuccess", "0");
+        }
+        if(highCheckBox.isChecked()){
+            b.putString("autoHigh", "1");
+        }else{
+            b.putString("autoHigh", "0");
+        }
+        if(lowCheckBox.isChecked()){
+            b.putString("autoLow", "1");
+        }else{
+            b.putString("autoLow", "0");
+        }
+        b.putString("autoBallsMade", String.valueOf(autoBallsMade));
+        return b;
     }
 }
