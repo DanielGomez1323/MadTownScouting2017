@@ -28,12 +28,12 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/teleopPeriodTextView"
         android:layout_centerHorizontal="true"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
         android:text="+"
         android:id="@+id/increasePickedUpGearButton"
         android:layout_below="@+id/gearsPickedUpTextView"
