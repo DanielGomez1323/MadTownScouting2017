@@ -1,8 +1,11 @@
 package com.example.pollo.madtownscouting2017;
 
 import android.content.Intent;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -16,6 +19,7 @@ public class StartMenu extends AppCompatActivity {
     Button teamsView;
     Button addPhoto;
     Button viewPhoto;
+    SQLiteDatabase myDB = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class StartMenu extends AppCompatActivity {
         teamsView = (Button) findViewById(R.id.teamsView);
         addPhoto = (Button) findViewById(R.id.addPhoto);
         viewPhoto = (Button) findViewById(R.id.viewPhoto);
+
+        createPicturesDatabase();
 
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
@@ -73,5 +79,15 @@ public class StartMenu extends AppCompatActivity {
                 startActivity(viewPhotoIntent);
             }
         });
+    }
+    public void createPicturesDatabase(){
+        try{
+            myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+            myDB.execSQL("CREATE TABLE IF NOT EXISTS TeamPictures ( _id INTEGER PRIMARY KEY AUTOINCREMENT, teamNumber int, pic1 VARCHAR)");
+            if (myDB != null)
+                myDB.close();
+        } catch (SQLException e) {
+            Log.e("Error", "Error", e);
+        }
     }
 }
