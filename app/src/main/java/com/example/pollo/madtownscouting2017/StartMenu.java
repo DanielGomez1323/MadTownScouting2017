@@ -80,6 +80,12 @@ public class StartMenu extends AppCompatActivity {
             }
         });
     }
+    public void createDatabase(){
+        try{
+            myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+            myDB.execSQL("CREATE TABLE SteamWorks (");
+        }
+    }
     public void createPicturesDatabase(){
         try{
             myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);

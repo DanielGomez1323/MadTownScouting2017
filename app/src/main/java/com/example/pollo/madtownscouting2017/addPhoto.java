@@ -125,7 +125,7 @@ public class addPhoto extends AppCompatActivity {
             // Continue only if the File was successfully created
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(this,
-                        "com.example.android.fileprovider",
+                        "com.example.pollo.fileprovider",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
@@ -147,7 +147,38 @@ public class addPhoto extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 0 && resultCode == RESULT_OK) {
             bp = BitmapFactory.decodeFile(fname);
-            img.setImageBitmap(bp);
+            Uri imageUri = Uri.fromFile(new File(fname));
+            try {
+                String[] filePathColumn = {MediaStore.Images.Media.DATA};
+                Cursor cursor = getContentResolver().query(imageUri, filePathColumn, null, null, null);
+                cursor.moveToFirst();
+
+                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                String filePath = cursor.getString(columnIndex);
+                cursor.close();
+
+                ExifInterface ei = new ExifInterface(filePath);
+                int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION,6);
+                switch(orientation) {
+                    case ExifInterface.ORIENTATION_ROTATE_90:
+                        bp = rotateImage(bp, 90);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_180:
+                        bp = rotateImage(bp, 180);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_270:
+                        bp = rotateImage(bp, 270);
+                        break;
+                    case ExifInterface.ORIENTATION_NORMAL:
+                    default:
+                        break;
+                }
+                img.setImageBitmap(bp);
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }else if(requestCode == 1 && resultCode == RESULT_OK){
             Uri imageUri = data.getData();
             String[] filePathColumn = {MediaStore.Images.Media.DATA};
@@ -242,14 +273,14 @@ public class addPhoto extends AppCompatActivity {
         File image = new File(
                 storageDir,
                 imageFileName+  /* prefix */
-                        ".jpg"         /* suffix */
+                        ".jpeg"         /* suffix */
                       /* directory */
         );
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = "file:/" + image.getAbsolutePath();
         fname = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), imageFileName).getAbsolutePath();
-        fname += ".jpg";
+        fname += ".jpeg";
         return image;
     }
 

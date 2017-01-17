@@ -31,6 +31,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.pollo.madtownscouting2017.ScoutingMenu" />
         </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.pollo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
 
 </manifest>
