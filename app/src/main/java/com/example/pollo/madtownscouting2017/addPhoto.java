@@ -277,14 +277,14 @@ public class addPhoto extends AppCompatActivity {
         File image = new File(
                 storageDir,
                 imageFileName+  /* prefix */
-                        ".jpeg"         /* suffix */
+                        ".jpg"         /* suffix */
                       /* directory */
         );
 
         // Save a file: path for use with ACTION_VIEW intents
         mCurrentPhotoPath = "file:/" + image.getAbsolutePath();
         fname = new File(getExternalFilesDir(Environment.DIRECTORY_PICTURES), imageFileName).getAbsolutePath();
-        fname += ".jpeg";
+        fname += ".jpg";
         return image;
     }
 
