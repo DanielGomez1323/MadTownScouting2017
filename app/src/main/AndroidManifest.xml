@@ -19,7 +19,6 @@
         <activity android:name=".DataUpload" />
         <activity android:name=".addPhoto" />
         <activity android:name=".teamsView" />
-        <activity android:name=".viewPhotos" />
         <activity android:name=".AutoPeriod" />
         <activity android:name=".TeleopPeriod" />
         <activity
@@ -42,6 +41,8 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <activity android:name=".PictureList" />
+        <activity android:name=".UploadPicture"></activity>
     </application>
 
 </manifest>
