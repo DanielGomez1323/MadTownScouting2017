@@ -16,6 +16,7 @@ public class AutoPeriod extends AppCompatActivity {
     CheckBox highCheckBox;
     CheckBox lowCheckBox;
     SeekBar autoBallsSeekBar;
+    TextView ballCountTextView;
     Button continueButton;
 
     @Override
@@ -28,7 +29,7 @@ public class AutoPeriod extends AppCompatActivity {
         highCheckBox = (CheckBox)findViewById(R.id.highCheckBox);
         lowCheckBox = (CheckBox)findViewById(R.id.lowCheckBox);
         autoBallsSeekBar = (SeekBar)findViewById(R.id.autoBallsSeekBar);
-        final TextView ballCountTextView = (TextView)findViewById(R.id.ballCountTextView);
+        ballCountTextView = (TextView)findViewById(R.id.ballCountTextView);
         continueButton = (Button)findViewById(R.id.continueButton);
 
         autoBallsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
