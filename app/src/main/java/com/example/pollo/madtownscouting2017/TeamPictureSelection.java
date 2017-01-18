@@ -3,16 +3,13 @@ package com.example.pollo.madtownscouting2017;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-/**
- * Created by 19IsaacD740 on 1/17/2017.
- */
 public class TeamPictureSelection extends AppCompatActivity {
     ListView teamsLV;
     SQLiteDatabase myDB = null;
@@ -22,8 +19,8 @@ public class TeamPictureSelection extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_picture_list);
-        teamsLV = (ListView) findViewById(R.id.pictureListView);
+        setContentView(R.layout.activity_team_picture_selection);
+        teamsLV = (ListView) findViewById(R.id.TeamPicturesListView);
         intent = new Intent(this, PictureList.class);
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
         c = myDB.rawQuery("SELECT teamNumber,_id, count(teamNumber) AS matchCount FROM TeamPictures GROUP BY teamNumber ORDER BY teamNumber asc", null);
@@ -48,5 +45,4 @@ public class TeamPictureSelection extends AppCompatActivity {
             }
         }
     }
-
 }

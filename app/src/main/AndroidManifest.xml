@@ -42,7 +42,8 @@
         </provider>
 
         <activity android:name=".PictureList" />
-        <activity android:name=".UploadPicture"></activity>
+        <activity android:name=".UploadPicture" />
+        <activity android:name=".TeamPictureSelection"></activity>
     </application>
 
 </manifest>
