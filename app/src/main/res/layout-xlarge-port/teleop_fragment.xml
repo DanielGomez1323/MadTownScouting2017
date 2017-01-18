@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pollo.madtownscouting2017.TeleopPeriod">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gears Picked Up:"
+        android:id="@+id/gearsPickedUpTextView"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/teleopPeriodTextView"
+        android:layout_alignRight="@+id/gearsDroppedTextView"
+        android:layout_alignEnd="@+id/gearsDroppedTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Teleoperated Period"
+        android:id="@+id/teleopPeriodTextView"
+        android:layout_marginTop="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decreaseGearsPickedUpButton"
+        android:layout_below="@+id/gearsPickedUpTextView"
+        android:layout_toLeftOf="@+id/gearsPickedUpTextView"
+        android:layout_toStartOf="@+id/gearsPickedUpTextView"
+        android:paddingTop="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increaseGearsPickedUpButton"
+        android:layout_alignTop="@+id/decreaseGearsPickedUpButton"
+        android:layout_toRightOf="@+id/gearsPickedUpTextView"
+        android:layout_toEndOf="@+id/gearsPickedUpTextView"
+        android:paddingTop="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/amountGearsPickedUpTextView"
+        android:layout_alignBottom="@+id/decreaseGearsPickedUpButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gears Dropped:"
+        android:id="@+id/gearsDroppedTextView"
+        android:layout_below="@+id/increaseGearsPickedUpButton"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decreaseGearsDroppedButton"
+        android:layout_below="@+id/gearsDroppedTextView"
+        android:layout_alignRight="@+id/decreaseGearsPickedUpButton"
+        android:layout_alignEnd="@+id/decreaseGearsPickedUpButton"
+        android:paddingTop="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increaseGearsDroppedButton"
+        android:layout_below="@+id/gearsDroppedTextView"
+        android:layout_alignLeft="@+id/increaseGearsPickedUpButton"
+        android:layout_alignStart="@+id/increaseGearsPickedUpButton"
+        android:paddingTop="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/amountGearsDroppedTextView"
+        android:layout_alignBottom="@+id/increaseGearsDroppedButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Gears Placed:"
+        android:id="@+id/gearsPlacedTextView"
+        android:layout_below="@+id/decreaseGearsDroppedButton"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decreaseGearsPlacedButton"
+        android:layout_below="@+id/gearsPlacedTextView"
+        android:layout_alignRight="@+id/decreaseGearsDroppedButton"
+        android:layout_alignEnd="@+id/decreaseGearsDroppedButton"
+        android:paddingTop="2dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/increaseGearsPlacedButton"
+        android:layout_below="@+id/gearsPlacedTextView"
+        android:layout_alignLeft="@+id/increaseGearsDroppedButton"
+        android:layout_alignStart="@+id/increaseGearsDroppedButton"
+        android:paddingTop="2dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="0"
+        android:id="@+id/amountGearsPlacedTextView"
+        android:layout_alignBottom="@+id/increaseGearsPlacedButton"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
