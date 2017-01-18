@@ -12,6 +12,7 @@ import android.graphics.Point;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.Parcel;
 import android.provider.MediaStore;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class addPhoto extends AppCompatActivity {
     Button cameraButton;
@@ -148,7 +150,7 @@ public class addPhoto extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 0 && resultCode == RESULT_OK) {
             bp = BitmapFactory.decodeFile(fname);
-            Uri imageUri = getImageContentUri(getApplicationContext(), new File(fname));
+            /*Uri imageUri = getImageContentUri(this, new File(fname));
             try {
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
                 Cursor cursor = getContentResolver().query(imageUri, filePathColumn, null, null, null);
@@ -179,7 +181,8 @@ public class addPhoto extends AppCompatActivity {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            }*/
+            img.setImageBitmap(bp);
         }else if(requestCode == 1 && resultCode == RESULT_OK){
             Uri imageUri = data.getData();
             String[] filePathColumn = {MediaStore.Images.Media.DATA};
