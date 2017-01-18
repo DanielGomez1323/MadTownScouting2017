@@ -28,6 +28,7 @@ import java.net.URL;
 public class UploadPicture extends AppCompatActivity {
 
     Button picUploadButton;
+    Button homeButton;
     ImageView picPreview;
     SQLiteDatabase myDB = null;
     Cursor c;
@@ -45,8 +46,17 @@ public class UploadPicture extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_picture);
         picUploadButton = (Button) findViewById(R.id.picUploadButton);
+        homeButton = (Button) findViewById(R.id.homeButton);
         picPreview = (ImageView) findViewById(R.id.picUploadPreview);
         message = (TextView) findViewById(R.id.responseText);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StartMenu.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
         String[] columns = new String[]{
                 "_id",
                 "teamNumber",
