@@ -40,7 +40,6 @@ public class UploadPicture extends AppCompatActivity {
     String teamNumber;
     private String SERVER_URL = "http://www.gorohi.com/1323/picupload.php";
     String m = "";
-    Button homeButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,15 +47,6 @@ public class UploadPicture extends AppCompatActivity {
         picUploadButton = (Button) findViewById(R.id.picUploadButton);
         picPreview = (ImageView) findViewById(R.id.picUploadPreview);
         message = (TextView) findViewById(R.id.responseText);
-        homeButton = (Button) findViewById(R.id.homeButton);
-        homeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), StartMenu.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
-        });
         String[] columns = new String[]{
                 "_id",
                 "teamNumber",
@@ -110,7 +100,7 @@ public class UploadPicture extends AppCompatActivity {
                         }
                     }).start();
                 }else{
-                    Toast.makeText(UploadPicture.this, "Please choose a File First", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UploadPicture.this,"Please choose a File First", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -165,49 +155,45 @@ public class UploadPicture extends AppCompatActivity {
                 connection.setRequestProperty("ENCTYPE", "multipart/form-data");
                 connection.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
                 connection.setRequestProperty("fileToUpload", teamNumber + "." + fileName);
-                try {
-                    dataOutputStream = new DataOutputStream(connection.getOutputStream());
-                    dataOutputStream.writeBytes(twoHyphens + boundary + lineEnd);
-                    dataOutputStream.writeBytes("Content-Disposition: form-data; name=\"fileToUpload\";filename=\"" + teamNumber + "." + fileName + "\"" + lineEnd);
 
-                    dataOutputStream.writeBytes(lineEnd);
+                dataOutputStream = new DataOutputStream(connection.getOutputStream());
 
+                dataOutputStream.writeBytes(twoHyphens + boundary + lineEnd);
+                dataOutputStream.writeBytes("Content-Disposition: form-data; name=\"fileToUpload\";filename=\"" + teamNumber + "." + fileName + "\"" + lineEnd);
+
+                dataOutputStream.writeBytes(lineEnd);
+
+                bytesAvailable = fileInputStream.available();
+                bufferSize = Math.min(bytesAvailable, maxBufferSize);
+                buffer = new byte[bufferSize];
+
+                bytesRead = fileInputStream.read(buffer, 0, bufferSize);
+
+                while(bytesRead > 0){
+                    dataOutputStream.write(buffer, 0, bufferSize);
                     bytesAvailable = fileInputStream.available();
-                    bufferSize = Math.min(bytesAvailable, maxBufferSize);
-                    buffer = new byte[bufferSize];
-
+                    bufferSize = Math.min(bytesRead, maxBufferSize);
                     bytesRead = fileInputStream.read(buffer, 0, bufferSize);
-
-                    while(bytesRead > 0){
-                        dataOutputStream.write(buffer, 0, bufferSize);
-                        bytesAvailable = fileInputStream.available();
-                        bufferSize = Math.min(bytesRead, maxBufferSize);
-                        bytesRead = fileInputStream.read(buffer, 0, bufferSize);
-                    }
-
-                    dataOutputStream.writeBytes(lineEnd);
-                    dataOutputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
-
-                    serverResponseCode = connection.getResponseCode();
-                    final String serverResponseMessage = connection.getResponseMessage();
-
-                    if(serverResponseCode == 200){
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                message.setText(serverResponseMessage);
-                            }
-                        });
-                    }
-                    fileInputStream.close();
-                    dataOutputStream.flush();
-                    dataOutputStream.close();
-                }catch(Error e) {
-                    System.out.println(e.toString());
                 }
 
+                dataOutputStream.writeBytes(lineEnd);
+                dataOutputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
 
+                serverResponseCode = connection.getResponseCode();
+                final String serverResponseMessage = connection.getResponseMessage();
 
+                if(serverResponseCode == 200){
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            message.setText(serverResponseMessage);
+                        }
+                    });
+                }
+
+                fileInputStream.close();
+                dataOutputStream.flush();
+                dataOutputStream.close();
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -227,6 +213,6 @@ public class UploadPicture extends AppCompatActivity {
             dialog.dismiss();
             return serverResponseCode;
         }
-
     }
+
 }
