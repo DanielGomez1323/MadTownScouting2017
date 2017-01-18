@@ -76,7 +76,7 @@ public class StartMenu extends AppCompatActivity {
         viewPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent viewPhotoIntent = new Intent(getApplicationContext(), PictureList.class);
+                Intent viewPhotoIntent = new Intent(getApplicationContext(), TeamPictureSelection.class);
                 startActivity(viewPhotoIntent);
             }
         });
