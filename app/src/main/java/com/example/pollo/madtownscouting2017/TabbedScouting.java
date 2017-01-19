@@ -108,16 +108,19 @@ public class TabbedScouting extends AppCompatActivity {
 
                 if (rank != "error") {
                     myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
-                    myDB.execSQL("INSERT INTO SteamWorks (teamNumber, matchNumber, teamColor, autoGearAttempt, autoGearSuccess, autoHighScored, autoLowScored, autoHighMissed, autoLowMissed, baseLine, gearsPickedUp, gearsDropped, gearsHung, highShootSpeed, highShotsMissed, lowSHootSpeed, lowShotsMissed, hopperIntake, climbTime, tbh, rank)" +
-                            "VALUES (");
                     try {
                         myDB.insertOrThrow("SteamWorks", null, c);
                     }catch (SQLException s){
                         Toast.makeText(getApplicationContext(), "Error saving", Toast.LENGTH_SHORT).show();
                     }
+                    if (myDB != null){
+                        myDB.close();
+                    }
                 }else{
                     Toast.makeText(getApplicationContext(), "Select a valid rank", Toast.LENGTH_SHORT).show();
                 }
+                Intent list = new Intent(getApplicationContext(), DataUpload.class);
+                startActivity(list);
             }
         });
 
