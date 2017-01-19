@@ -18,7 +18,8 @@
         android:layout_marginTop="25dp"
         android:layout_below="@+id/teleopPeriodTextView"
         android:layout_alignRight="@+id/gearsDroppedTextView"
-        android:layout_alignEnd="@+id/gearsDroppedTextView" />
+        android:layout_alignEnd="@+id/gearsDroppedTextView"
+        android:textSize="20sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,9 +27,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Teleoperated Period"
         android:id="@+id/teleopPeriodTextView"
-        android:layout_marginTop="64dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -67,7 +68,8 @@
         android:id="@+id/gearsDroppedTextView"
         android:layout_below="@+id/increaseGearsPickedUpButton"
         android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"/>
+        android:paddingTop="10dp"
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -106,7 +108,8 @@
         android:id="@+id/gearsPlacedTextView"
         android:layout_below="@+id/decreaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"/>
+        android:paddingTop="10dp"
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="wrap_content"
