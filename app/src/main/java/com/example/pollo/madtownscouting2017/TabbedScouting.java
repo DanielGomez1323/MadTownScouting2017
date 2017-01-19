@@ -1,6 +1,7 @@
 package com.example.pollo.madtownscouting2017;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,10 +19,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.List;
 
 public class TabbedScouting extends AppCompatActivity {
-
+    SQLiteDatabase myDB = null;
     int autoID;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -67,12 +70,28 @@ public class TabbedScouting extends AppCompatActivity {
                 String teamNumber = i.getStringExtra("teamNumber");
                 String teamColor = i.getStringExtra("teamColor");
                 String matchNumber = i.getStringExtra("matchNumber");
+
                 List<Fragment> f = getSupportFragmentManager().getFragments();
                 AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentByTag(f.get(0).getTag());
-                Bundle b = autoFragment.getData();
-                String autoGearAttempt = b.getString("gearAttempt");
-                String autoGearSuccess = b.getString("gearSuccess");
-                String autoHighScored = b.getString("autoHigh");
+                Bundle ab = autoFragment.getData();
+                String autoGearAttempt = ab.getString("gearAttempt");
+                String autoGearSuccess = ab.getString("gearSuccess");
+                String autoHighScored = ab.getString("autoHigh");
+
+                TeleopFragment teleopFragment = (TeleopFragment) getSupportFragmentManager().findFragmentByTag(f.get(1).getTag());
+                Bundle tb = teleopFragment.getData();
+
+                NotesFragment notesFragment = (NotesFragment) getSupportFragmentManager().findFragmentByTag(f.get(2).getTag());
+                Bundle nb = notesFragment.getData();
+                String tbh = nb.getString("tbh");
+                String rank = nb.getString("rank");
+
+                if (rank != "error") {
+                    myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+                    //myDB.execSQL("INSERT INTO SteamWorks ()");
+                }else{
+                    Toast.makeText(getApplicationContext(), "Select a valid rank", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -156,7 +175,7 @@ public class TabbedScouting extends AppCompatActivity {
                 case 1:
                     return TeleopFragment.newInstance();
                 case 2:
-                    return PlaceholderFragment.newInstance(position + 1);
+                    return NotesFragment.newInstance();
             }
             return PlaceholderFragment.newInstance(position + 1);
         }
