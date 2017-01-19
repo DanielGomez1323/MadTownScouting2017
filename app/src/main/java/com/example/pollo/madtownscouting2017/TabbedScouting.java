@@ -1,6 +1,8 @@
 package com.example.pollo.madtownscouting2017;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -66,6 +68,7 @@ public class TabbedScouting extends AppCompatActivity {
             public void onClick(View view) {
                 //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                //         .setAction("Action", null).show();
+                ContentValues c = new ContentValues();
                 Intent i = getIntent();
                 String teamNumber = i.getStringExtra("teamNumber");
                 String teamColor = i.getStringExtra("teamColor");
@@ -80,15 +83,38 @@ public class TabbedScouting extends AppCompatActivity {
 
                 TeleopFragment teleopFragment = (TeleopFragment) getSupportFragmentManager().findFragmentByTag(f.get(1).getTag());
                 Bundle tb = teleopFragment.getData();
+                String gearsPickedUp = tb.getString("gearsPickedUp");
+                String gearsDropped = tb.getString("gearsDropped");
+                String gearsHung = tb.getString("gearsPlaced");
 
                 NotesFragment notesFragment = (NotesFragment) getSupportFragmentManager().findFragmentByTag(f.get(2).getTag());
                 Bundle nb = notesFragment.getData();
                 String tbh = nb.getString("tbh");
                 String rank = nb.getString("rank");
 
+                c.put("teamNumber", teamNumber);
+                c.put("teamColor", teamColor);
+                c.put("matchNumber", matchNumber);
+                c.put("autoGearAttempt", autoGearAttempt);
+                c.put("autoGearSuccess", autoGearSuccess);
+                c.put("autoHighScored", autoHighScored);
+
+                c.put("gearsPickedUp", gearsPickedUp);
+                c.put("gearsDropped", gearsDropped);
+                c.put("gearsHung", gearsHung);
+
+                c.put("tbh", tbh);
+                c.put("rank", rank);
+
                 if (rank != "error") {
                     myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
-                    //myDB.execSQL("INSERT INTO SteamWorks ()");
+                    myDB.execSQL("INSERT INTO SteamWorks (teamNumber, matchNumber, teamColor, autoGearAttempt, autoGearSuccess, autoHighScored, autoLowScored, autoHighMissed, autoLowMissed, baseLine, gearsPickedUp, gearsDropped, gearsHung, highShootSpeed, highShotsMissed, lowSHootSpeed, lowShotsMissed, hopperIntake, climbTime, tbh, rank)" +
+                            "VALUES (");
+                    try {
+                        myDB.insertOrThrow("SteamWorks", null, c);
+                    }catch (SQLException s){
+                        Toast.makeText(getApplicationContext(), "Error saving", Toast.LENGTH_SHORT).show();
+                    }
                 }else{
                     Toast.makeText(getApplicationContext(), "Select a valid rank", Toast.LENGTH_SHORT).show();
                 }
