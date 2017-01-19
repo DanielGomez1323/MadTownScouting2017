@@ -58,7 +58,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
             @Override
             public void onClick(View v) {
                 pickUps ++;
-                pickUpText.setText(pickUps);
+                pickUpText.setText(String.valueOf(pickUps));
             }
         });
         decreaseDropsButton.setOnClickListener(new View.OnClickListener() {
