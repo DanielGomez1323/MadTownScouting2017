@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -60,9 +57,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="0"
         android:id="@+id/amountGearsPickedUpTextView"
-        android:layout_alignBottom="@+id/decreaseGearsPickedUpButton"
-        android:layout_centerHorizontal="true"
-        android:textSize="10sp"/>
+        android:textSize="10sp"
+        android:layout_alignBottom="@+id/increaseGearsPickedUpButton"
+        android:layout_alignLeft="@+id/amountGearsDroppedTextView"
+        android:layout_alignStart="@+id/amountGearsDroppedTextView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -146,5 +144,100 @@
         android:layout_centerHorizontal="true"
         android:textSize="10sp"/>
 
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/ballrateSeekBar"
+        android:max="10"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/amountGearsPlacedTextView"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ball Rate"
+        android:id="@+id/ballrateTextView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ballrateSeekBar"
+        android:textSize="11sp"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/zerorateTextView"
+        android:layout_below="@+id/ballrateSeekBar"
+        android:layout_toLeftOf="@+id/ballrateSeekBar"
+        android:layout_toStartOf="@+id/ballrateSeekBar"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10"
+        android:id="@+id/tenrateTextView"
+        android:layout_alignTop="@+id/ballrateTextView"
+        android:layout_toRightOf="@+id/teleopPeriodTextView"
+        android:layout_toEndOf="@+id/teleopPeriodTextView"
+        android:textSize="11sp"/>
+
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/lowballrateSeekBar"
+        android:layout_below="@+id/ballrateTextView"
+        android:layout_centerHorizontal="true"
+        android:max="10"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Low Ball Rate"
+        android:id="@+id/lowballTextView"
+        android:layout_below="@+id/lowballrateSeekBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/lowzerorateTextView"
+        android:layout_below="@+id/lowballrateSeekBar"
+        android:layout_toLeftOf="@+id/lowballrateSeekBar"
+        android:layout_toStartOf="@+id/lowballrateSeekBar"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10"
+        android:id="@+id/lowtenrateTextView"
+        android:textSize="11sp"
+        android:layout_alignTop="@+id/lowballTextView"
+        android:layout_alignLeft="@+id/tenrateTextView"
+        android:layout_alignStart="@+id/tenrateTextView" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Successful Climb?"
+        android:id="@+id/successfulclimbcheckBox"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lowballTextView"
+        android:layout_centerHorizontal="true"
+        android:textSize="13sp"/>
+
 </RelativeLayout>
-</ScrollView>
