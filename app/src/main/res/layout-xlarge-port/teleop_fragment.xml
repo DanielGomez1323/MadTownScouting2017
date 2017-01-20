@@ -19,7 +19,7 @@
         android:layout_below="@+id/teleopPeriodTextView"
         android:layout_alignRight="@+id/gearsDroppedTextView"
         android:layout_alignEnd="@+id/gearsDroppedTextView"
-        android:textSize="20sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,7 +39,8 @@
         android:layout_below="@+id/gearsPickedUpTextView"
         android:layout_toLeftOf="@+id/gearsPickedUpTextView"
         android:layout_toStartOf="@+id/gearsPickedUpTextView"
-        android:paddingTop="2dp"/>
+        android:paddingTop="2dp"
+        android:layout_marginTop="5dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -59,7 +60,7 @@
         android:id="@+id/amountGearsPickedUpTextView"
         android:layout_alignBottom="@+id/decreaseGearsPickedUpButton"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:textSize="25sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,7 +71,7 @@
         android:layout_below="@+id/increaseGearsPickedUpButton"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:textSize="20sp"/>
+        android:textSize="30sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -80,7 +81,8 @@
         android:layout_below="@+id/gearsDroppedTextView"
         android:layout_alignRight="@+id/decreaseGearsPickedUpButton"
         android:layout_alignEnd="@+id/decreaseGearsPickedUpButton"
-        android:paddingTop="2dp"/>
+        android:paddingTop="2dp"
+        android:layout_marginTop="5dp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -100,7 +102,7 @@
         android:id="@+id/amountGearsDroppedTextView"
         android:layout_alignBottom="@+id/increaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:textSize="25sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -111,7 +113,7 @@
         android:layout_below="@+id/decreaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:textSize="20sp"/>
+        android:textSize="30sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -121,17 +123,18 @@
         android:layout_below="@+id/gearsPlacedTextView"
         android:layout_alignRight="@+id/decreaseGearsDroppedButton"
         android:layout_alignEnd="@+id/decreaseGearsDroppedButton"
-        android:paddingTop="2dp"/>
+        android:paddingTop="2dp"
+        android:layout_marginTop="5dp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
         android:id="@+id/increaseGearsPlacedButton"
-        android:layout_below="@+id/gearsPlacedTextView"
-        android:layout_alignLeft="@+id/increaseGearsDroppedButton"
-        android:layout_alignStart="@+id/increaseGearsDroppedButton"
-        android:paddingTop="2dp"/>
+        android:paddingTop="2dp"
+        android:layout_above="@+id/shootingRateSeekBar"
+        android:layout_toRightOf="@+id/gearsDroppedTextView"
+        android:layout_toEndOf="@+id/gearsDroppedTextView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -141,6 +144,130 @@
         android:id="@+id/amountGearsPlacedTextView"
         android:layout_alignBottom="@+id/increaseGearsPlacedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:textSize="25sp"/>
+
+    <SeekBar
+        android:layout_width="550dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/shootingRateSeekBar"
+        android:max="10"
+        android:indeterminate="false"
+        android:layout_below="@+id/decreaseGearsPlacedButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/zeroHighShootingRateTextView"
+        android:layout_below="@+id/shootingRateSeekBar"
+        android:layout_alignLeft="@+id/shootingRateSeekBar"
+        android:layout_alignStart="@+id/shootingRateSeekBar"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10"
+        android:id="@+id/tenHighShootingRateTextView"
+        android:layout_alignTop="@+id/zeroHighShootingRateTextView"
+        android:layout_alignRight="@+id/shootingRateSeekBar"
+        android:layout_alignEnd="@+id/shootingRateSeekBar"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Shooting Rate (High):"
+        android:id="@+id/shootingRateHighTextSize"
+        android:layout_below="@+id/shootingRateSeekBar"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Can it Climb?"
+        android:id="@+id/canItClimbCheckBox"
+        android:layout_marginTop="73dp"
+        android:checked="false"
+        android:textSize="30sp"
+        android:layout_below="@+id/shootingRateLowTextView"
+        android:layout_alignLeft="@+id/shootingRateLowTextView"
+        android:layout_alignStart="@+id/shootingRateLowTextView" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:textSize="35sp"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/canItClimbCheckBox"
+        android:layout_alignRight="@+id/zeroLowShootingRateTextView"
+        android:layout_alignEnd="@+id/zeroLowShootingRateTextView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start/Stop"
+        android:id="@+id/climbStarterStoperTimerButton"
+        android:layout_alignTop="@+id/chronometer"
+        android:layout_alignLeft="@+id/shootingRateHighTextSize"
+        android:layout_alignStart="@+id/shootingRateHighTextSize"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/climbResetTimerButton"
+        android:textSize="25sp"
+        android:layout_alignTop="@+id/climbStarterStoperTimerButton"
+        android:layout_toRightOf="@+id/teleopPeriodTextView"
+        android:layout_toEndOf="@+id/teleopPeriodTextView" />
+
+    <SeekBar
+        android:layout_width="550dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/shootingRateHighTextSize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/zeroLowShootingRateTextView"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignRight="@+id/zeroHighShootingRateTextView"
+        android:layout_alignEnd="@+id/zeroHighShootingRateTextView"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="10"
+        android:id="@+id/tenLowShootingRateTextView"
+        android:layout_alignTop="@+id/zeroLowShootingRateTextView"
+        android:layout_alignLeft="@+id/tenHighShootingRateTextView"
+        android:layout_alignStart="@+id/tenHighShootingRateTextView"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Shooting Rate (Low):"
+        android:id="@+id/shootingRateLowTextView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp" />
 
 </RelativeLayout>
