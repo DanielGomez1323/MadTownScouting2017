@@ -34,6 +34,40 @@ public class NotesFragment extends Fragment{
         secondPickCheckBox = (CheckBox) rootView.findViewById(R.id.secondPickCheckBox);
         dnpCheckBox = (CheckBox) rootView.findViewById(R.id.dnpCheckBox);
 
+        firstPickCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (secondPickCheckBox.isChecked()){
+                    secondPickCheckBox.toggle();
+                }
+                if (dnpCheckBox.isChecked()){
+                    dnpCheckBox.toggle();
+                }
+            }
+        });
+        secondPickCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (firstPickCheckBox.isChecked()){
+                    firstPickCheckBox.toggle();
+                }
+                if (dnpCheckBox.isChecked()){
+                    dnpCheckBox.toggle();
+                }
+            }
+        });
+        dnpCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(firstPickCheckBox.isChecked()){
+                    firstPickCheckBox.toggle();
+                }
+                if (secondPickCheckBox.isChecked()){
+                    secondPickCheckBox.toggle();
+                }
+            }
+        });
+
         return rootView;
     }
 
@@ -41,11 +75,11 @@ public class NotesFragment extends Fragment{
         Bundle b = new Bundle();
         b.putString("tbh", tbh.getText().toString());
         if(firstPickCheckBox.isChecked() && !(secondPickCheckBox.isChecked() || dnpCheckBox.isChecked())){
-            b.putString("rank", "first");
+            b.putString("rank", "1");
         }else if (secondPickCheckBox.isChecked() && !(firstPickCheckBox.isChecked() || dnpCheckBox.isChecked())){
-            b.putString("rank", "second");
+            b.putString("rank", "2");
         }else if(dnpCheckBox.isChecked() && !(firstPickCheckBox.isChecked() || secondPickCheckBox.isChecked())){
-            b.putString("rank", "dnp");
+            b.putString("rank", "3");
         }else{
             b.putString("rank", "error");
         }
