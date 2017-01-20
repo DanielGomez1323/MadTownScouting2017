@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,11 +18,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Gears Picked Up:"
         android:id="@+id/gearsPickedUpTextView"
-        android:layout_marginTop="15dp"
+        android:textSize="10sp"
         android:layout_below="@+id/teleopPeriodTextView"
         android:layout_alignRight="@+id/gearsDroppedTextView"
         android:layout_alignEnd="@+id/gearsDroppedTextView"
-        android:textSize="15sp"/>
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,27 +31,28 @@
         android:text="Teleoperated Period"
         android:id="@+id/teleopPeriodTextView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"/>
 
     <Button
-        android:layout_width="65dp"
-        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:text="-"
         android:id="@+id/decreaseGearsPickedUpButton"
         android:layout_below="@+id/gearsPickedUpTextView"
         android:layout_toLeftOf="@+id/gearsPickedUpTextView"
         android:layout_toStartOf="@+id/gearsPickedUpTextView"
-        android:paddingTop="2dp"/>
+        android:paddingTop="5dp"/>
 
     <Button
-        android:layout_width="65dp"
-        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:text="+"
         android:id="@+id/increaseGearsPickedUpButton"
         android:layout_alignTop="@+id/decreaseGearsPickedUpButton"
         android:layout_toRightOf="@+id/gearsPickedUpTextView"
         android:layout_toEndOf="@+id/gearsPickedUpTextView"
-        android:paddingTop="2dp"/>
+        android:paddingTop="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,7 +62,7 @@
         android:id="@+id/amountGearsPickedUpTextView"
         android:layout_alignBottom="@+id/decreaseGearsPickedUpButton"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:textSize="10sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,27 +73,27 @@
         android:layout_below="@+id/increaseGearsPickedUpButton"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:textSize="15sp"/>
+        android:textSize="10sp"/>
 
     <Button
-        android:layout_width="65dp"
-        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:text="-"
         android:id="@+id/decreaseGearsDroppedButton"
         android:layout_below="@+id/gearsDroppedTextView"
         android:layout_alignRight="@+id/decreaseGearsPickedUpButton"
         android:layout_alignEnd="@+id/decreaseGearsPickedUpButton"
-        android:paddingTop="2dp"/>
+        android:paddingTop="5dp"/>
 
     <Button
-        android:layout_width="65dp"
-        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:text="+"
         android:id="@+id/increaseGearsDroppedButton"
         android:layout_below="@+id/gearsDroppedTextView"
         android:layout_alignLeft="@+id/increaseGearsPickedUpButton"
         android:layout_alignStart="@+id/increaseGearsPickedUpButton"
-        android:paddingTop="2dp"/>
+        android:paddingTop="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,7 +103,7 @@
         android:id="@+id/amountGearsDroppedTextView"
         android:layout_alignBottom="@+id/increaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:textSize="10sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -110,27 +114,27 @@
         android:layout_below="@+id/decreaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:textSize="15sp"/>
+        android:textSize="10sp"/>
 
     <Button
-        android:layout_width="65dp"
-        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:text="-"
         android:id="@+id/decreaseGearsPlacedButton"
         android:layout_below="@+id/gearsPlacedTextView"
         android:layout_alignRight="@+id/decreaseGearsDroppedButton"
         android:layout_alignEnd="@+id/decreaseGearsDroppedButton"
-        android:paddingTop="2dp"/>
+        android:paddingTop="5dp"/>
 
     <Button
-        android:layout_width="65dp"
-        android:layout_height="40dp"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
         android:text="+"
         android:id="@+id/increaseGearsPlacedButton"
         android:layout_below="@+id/gearsPlacedTextView"
         android:layout_alignLeft="@+id/increaseGearsDroppedButton"
         android:layout_alignStart="@+id/increaseGearsDroppedButton"
-        android:paddingTop="2dp"/>
+        android:paddingTop="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -140,6 +144,7 @@
         android:id="@+id/amountGearsPlacedTextView"
         android:layout_alignBottom="@+id/increaseGearsPlacedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:textSize="10sp"/>
 
 </RelativeLayout>
+</ScrollView>
