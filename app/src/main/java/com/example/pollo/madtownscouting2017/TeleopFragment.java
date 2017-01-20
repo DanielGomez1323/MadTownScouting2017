@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -31,6 +32,10 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     TextView climbChronometer;
     long startTime;
     long climbTime;
+    SeekBar highBallRate;
+    int highSpeed = 0;
+    SeekBar lowBallRate;
+    int lowSpeed = 0;
 
     Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
@@ -66,6 +71,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         placedText = (TextView) rootView.findViewById(R.id.amountGearsPlacedTextView);
         startClimb = (Button) rootView.findViewById(R.id.startclimbButton);
         climbChronometer = (TextView) rootView.findViewById(R.id.climbChronometer);
+        highBallRate = (SeekBar) rootView.findViewById(R.id.ballrateSeekBar);
         startClimb.setText("Start");
         startClimb.setOnClickListener(new View.OnClickListener() {
             @Override
