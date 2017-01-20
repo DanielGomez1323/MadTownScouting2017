@@ -25,6 +25,23 @@ public class ScoutingMenu extends AppCompatActivity {
         startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
         redCheckBox = (CheckBox) findViewById(R.id.redCheckBox);
         blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
+        redCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(blueCheckBox.isChecked()){
+                    blueCheckBox.toggle();
+                }
+            }
+        });
+
+        blueCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(redCheckBox.isChecked()){
+                    redCheckBox.toggle();
+                }
+            }
+        });
         startScoutingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
