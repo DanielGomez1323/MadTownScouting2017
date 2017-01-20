@@ -19,7 +19,7 @@
         android:layout_below="@+id/teleopPeriodTextView"
         android:layout_alignRight="@+id/gearsDroppedTextView"
         android:layout_alignEnd="@+id/gearsDroppedTextView"
-        android:textSize="30sp"/>
+        android:textSize="20sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         android:id="@+id/teleopPeriodTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="40sp"/>
+        android:textSize="30sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
         android:id="@+id/amountGearsPickedUpTextView"
         android:layout_alignBottom="@+id/decreaseGearsPickedUpButton"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"/>
+        android:textSize="15sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         android:layout_below="@+id/increaseGearsPickedUpButton"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:textSize="30sp"/>
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
         android:id="@+id/amountGearsDroppedTextView"
         android:layout_alignBottom="@+id/increaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"/>
+        android:textSize="15sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
         android:layout_below="@+id/decreaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
         android:paddingTop="10dp"
-        android:textSize="30sp"/>
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -141,6 +141,6 @@
         android:id="@+id/amountGearsPlacedTextView"
         android:layout_alignBottom="@+id/increaseGearsPlacedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"/>
+        android:textSize="15sp"/>
 
 </RelativeLayout>
