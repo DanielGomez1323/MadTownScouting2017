@@ -1,6 +1,7 @@
 package com.example.pollo.madtownscouting2017;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,23 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     int pickUps = 0;
     int drops = 0;
     int placed = 0;
+    Button startClimb;
+    TextView climbChronometer;
+    long startTime;
+    long climbTime;
 
+    Handler timerHandler = new Handler();
+    Runnable timerRunnable = new Runnable() {
+        @Override
+        public void run() {
+            long millis = System.currentTimeMillis() - startTime;
+            int seconds = (int) (millis/1000);
+            climbTime = millis/1000;
+            int minutes = seconds / 60;
+            seconds = seconds % 60;
+            climbChronometer.setText(String.format("%d:%02d", minutes, seconds));
+        }
+    };
 
     public static TeleopFragment newInstance() {
         TeleopFragment fragment = new TeleopFragment();
@@ -47,6 +64,23 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         pickUpText = (TextView) rootView.findViewById(R.id.amountGearsPickedUpTextView);
         dropText = (TextView) rootView.findViewById(R.id.amountGearsDroppedTextView);
         placedText = (TextView) rootView.findViewById(R.id.amountGearsPlacedTextView);
+        startClimb = (Button) rootView.findViewById(R.id.startclimbButton);
+        climbChronometer = (TextView) rootView.findViewById(R.id.climbChronometer);
+        startClimb.setText("Start");
+        startClimb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button b = (Button) v;
+                if (b.getText().equals("stop")) {
+                    timerHandler.removeCallbacks(timerRunnable);
+                    b.setText("Start");
+                } else {
+                    startTime = System.currentTimeMillis();
+                    timerHandler.postDelayed(timerRunnable, 0);
+                    b.setText("Stop");
+                }
+            }
+        });
         decreasePickUpsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,7 +125,12 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         });
         return rootView;
     }
-
+    @Override
+    public void onPause() {
+        super.onPause();
+        timerHandler.removeCallbacks(timerRunnable);
+        startClimb.setText("Start");
+    }
     public Bundle getData(){
         Bundle b = new Bundle();
         b.putString("gearsPickedUp", String.valueOf(pickUps));
