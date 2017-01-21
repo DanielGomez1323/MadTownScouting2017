@@ -28,7 +28,7 @@
         android:id="@+id/teleopPeriodTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp"/>
+        android:textSize="40sp"/>
 
     <Button
         android:layout_width="70dp"
@@ -234,7 +234,7 @@
         android:layout_height="wrap_content"
         android:text="Successful Climb?"
         android:id="@+id/successfulclimbcheckBox"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/lowballTextView"
         android:layout_centerHorizontal="true"
         android:textSize="30sp" />
@@ -247,8 +247,7 @@
         android:layout_alignBottom="@+id/startclimbButton"
         android:layout_alignLeft="@+id/lowzerorateTextView"
         android:layout_alignStart="@+id/lowzerorateTextView"
-        android:textSize="25sp"
-        android:layout_marginTop="10dp"/>
+        android:textSize="25sp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -259,7 +258,7 @@
         android:textSize="15sp"
         android:layout_below="@+id/successfulclimbcheckBox"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="25dp"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
