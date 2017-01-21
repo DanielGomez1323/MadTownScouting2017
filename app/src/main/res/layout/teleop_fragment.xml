@@ -71,9 +71,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Gears Dropped:"
         android:id="@+id/gearsDroppedTextView"
-        android:layout_below="@+id/increaseGearsPickedUpButton"
+        android:layout_below="@+id/amountGearsPickedUpTextView"
         android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
         android:textSize="10sp"/>
 
     <Button
@@ -112,9 +112,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Gears Placed:"
         android:id="@+id/gearsPlacedTextView"
-        android:layout_below="@+id/decreaseGearsDroppedButton"
+        android:layout_below="@+id/amountGearsDroppedTextView"
         android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"
+        android:layout_marginTop="10dp"
         android:textSize="10sp"/>
 
     <Button
