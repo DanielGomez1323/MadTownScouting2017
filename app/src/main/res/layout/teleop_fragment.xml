@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -269,10 +272,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="10"
         android:id="@+id/lowtenrateTextView"
-        android:textSize="11sp"
         android:layout_alignTop="@+id/lowballTextView"
         android:layout_alignLeft="@+id/tenrateTextView"
-        android:layout_alignStart="@+id/tenrateTextView" />
+        android:layout_alignStart="@+id/tenrateTextView"
+        android:textSize="11sp"/>
 
     <SeekBar
         android:layout_width="200dp"
@@ -281,7 +284,85 @@
         android:max="100"
         android:layout_below="@+id/lowballTextView"
         android:layout_alignRight="@+id/lowballrateSeekBar"
-        android:/>
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/zerolowmissedTextView"
+        android:layout_below="@+id/lowballmissedSeekBar"
+        android:layout_toLeftOf="@+id/lowballmissedSeekBar"
+        android:layout_toStartOf="@+id/lowballmissedSeekBar"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Low Missed"
+        android:id="@+id/lowballmissedTextView"
+        android:layout_below="@+id/lowballmissedSeekBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100"
+        android:id="@+id/onehundredlowmissedTextView"
+        android:layout_below="@+id/lowballmissedSeekBar"
+        android:layout_toRightOf="@id/lowballmissedSeekBar"
+        android:layout_toEndOf="@+id/lowballmissedSeekBar"
+        android:layout_marginTop="0dp"
+        android:textSize="11sp" />
+
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/hopperintakeSeekBar"
+        android:max="100"
+        android:layout_below="@+id/lowballmissedTextView"
+        android:layout_alignRight="@+id/lowballmissedSeekBar"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/zerointakenTextView"
+        android:layout_below="@+id/hopperintakeSeekBar"
+        android:layout_toLeftOf="@+id/hopperintakeSeekBar"
+        android:layout_toStartOf="@+id/hopperintakeSeekBar"
+        android:layout_marginTop="0dp"
+        android:textSize="11sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Hopper Intake"
+        android:id="@+id/hopperintakeTextView"
+        android:layout_below="@+id/hopperintakeSeekBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:textSize="11sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100"
+        android:id="@+id/onehundredhopperintakeTextView"
+        android:layout_below="@+id/hopperintakeSeekBar"
+        android:layout_toRightOf="@+id/hopperintakeSeekBar"
+        android:layout_toEndOf="@+id/hopperintakeSeekBar"
+        android:layout_marginTop="0dp"
+        android:textSize="11sp" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -289,9 +370,9 @@
         android:text="Successful Climb?"
         android:id="@+id/successfulclimbcheckBox"
         android:textSize="13sp"
-        android:layout_below="@+id/lowballTextView"
+        android:layout_below="@+id/hopperintakeTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp" />
+        android:layout_marginTop="10dp" />
 
     <Chronometer
         android:layout_width="25dp"
@@ -324,3 +405,4 @@
         android:layout_toEndOf="@+id/increaseGearsPlacedButton" />
 
 </RelativeLayout>
+</ScrollView>
