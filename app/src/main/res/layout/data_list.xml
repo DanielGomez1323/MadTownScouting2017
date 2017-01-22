@@ -96,6 +96,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Gears Dropped "
+        android:id="@+id/gearsDroppedTextView"
+        android:layout_toRightOf="@+id/gearsHungTextView"
+        android:layout_below="@+id/autoLowMissedTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="High Shoot Speed "
         android:id="@+id/highShootSpeedTextView"
         android:layout_below="@+id/gearsPickedUpTextView"/>
@@ -118,9 +126,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="High Shots Missed "
+        android:text="Low Shots Missed "
         android:id="@+id/lowShotsMissedTextView"
         android:layout_toRightOf="@+id/lowShootSpeedTextView"
         android:layout_below="@+id/highShotsMissedTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hopper Intake "
+        android:id="@+id/hopperIntakeTextView"
+        android:layout_below="@+id/lowShootSpeedTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Climb Time "
+        android:id="@+id/climbTimeTextView"
+        android:layout_below="@+id/hopperIntakeTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Climb Success "
+        android:id="@+id/climbSuccessTextView"
+        android:layout_toRightOf="@+id/climbTimeTextView"
+        android:layout_below="@+id/hopperIntakeTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rank "
+        android:id="@+id/rankTextView"
+        android:layout_below="@+id/climbTimeTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="TBH "
+        android:id="@+id/tBHTextView"
+        android:layout_below="@+id/rankTextView"/>
 
 </RelativeLayout>
