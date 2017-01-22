@@ -18,7 +18,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Gears Picked Up:"
         android:id="@+id/gearsPickedUpTextView"
-        android:textSize="15sp"
+        android:textSize="40sp"
         android:layout_marginTop="15dp"
         android:layout_below="@+id/teleopPeriodTextView"
         android:layout_centerHorizontal="true"/>
@@ -31,28 +31,28 @@
         android:id="@+id/teleopPeriodTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="25sp"/>
+        android:textSize="50sp"/>
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:text="-"
         android:id="@+id/decreaseGearsPickedUpButton"
         android:layout_below="@+id/gearsPickedUpTextView"
         android:layout_toLeftOf="@+id/gearsPickedUpTextView"
         android:layout_toStartOf="@+id/gearsPickedUpTextView"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:paddingTop="5dp"/>
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:text="+"
         android:id="@+id/increaseGearsPickedUpButton"
         android:paddingTop="5dp"
         android:layout_below="@+id/gearsPickedUpTextView"
         android:layout_toEndOf="@+id/gearsPickedUpTextView"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="0"
         android:id="@+id/amountGearsPickedUpTextView"
-        android:textSize="10sp"
+        android:textSize="30sp"
         android:layout_centerHorizontal="true"
         android:layout_alignBottom="@+id/increaseGearsPickedUpButton"/>
 
@@ -70,14 +70,14 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Gears Dropped:"
         android:id="@+id/gearsDroppedTextView"
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
+        android:textSize="40sp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/amountGearsPickedUpTextView"
         android:layout_centerHorizontal="true"/>
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:text="-"
         android:id="@+id/decreaseGearsDroppedButton"
         android:layout_marginTop="10dp"
@@ -86,8 +86,8 @@
         android:paddingTop="5dp"/>
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:text="+"
         android:id="@+id/increaseGearsDroppedButton"
         android:layout_marginTop="10dp"
@@ -103,7 +103,7 @@
         android:id="@+id/amountGearsDroppedTextView"
         android:layout_alignBottom="@+id/increaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -113,12 +113,12 @@
         android:id="@+id/gearsPlacedTextView"
         android:layout_below="@+id/decreaseGearsDroppedButton"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textSize="15sp"/>
+        android:layout_marginTop="15dp"
+        android:textSize="40sp"/>
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:text="-"
         android:id="@+id/decreaseGearsPlacedButton"
         android:layout_marginTop="10dp"
@@ -127,8 +127,8 @@
         android:paddingTop="5dp"/>
 
     <Button
-        android:layout_width="40dp"
-        android:layout_height="30dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:text="+"
         android:id="@+id/increaseGearsPlacedButton"
         android:layout_marginTop="10dp"
@@ -144,17 +144,17 @@
         android:id="@+id/amountGearsPlacedTextView"
         android:layout_alignBottom="@+id/increaseGearsPlacedButton"
         android:layout_centerHorizontal="true"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <SeekBar
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="30dp"
         android:id="@+id/ballrateSeekBar"
         android:max="10"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/amountGearsPlacedTextView"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -165,7 +165,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/ballrateSeekBar"
-        android:textSize="10sp"
+        android:textSize="30sp"
         android:layout_marginTop="0dp"/>
 
     <TextView
@@ -178,7 +178,7 @@
         android:layout_below="@+id/ballrateSeekBar"
         android:layout_toLeftOf="@+id/ballrateSeekBar"
         android:layout_toStartOf="@+id/ballrateSeekBar"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -190,14 +190,14 @@
         android:layout_toRightOf="@+id/ballrateSeekBar"
         android:layout_toEndOf="@+id/ballrateSeekBar"
         android:layout_marginTop="0dp"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <SeekBar
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="30dp"
         android:id="@+id/highballsmissedSeekBar"
         android:max="100"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/ballrateTextView"
         android:layout_alignRight="@id/ballrateSeekBar"/>
 
@@ -210,7 +210,7 @@
         android:layout_below="@+id/highballsmissedSeekBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
-        android:textSize="10sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -222,7 +222,7 @@
         android:layout_toLeftOf="@+id/highballsmissedSeekBar"
         android:layout_toStartOf="@+id/highballsmissedSeekBar"
         android:layout_marginTop="0dp"
-        android:textSize="10sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -234,16 +234,16 @@
         android:layout_toRightOf="@+id/highballsmissedSeekBar"
         android:layout_toEndOf="@+id/highballsmissedSeekBar"
         android:layout_marginTop="0dp"
-        android:textSize="10sp" />
+        android:textSize="30sp" />
 
     <SeekBar
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="30dp"
         android:id="@+id/lowballrateSeekBar"
         android:layout_below="@+id/highmissedTextView"
         android:layout_centerHorizontal="true"
         android:max="10"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="15dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -254,7 +254,7 @@
         android:layout_below="@+id/lowballrateSeekBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -266,7 +266,7 @@
         android:layout_below="@+id/lowballrateSeekBar"
         android:layout_toLeftOf="@+id/lowballrateSeekBar"
         android:layout_toStartOf="@+id/lowballrateSeekBar"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -274,20 +274,20 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="10"
         android:id="@+id/lowtenrateTextView"
-        android:textSize="10sp"
+        android:textSize="30sp"
         android:layout_marginTop="0dp"
         android:layout_below="@+id/lowballrateSeekBar"
         android:layout_toRightOf="@+id/lowballrateSeekBar"
         android:layout_toEndOf="@+id/lowballrateSeekBar" />
 
     <SeekBar
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="30dp"
         android:id="@+id/lowballmissedSeekBar"
         android:max="100"
         android:layout_below="@+id/lowballTextView"
         android:layout_alignRight="@+id/lowballrateSeekBar"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -299,7 +299,7 @@
         android:layout_toLeftOf="@+id/lowballmissedSeekBar"
         android:layout_toStartOf="@+id/lowballmissedSeekBar"
         android:layout_marginTop="0dp"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -310,7 +310,7 @@
         android:layout_below="@+id/lowballmissedSeekBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
-        android:textSize="10sp"/>
+        android:textSize="30sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -322,16 +322,16 @@
         android:layout_toRightOf="@id/lowballmissedSeekBar"
         android:layout_toEndOf="@+id/lowballmissedSeekBar"
         android:layout_marginTop="0dp"
-        android:textSize="10sp" />
+        android:textSize="30sp" />
 
     <SeekBar
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="30dp"
         android:id="@+id/hopperintakeSeekBar"
         android:max="100"
         android:layout_below="@+id/lowballmissedTextView"
         android:layout_alignRight="@+id/lowballmissedSeekBar"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -343,7 +343,7 @@
         android:layout_toLeftOf="@+id/hopperintakeSeekBar"
         android:layout_toStartOf="@+id/hopperintakeSeekBar"
         android:layout_marginTop="0dp"
-        android:textSize="10sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -354,7 +354,7 @@
         android:layout_below="@+id/hopperintakeSeekBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="0dp"
-        android:textSize="10sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -366,23 +366,23 @@
         android:layout_toRightOf="@+id/hopperintakeSeekBar"
         android:layout_toEndOf="@+id/hopperintakeSeekBar"
         android:layout_marginTop="0dp"
-        android:textSize="10sp" />
+        android:textSize="30sp" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Successful Climb?"
         android:id="@+id/successfulclimbcheckBox"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/hopperintakeTextView"
         android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:textSize="30sp"/>
 
     <Chronometer
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/climbChronometer"
-        android:textSize="15sp"
+        android:textSize="30sp"
         android:text="00"
         android:layout_marginTop="15dp"
         android:layout_alignBottom="@+id/startclimbButton"
@@ -391,20 +391,20 @@
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Start/Stop"
         android:id="@+id/startclimbButton"
         android:layout_marginTop="15dp"
-        android:textSize="10sp"
+        android:textSize="30sp"
         android:layout_below="@+id/successfulclimbcheckBox"
         android:layout_centerHorizontal="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:textSize="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
         android:text="Reset"
         android:id="@+id/resetclimbButton"
         android:layout_marginTop="15dp"
