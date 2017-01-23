@@ -229,11 +229,10 @@
             android:textAppearance="?android:textAppearanceSmall"
             android:text="100"
             android:id="@+id/onehundredmissedTextView"
+            android:textSize="11sp"
             android:layout_below="@+id/highballsmissedSeekBar"
-            android:layout_toRightOf="@+id/highballsmissedSeekBar"
-            android:layout_toEndOf="@+id/highballsmissedSeekBar"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp"/>
+            android:layout_alignLeft="@+id/tenrateTextView"
+            android:layout_alignStart="@+id/tenrateTextView" />
 
         <SeekBar
             android:layout_width="200dp"
@@ -314,11 +313,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="100"
             android:id="@+id/onehundredlowmissedTextView"
+            android:textSize="11sp"
             android:layout_below="@+id/lowballmissedSeekBar"
-            android:layout_toRightOf="@id/lowballmissedSeekBar"
-            android:layout_toEndOf="@+id/lowballmissedSeekBar"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp" />
+            android:layout_alignLeft="@+id/lowtenrateTextView"
+            android:layout_alignStart="@+id/lowtenrateTextView" />
 
         <SeekBar
             android:layout_width="200dp"
@@ -358,11 +356,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="100"
             android:id="@+id/onehundredhopperintakeTextView"
+            android:textSize="11sp"
             android:layout_below="@+id/hopperintakeSeekBar"
-            android:layout_toRightOf="@+id/hopperintakeSeekBar"
-            android:layout_toEndOf="@+id/hopperintakeSeekBar"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp" />
+            android:layout_alignLeft="@+id/lowtenrateTextView"
+            android:layout_alignStart="@+id/lowtenrateTextView" />
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -400,9 +397,9 @@
             android:textSize="10sp"
             android:text="Reset"
             android:id="@+id/resetclimbButton"
-            android:layout_alignBottom="@+id/climbChronometer"
-            android:layout_toRightOf="@+id/increaseGearsPlacedButton"
-            android:layout_toEndOf="@+id/increaseGearsPlacedButton" />
+            android:layout_below="@+id/successfulclimbcheckBox"
+            android:layout_alignLeft="@+id/onehundredhopperintakeTextView"
+            android:layout_alignStart="@+id/onehundredhopperintakeTextView" />
 
     </RelativeLayout>
 </ScrollView>
