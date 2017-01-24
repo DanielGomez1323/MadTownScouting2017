@@ -173,8 +173,8 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         hignballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                highmissedTextView.setText("High Missed: " + String.valueOf(progress));
                 highMissed = progress;
-                highMissed = progress * 10;
             }
 
             @Override
@@ -207,8 +207,8 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         lowballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                lowballmissedTextView.setText("Low Missed : " + String.valueOf(progress));
                 lowballMissed = progress;
-                lowballMissed = progress * 10;
             }
 
             @Override
@@ -224,8 +224,8 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         hopperintakeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                hopperintakeTextView.setText("Hopper Intaken: " + String.valueOf(progress));
                 hopperIntake = progress;
-                hopperIntake = progress * 10;
             }
 
             @Override
