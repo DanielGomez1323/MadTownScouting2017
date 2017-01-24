@@ -175,7 +175,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         seekBar.incrementProgressBy(10);
         seekBar.setMax(100);
         TextView seekBarValue = (TextView)rootView.findViewById(R.id.highballsmissedSeekBar);
-        seekBarValue.setText(g.getText().toString().trim());
+        seekBarValue.setText(.getText().toString().trim());
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
 
