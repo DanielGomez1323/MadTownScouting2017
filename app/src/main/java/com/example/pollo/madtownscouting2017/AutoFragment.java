@@ -68,31 +68,36 @@ public class AutoFragment extends android.support.v4.app.Fragment {
     public Bundle getData(){
         Bundle b = new Bundle();
         if(baselineCheckBox.isChecked()){
-            b.putString("baselineCrossed", "1");
+            b.putString("baseLine", "1");
         }else{
-            b.putString("baselineCrossed", "0");
+            b.putString("baseLine", "0");
         }
         if(gearAttemptCheckBox.isChecked()){
-            b.putString("gearAttempt", "1");
+            b.putString("autoGearAttempt", "1");
         }else{
-            b.putString("gearAttempt", "0");
+            b.putString("autoGearAttempt", "0");
         }
         if(gearSuccessCheckBox.isChecked()){
-            b.putString("gearSuccess", "1");
+            b.putString("autoGearSuccess", "1");
         }else{
-            b.putString("gearSuccess", "0");
+            b.putString("autoGearSuccess", "0");
         }
-        if(highCheckBox.isChecked()){
-            b.putString("autoHigh", "1");
+        if (highCheckBox.isChecked()){
+            b.putString("autoHighScored", String.valueOf(autoBallsMade));
+            b.putString("autoLowScored", "0");
+            b.putString("autoHighMissed", String.valueOf(10 - autoBallsMade));
+            b.putString("autoLowMissed", "0");
+        }else if (lowCheckBox.isChecked()){
+            b.putString("autoHighScored", "0");
+            b.putString("autoLowScored", String.valueOf(autoBallsMade));
+            b.putString("autoHighMissed", "0");
+            b.putString("autoLowMissed", String.valueOf(10 - autoBallsMade));
         }else{
-            b.putString("autoHigh", "0");
+            b.putString("autoHighScored", "0");
+            b.putString("autoLowScored", "0");
+            b.putString("autoHighMissed", "0");
+            b.putString("autoLowMissed", "0");
         }
-        if(lowCheckBox.isChecked()){
-            b.putString("autoLow", "1");
-        }else{
-            b.putString("autoLow", "0");
-        }
-        b.putString("autoBallsMade", String.valueOf(autoBallsMade));
         return b;
     }
 }

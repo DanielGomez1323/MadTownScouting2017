@@ -77,15 +77,26 @@ public class TabbedScouting extends AppCompatActivity {
                 List<Fragment> f = getSupportFragmentManager().getFragments();
                 AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentByTag(f.get(0).getTag());
                 Bundle ab = autoFragment.getData();
-                String autoGearAttempt = ab.getString("gearAttempt");
-                String autoGearSuccess = ab.getString("gearSuccess");
-                String autoHighScored = ab.getString("autoHigh");
+                String baseLine = ab.getString("baseLine");
+                String autoGearAttempt = ab.getString("autoGearAttempt");
+                String autoGearSuccess = ab.getString("autoGearSuccess");
+                String autoHighScored = ab.getString("autoHighScored");
+                String autoHighMissed = ab.getString("autoHighMissed");
+                String autoLowScored = ab.getString("autoLowScored");
+                String autoLowMissed = ab.getString("autoLowMissed");
 
                 TeleopFragment teleopFragment = (TeleopFragment) getSupportFragmentManager().findFragmentByTag(f.get(1).getTag());
                 Bundle tb = teleopFragment.getData();
                 String gearsPickedUp = tb.getString("gearsPickedUp");
                 String gearsDropped = tb.getString("gearsDropped");
-                String gearsHung = tb.getString("gearsPlaced");
+                String gearsHung = tb.getString("gearsHung");
+                String highShootSpeed = tb.getString("highShootSpeed");
+                String highShotsMissed = tb.getString("highShotsMissed");
+                String lowShootSpeed = tb.getString("lowShootSpeed");
+                String lowShotsMissed = tb.getString("lowShotsMissed");
+                String hopperIntake = tb.getString("hopperIntake");
+                String climbTime = tb.getString("climbTime");
+                String climbSuccess = tb.getString("climbSuccess");
 
                 NotesFragment notesFragment = (NotesFragment) getSupportFragmentManager().findFragmentByTag(f.get(2).getTag());
                 Bundle nb = notesFragment.getData();
@@ -95,13 +106,24 @@ public class TabbedScouting extends AppCompatActivity {
                 c.put("teamNumber", teamNumber);
                 c.put("teamColor", teamColor);
                 c.put("matchNumber", matchNumber);
+                c.put("baseLine", baseLine);
                 c.put("autoGearAttempt", autoGearAttempt);
                 c.put("autoGearSuccess", autoGearSuccess);
                 c.put("autoHighScored", autoHighScored);
+                c.put("autoHighMissed", autoHighMissed);
+                c.put("autoLowScored", autoLowScored);
+                c.put("autoLowMissed", autoLowMissed);
 
                 c.put("gearsPickedUp", gearsPickedUp);
                 c.put("gearsDropped", gearsDropped);
                 c.put("gearsHung", gearsHung);
+                c.put("highShootSpeed", highShootSpeed);
+                c.put("highShotsMissed", highShotsMissed);
+                c.put("lowShootSpeed", lowShootSpeed);
+                c.put("lowShotsMissed", lowShotsMissed);
+                c.put("hopperIntake", hopperIntake);
+                c.put("climbTime", climbTime);
+                c.put("climbSuccess", climbSuccess);
 
                 c.put("tbh", tbh);
                 c.put("rank", rank);
@@ -116,11 +138,11 @@ public class TabbedScouting extends AppCompatActivity {
                     if (myDB != null){
                         myDB.close();
                     }
+                    Intent list = new Intent(getApplicationContext(), DataUpload.class);
+                    startActivity(list);
                 }else{
                     Toast.makeText(getApplicationContext(), "Select a valid rank", Toast.LENGTH_SHORT).show();
                 }
-                Intent list = new Intent(getApplicationContext(), DataUpload.class);
-                startActivity(list);
             }
         });
 
