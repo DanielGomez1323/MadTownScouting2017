@@ -1,5 +1,6 @@
 package com.example.pollo.madtownscouting2017;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
@@ -96,6 +97,7 @@ public class DataUpload extends AppCompatActivity {
                 gearsDropped = c.getString(c.getColumnIndex("gearsDropped"));
                 tbh = c.getString(c.getColumnIndex("tbh"));
                 rank = c.getString(c.getColumnIndex("rank"));
+                Toast.makeText(getApplicationContext(), "Team " + teamNumber + ", Match " + matchNumber + " selected", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -153,6 +155,11 @@ public class DataUpload extends AppCompatActivity {
         scrollUpButton = (Button) findViewById(R.id.ToTopButton);
         match = new Match();
         query = "SELECT * FROM SteamWorks";
+        Intent i = getIntent();
+        String search = i.getStringExtra("search");
+        if (search.contains("t")){
+
+        }
 
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
         c = myDB.rawQuery(query, null);
@@ -160,6 +167,10 @@ public class DataUpload extends AppCompatActivity {
             try {
                 listAdapter = new dataListAdapter(DataUpload.this, c, 0);
                 lv.setAdapter(listAdapter);
+                lv.setSelection(listAdapter.getCount() - 1);
+                c.moveToPosition(listAdapter.getCount() - 1);
+                _id = c.getString(c.getColumnIndex("_id"));
+                match.loadDatabase(Integer.parseInt(_id));
                 lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -192,6 +203,12 @@ public class DataUpload extends AppCompatActivity {
                 myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
                 myDB.execSQL("DELETE FROM SteamWorks WHERE _id = " + _id);
                 updateList();
+            }
+        });
+        scrollUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lv.smoothScrollToPosition(0);
             }
         });
     }

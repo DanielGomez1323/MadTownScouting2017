@@ -42,6 +42,7 @@ public class StartMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent searchIntent = new Intent(getApplicationContext(), DataUpload.class);
+                searchIntent.putExtra("search", searchMenuSearchBox.getText());
                 startActivity(searchIntent);
             }
         });
