@@ -135,7 +135,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         increaseDropsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drops ++;
+                drops++;
                 dropText.setText(String.valueOf(drops));
             }
         });
@@ -170,7 +170,34 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
 
             }
         });
-        hignballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        SeekBar seekBar = (SeekBar)rootView.findViewById(R.id.highballsmissedSeekBar);
+        seekBar.setProgress(0);
+        seekBar.incrementProgressBy(10);
+        seekBar.setMax(100);
+        TextView seekBarValue = (TextView)rootView.findViewById(R.id.highballsmissedSeekBar);
+        seekBarValue.setText(g.getText().toString().trim());
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                progress = progress / 10;
+                progress = progress * 10;
+                highmissedTextView.setText("High Missed" + String.valueOf(progress));
+                highMissed = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        /*hignballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 highmissedTextView.setText("High Missed: " + String.valueOf(progress));
@@ -186,7 +213,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
             public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
-        });
+        });*/
         lowBallRate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
