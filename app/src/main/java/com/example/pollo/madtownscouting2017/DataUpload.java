@@ -41,7 +41,7 @@ public class DataUpload extends AppCompatActivity {
     Button scrollUpButton;
     Match match;
     String query;
-    String address = "http://www.gorohi.com/1323";
+    String address = "http://www.gorohi.com/1323/2017/data.php";
     String _id;
     dataListAdapter listAdapter;
 
@@ -157,10 +157,18 @@ public class DataUpload extends AppCompatActivity {
         query = "SELECT * FROM SteamWorks";
         Intent i = getIntent();
         String search = i.getStringExtra("search");
-        if (search.contains("t")){
-
+        if (search != null) {
+            if (search.toLowerCase().contains("t")) {
+                search = search.replaceAll("[^\\d.]", "");
+                query = "SELECT * FROM SteamWorks WHERE teamNumber = " + search;
+            } else if (search.toLowerCase().contains("m")) {
+                search = search.replaceAll("[^\\d.]", "");
+                query = "SELECT * FROM SteamWorks WHERE matchNumber = " + search;
+            } else {
+                search = search.replaceAll("[^\\d.]", "");
+                query = "SELECT * FROM SteamWorks WHERE teamNumber = " + search + " OR matchNumber = " + search;
+            }
         }
-
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
         c = myDB.rawQuery(query, null);
         if (c.getCount() > 0) {
