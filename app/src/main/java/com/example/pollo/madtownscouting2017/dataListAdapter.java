@@ -42,6 +42,7 @@ public class dataListAdapter extends CursorAdapter{
         TextView climbSuccessTextView = (TextView) view.findViewById(R.id.climbSuccessTextView);
         TextView rankTextView = (TextView) view.findViewById(R.id.rankTextView);
         TextView tBHTextView = (TextView) view.findViewById(R.id.tBHTextView);
+<<<<<<< HEAD
         teamNumberTextView.setText(teamNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText(matchNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("matchNumber")));
         teamColorTextView.setText(teamColorTextView.getText() + cursor.getString(cursor.getColumnIndex("teamColor")));
@@ -64,6 +65,31 @@ public class dataListAdapter extends CursorAdapter{
         climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         rankTextView.setText(rankTextView.getText() + cursor.getString(cursor.getColumnIndex("rank")));
         tBHTextView.setText(tBHTextView.getText() + cursor.getString(cursor.getColumnIndex("tbh")));
+=======
+        teamNumberTextView.setText("Team " + cursor.getString(cursor.getColumnIndex("teamNumber")));
+        matchNumberTextView.setText("Match " + cursor.getString(cursor.getColumnIndex("matchNumber")));
+        teamColorTextView.setText(cursor.getString(cursor.getColumnIndex("teamColor")));
+        baselineTextView.setText("Baseline " + cursor.getString(cursor.getColumnIndex("baseLine")));
+        autoGearAttemptTextView.setText("Auto Gear Attempt " + cursor.getString(cursor.getColumnIndex("autoGearAttempt")));
+        autoGearSuccessTextView.setText("Auto Gear Success " + cursor.getString(cursor.getColumnIndex("autoGearSuccess")));
+        autoHighScoredTextView.setText("Auto High Scored " + cursor.getString(cursor.getColumnIndex("autoHighScored")));
+        autoHighMissedTextView.setText("Auto High Missed " + cursor.getString(cursor.getColumnIndex("autoHighMissed")));
+        autoLowScoredTextView.setText("Auto Low Scored " + cursor.getString(cursor.getColumnIndex("autoLowScored")));
+        autoLowMissedTextView.setText("Auto Low Missed " + cursor.getString(cursor.getColumnIndex("autoLowMissed")));
+        gearsPickedUpTextView.setText("Gears Picked Up " + cursor.getString(cursor.getColumnIndex("gearsPickedUp")));
+        gearsHungTextView.setText("Gears Hung " + cursor.getString(cursor.getColumnIndex("gearsHung")));
+        gearsDroppedTextView.setText("Gears Dropped " + cursor.getString(cursor.getColumnIndex("gearsDropped")));
+        highShootSpeedTextView.setText("High Shoot Speed " + cursor.getString(cursor.getColumnIndex("highShootSpeed")));
+        highShotsMissedTextView.setText("High Shots Missed " + cursor.getString(cursor.getColumnIndex("highShotsMissed")));
+        lowShootSpeedTextView.setText("Low Shoot Speed " + cursor.getString(cursor.getColumnIndex("lowShootSpeed")));
+        lowShotsMissedTextView.setText("Low Shots Missed " + cursor.getString(cursor.getColumnIndex("lowShotsMissed")));
+        hopperIntakeTextView.setText("Hopper Intake " + cursor.getString(cursor.getColumnIndex("hopperIntake")));
+        climbTimeTextView.setText("Climb Time " + cursor.getString(cursor.getColumnIndex("climbTime")));
+        climbSuccessTextView.setText("Climb Success " + cursor.getString(cursor.getColumnIndex("climbSuccess")));
+        rankTextView.setText("Rank " + cursor.getString(cursor.getColumnIndex("rank")));
+        tBHTextView.setText("TBH " + cursor.getString(cursor.getColumnIndex("tbh")));
+
+>>>>>>> origin/master
     }
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         // R.layout.list_row is your xml layout for each row
