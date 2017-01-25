@@ -64,7 +64,6 @@ public class dataListAdapter extends CursorAdapter{
         climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         rankTextView.setText(rankTextView.getText() + cursor.getString(cursor.getColumnIndex("rank")));
         tBHTextView.setText(tBHTextView.getText() + cursor.getString(cursor.getColumnIndex("tbh")));
-
     }
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         // R.layout.list_row is your xml layout for each row
