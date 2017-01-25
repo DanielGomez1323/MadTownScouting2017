@@ -63,7 +63,7 @@ public class StartMenu extends AppCompatActivity {
         teamsView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent teamsIntent = new Intent(getApplicationContext(), teamsView.class);
+                Intent teamsIntent = new Intent(getApplicationContext(), TeamRoster.class);
                 startActivity(teamsIntent);
             }
         });

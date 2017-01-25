@@ -52,7 +52,7 @@ public class TeamRoster extends AppCompatActivity {
         }
     }
     public void goToSendData(){
-        intent.putExtra("ME", "SELECT * FROM MatchScouting WHERE teamNumber = ");
+        intent.putExtra("search", "SELECT * FROM MatchScouting WHERE teamNumber = ");
         startActivity(intent);
     }
     @Override
