@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.security.SecureRandom;
+
 /**
  * Created by 19IsaacD740 on 1/13/2017.
  */
@@ -170,34 +172,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
 
             }
         });
-        SeekBar seekBar = (SeekBar)rootView.findViewById(R.id.highballsmissedSeekBar);
-        seekBar.setProgress(0);
-        seekBar.incrementProgressBy(10);
-        seekBar.setMax(100);
-        TextView seekBarValue = (TextView)rootView.findViewById(R.id.highballsmissedSeekBar);
-        seekBarValue.setText(.getText().toString().trim());
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                progress = progress / 10;
-                progress = progress * 10;
-                highmissedTextView.setText("High Missed" + String.valueOf(progress));
-                highMissed = progress;
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        /*hignballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        hignballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 highmissedTextView.setText("High Missed: " + String.valueOf(progress));
@@ -213,7 +188,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
             public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
-        });*/
+        });
         lowBallRate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -279,7 +254,11 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         b.putString("gearsDropped", String.valueOf(drops));
         b.putString("gearsPlaced", String.valueOf(placed));
         b.putString("highShootSpeed", String.valueOf(highSpeed));
+        b.putString("highShotsMissed", String.valueOf(highMissed));
         b.putString("lowShootSpeed", String.valueOf(lowSpeed));
+        b.putString("lowShotsMissed", String.valueOf(lowballMissed));
+        b.putString("hopperIntake", String.valueOf(hopperIntake));
+        b.putString("climbTime", String.valueOf(climbTime));
         if (successfulClimbCHeckBox.isChecked()){
             b.putString("climbSuccess", "1");
         }else{
