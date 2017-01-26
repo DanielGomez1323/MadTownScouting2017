@@ -52,9 +52,9 @@ public class ScoutingMenu extends AppCompatActivity {
                             autoIntent.putExtra("teamNumber", teamNumberEditText.getText().toString());
                             autoIntent.putExtra("matchNumber", matchNumberEditText.getText().toString());
                             if(redCheckBox.isChecked()){
-                                autoIntent.putExtra("teamColor", "25500");
+                                autoIntent.putExtra("teamColor", "0");
                             }else{
-                                autoIntent.putExtra("teamColor", "00255");
+                                autoIntent.putExtra("teamColor", "1");
                             }
                             startActivity(autoIntent);
                         }else{

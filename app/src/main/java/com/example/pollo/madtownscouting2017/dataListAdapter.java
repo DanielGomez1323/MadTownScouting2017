@@ -42,7 +42,6 @@ public class dataListAdapter extends CursorAdapter{
         TextView climbSuccessTextView = (TextView) view.findViewById(R.id.climbSuccessTextView);
         TextView rankTextView = (TextView) view.findViewById(R.id.rankTextView);
         TextView tBHTextView = (TextView) view.findViewById(R.id.tBHTextView);
-<<<<<<< HEAD
         teamNumberTextView.setText(teamNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText(matchNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("matchNumber")));
         teamColorTextView.setText(teamColorTextView.getText() + cursor.getString(cursor.getColumnIndex("teamColor")));
@@ -65,14 +64,18 @@ public class dataListAdapter extends CursorAdapter{
         climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         rankTextView.setText(rankTextView.getText() + cursor.getString(cursor.getColumnIndex("rank")));
         tBHTextView.setText(tBHTextView.getText() + cursor.getString(cursor.getColumnIndex("tbh")));
-=======
         teamNumberTextView.setText("Team " + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText("Match " + cursor.getString(cursor.getColumnIndex("matchNumber")));
         String color = cursor.getString(cursor.getColumnIndex("teamColor"));
-        if (color == "00255"){
-            color = "Blue";
-        }else if (color == "25500"){
-            color = "Red";
+        switch(cursor.getString(cursor.getColumnIndex("teamColor"))){
+            case "1":
+                color = "Blue";
+                break;
+            case "0":
+                color = "Red";
+                break;
+            default:
+                break;
         }
         teamColorTextView.setText(color);
         baselineTextView.setText("Baseline " + cursor.getString(cursor.getColumnIndex("baseLine")));
@@ -94,8 +97,6 @@ public class dataListAdapter extends CursorAdapter{
         climbSuccessTextView.setText("Climb Success " + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         rankTextView.setText("Rank " + cursor.getString(cursor.getColumnIndex("rank")));
         tBHTextView.setText("TBH " + cursor.getString(cursor.getColumnIndex("tbh")));
-
->>>>>>> origin/master
     }
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         // R.layout.list_row is your xml layout for each row

@@ -115,14 +115,14 @@ public class DataUpload extends AppCompatActivity {
     public static String toJSon(Match data) {
         try {
             JSONObject object = new JSONObject();
-            object.put("teamName", data.teamNumber);
+            object.put("teamNumber", data.teamNumber);
             object.put("matchNumber", data.matchNumber);
             object.put("teamColor", data.teamColor);
             object.put("baseLine", data.baseLine);
             object.put("autoGearAttempt", data.autoGearAttempt);
             object.put("autoGearSuccess", data.autoGearSuccess);
             object.put("autoHighScored", data.autoHighScored);
-            object.put("autoHIghMissed", data.autoHighMissed);
+            object.put("autoHighMissed", data.autoHighMissed);
             object.put("autoLowScored", data.autoLowScored);
             object.put("autoLowMissed", data.autoLowMissed);
             object.put("gearsPickedUp", data.gearsPickedUp);
@@ -150,6 +150,7 @@ public class DataUpload extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_upload);
         lv = (ListView) findViewById(R.id.webListView);
+
         uploadButton = (Button) findViewById(R.id.sendToWebButton);
         deleteButton = (Button) findViewById(R.id.deleteButton);
         scrollUpButton = (Button) findViewById(R.id.ToTopButton);
