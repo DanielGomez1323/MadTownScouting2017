@@ -42,6 +42,30 @@ public class dataListAdapter extends CursorAdapter{
         TextView climbSuccessTextView = (TextView) view.findViewById(R.id.climbSuccessTextView);
         TextView rankTextView = (TextView) view.findViewById(R.id.rankTextView);
         TextView tBHTextView = (TextView) view.findViewById(R.id.tBHTextView);
+<<<<<<< HEAD
+        teamNumberTextView.setText(teamNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("teamNumber")));
+        matchNumberTextView.setText(matchNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("matchNumber")));
+        teamColorTextView.setText(teamColorTextView.getText() + cursor.getString(cursor.getColumnIndex("teamColor")));
+        baselineTextView.setText(baselineTextView.getText() + cursor.getString(cursor.getColumnIndex("baseLine")));
+        autoGearAttemptTextView.setText(autoGearAttemptTextView.getText() + cursor.getString(cursor.getColumnIndex("autoGearAttempt")));
+        autoGearSuccessTextView.setText(autoGearSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("autoGearSuccess")));
+        autoHighScoredTextView.setText(autoHighScoredTextView.getText() + cursor.getString(cursor.getColumnIndex("autoHighScored")));
+        autoHighMissedTextView.setText(autoHighMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("autoHighMissed")));
+        autoLowScoredTextView.setText(autoLowScoredTextView.getText() + cursor.getString(cursor.getColumnIndex("autoLowScored")));
+        autoLowMissedTextView.setText(autoLowMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("autoLowMissed")));
+        gearsPickedUpTextView.setText(gearsPickedUpTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsPickedUp")));
+        gearsHungTextView.setText(gearsHungTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsHung")));
+        gearsDroppedTextView.setText(gearsDroppedTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsDropped")));
+        highShootSpeedTextView.setText(highShootSpeedTextView.getText() + cursor.getString(cursor.getColumnIndex("highShootSpeed")));
+        highShotsMissedTextView.setText(highShotsMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("highShotsMissed")));
+        lowShootSpeedTextView.setText(lowShootSpeedTextView.getText() + cursor.getString(cursor.getColumnIndex("lowShootSpeed")));
+        lowShotsMissedTextView.setText(lowShotsMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("lowShotsMissed")));
+        hopperIntakeTextView.setText(hopperIntakeTextView.getText() + cursor.getString(cursor.getColumnIndex("hopperIntake")));
+        climbTimeTextView.setText(climbTimeTextView.getText() + cursor.getString(cursor.getColumnIndex("climbTime")));
+        climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
+        rankTextView.setText(rankTextView.getText() + cursor.getString(cursor.getColumnIndex("rank")));
+        tBHTextView.setText(tBHTextView.getText() + cursor.getString(cursor.getColumnIndex("tbh")));
+=======
         teamNumberTextView.setText("Team " + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText("Match " + cursor.getString(cursor.getColumnIndex("matchNumber")));
         String color = cursor.getString(cursor.getColumnIndex("teamColor"));
@@ -71,6 +95,7 @@ public class dataListAdapter extends CursorAdapter{
         rankTextView.setText("Rank " + cursor.getString(cursor.getColumnIndex("rank")));
         tBHTextView.setText("TBH " + cursor.getString(cursor.getColumnIndex("tbh")));
 
+>>>>>>> origin/master
     }
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         // R.layout.list_row is your xml layout for each row

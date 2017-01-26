@@ -252,7 +252,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         Bundle b = new Bundle();
         b.putString("gearsPickedUp", String.valueOf(pickUps));
         b.putString("gearsDropped", String.valueOf(drops));
-        b.putString("gearsPlaced", String.valueOf(placed));
+        b.putString("gearsHung", String.valueOf(placed));
         b.putString("highShootSpeed", String.valueOf(highSpeed));
         b.putString("highShotsMissed", String.valueOf(highMissed));
         b.putString("lowShootSpeed", String.valueOf(lowSpeed));
