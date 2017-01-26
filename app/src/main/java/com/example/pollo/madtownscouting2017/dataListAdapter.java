@@ -44,7 +44,13 @@ public class dataListAdapter extends CursorAdapter{
         TextView tBHTextView = (TextView) view.findViewById(R.id.tBHTextView);
         teamNumberTextView.setText("Team " + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText("Match " + cursor.getString(cursor.getColumnIndex("matchNumber")));
-        teamColorTextView.setText(cursor.getString(cursor.getColumnIndex("teamColor")));
+        String color = cursor.getString(cursor.getColumnIndex("teamColor"));
+        if (color == "00255"){
+            color = "Blue";
+        }else if (color == "25500"){
+            color = "Red";
+        }
+        teamColorTextView.setText(color);
         baselineTextView.setText("Baseline " + cursor.getString(cursor.getColumnIndex("baseLine")));
         autoGearAttemptTextView.setText("Auto Gear Attempt " + cursor.getString(cursor.getColumnIndex("autoGearAttempt")));
         autoGearSuccessTextView.setText("Auto Gear Success " + cursor.getString(cursor.getColumnIndex("autoGearSuccess")));
