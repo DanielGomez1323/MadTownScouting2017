@@ -62,7 +62,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
             climbTime = millis/1000;
             int minutes = seconds / 60;
             seconds = seconds % 60;
-            climbChronometer.setText(String.format("%d:%02d", minutes, seconds));
+            climbChronometer.setText(String.valueOf(seconds));
         }
     };
 

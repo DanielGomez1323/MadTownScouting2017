@@ -206,12 +206,13 @@ public class DataUpload extends AppCompatActivity {
                 }
             });
         }
-        deleteButton.setOnClickListener(new View.OnClickListener() {
+        deleteButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onLongClick(View v) {
                 myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
                 myDB.execSQL("DELETE FROM SteamWorks WHERE _id = " + _id);
                 updateList();
+                return true;
             }
         });
         scrollUpButton.setOnClickListener(new View.OnClickListener() {
@@ -274,9 +275,24 @@ public class DataUpload extends AppCompatActivity {
                     && keyCode == KeyEvent.KEYCODE_BACK){
                 c.close();
                 myDB.close();
+
             }
             return super.onKeyDown(keyCode, event);
         }
+
+    @Override
+    public boolean onKeyLongPress(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            c.close();
+            myDB.close();
+            Intent i = new Intent(this, ScoutingMenu.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+            return true;
+        }
+        return super.onKeyLongPress(keyCode, event);
+    }
 
         private static String convertInputStreamToString(InputStream inputStream) throws IOException{
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
