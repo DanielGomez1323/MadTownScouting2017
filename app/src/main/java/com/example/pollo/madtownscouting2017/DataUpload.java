@@ -176,10 +176,10 @@ public class DataUpload extends AppCompatActivity {
             try {
                 listAdapter = new dataListAdapter(DataUpload.this, c, 0);
                 lv.setAdapter(listAdapter);
-                //lv.setSelection(listAdapter.getCount() - 1);
-                //c.moveToPosition(listAdapter.getCount() - 1);
-                //_id = c.getString(c.getColumnIndex("_id"));
-                //match.loadDatabase(Integer.parseInt(_id));
+                lv.setSelection(listAdapter.getCount() - 1);
+                c.moveToPosition(listAdapter.getCount() - 1);
+                _id = c.getString(c.getColumnIndex("_id"));
+                match.loadDatabase(Integer.parseInt(_id));
                 lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
