@@ -65,4 +65,61 @@
         android:layout_below="@+id/teamColorTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Crossed BaseLine"
+        android:id="@+id/crossedBaselineTV"
+        android:layout_below="@+id/teamColorEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/baselineCrossedEnterText"
+        android:hint="Baseline Crossed"
+        android:layout_below="@+id/crossedBaselineTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Gear Attempted"
+        android:id="@+id/autoGearAttemptTV"
+        android:layout_below="@+id/baselineCrossedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoGearAttemptEnterText"
+        android:hint="Auto Gear Attempted"
+        android:layout_below="@+id/autoGearAttemptTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Gear Success"
+        android:id="@+id/autoGearSuccessTV"
+        android:layout_below="@+id/autoGearAttemptEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoGearSuccessEnterText"
+        android:hint="Auto Gear Success"
+        android:layout_below="@+id/autoGearSuccessTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
 </RelativeLayout>
