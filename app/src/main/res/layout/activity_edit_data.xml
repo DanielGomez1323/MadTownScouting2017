@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -65,4 +68,329 @@
         android:layout_below="@+id/teamColorTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Crossed BaseLine"
+        android:id="@+id/crossedBaselineTV"
+        android:layout_below="@+id/teamColorEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/baselineCrossedEnterText"
+        android:hint="Baseline Crossed"
+        android:layout_below="@+id/crossedBaselineTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Gear Attempted"
+        android:id="@+id/autoGearAttemptTV"
+        android:layout_below="@+id/baselineCrossedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoGearAttemptEnterText"
+        android:hint="Auto Gear Attempted"
+        android:layout_below="@+id/autoGearAttemptTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Gear Success"
+        android:id="@+id/autoGearSuccessTV"
+        android:layout_below="@+id/autoGearAttemptEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoGearSuccessEnterText"
+        android:hint="Auto Gear Success"
+        android:layout_below="@+id/autoGearSuccessTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto High Scored"
+        android:id="@+id/autoHighScoredTV"
+        android:layout_below="@+id/autoGearSuccessEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoHighScoredEnterText"
+        android:hint="Auto High Scored"
+        android:layout_below="@+id/autoHighScoredTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto High Missed"
+        android:id="@+id/autoHighMissedTV"
+        android:layout_below="@+id/autoHighScoredEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoHighMissedEnterText"
+        android:hint="Auto High Missed"
+        android:layout_below="@+id/autoHighMissedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Low Scored"
+        android:id="@+id/autoLowScoredTV"
+        android:layout_below="@+id/autoHighMissedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoLowScoredEnterText"
+        android:hint="Auto Low Scored"
+        android:layout_below="@+id/autoLowScoredTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Low Missed"
+        android:id="@+id/autoLowMissedTV"
+        android:layout_below="@+id/autoLowScoredEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoLowMissedEnterText"
+        android:hint="Auto Low Missed"
+        android:layout_below="@+id/autoLowMissedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Gears Picked Up"
+        android:id="@+id/gearsPickedUpTV"
+        android:layout_below="@+id/autoLowMissedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/gearsPickedUpEnterText"
+        android:hint="Gears Picked Up"
+        android:layout_below="@+id/gearsPickedUpTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Gears Hung"
+        android:id="@+id/gearsHungTV"
+        android:layout_below="@+id/gearsPickedUpEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/gearsHungEnterText"
+        android:hint="Gears Hung"
+        android:layout_below="@+id/gearsHungTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Gears Dropped"
+        android:id="@+id/gearsDroppedTV"
+        android:layout_below="@+id/gearsHungEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/gearsDroppedEnterText"
+        android:hint="Gears Dropped"
+        android:layout_below="@+id/gearsDroppedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="High Shoot Speed"
+        android:id="@+id/highShootSpeedTV"
+        android:layout_below="@+id/gearsDroppedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/highShootSpeedEnterText"
+        android:hint="High Shoot Speed"
+        android:layout_below="@+id/highShootSpeedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="High Shots Missed"
+        android:id="@+id/highShotsMissedTV"
+        android:layout_below="@+id/highShootSpeedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/highShotsMissedEnterText"
+        android:hint="High Shots Missed"
+        android:layout_below="@+id/highShotsMissedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Low Speed Shot"
+        android:id="@+id/lowShootSpeedTV"
+        android:layout_below="@+id/highShotsMissedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/lowShootSpeedEnterText"
+        android:hint="Low Speed Shot"
+        android:layout_below="@+id/lowShootSpeedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Low Shots Missed"
+        android:id="@+id/lowShotsMissedTV"
+        android:layout_below="@+id/lowShootSpeedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/lowShotsMissedEnterText"
+        android:hint="Low Shots Missed"
+        android:layout_below="@+id/lowShotsMissedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Hopper Intake"
+        android:id="@+id/hopperIntakeTV"
+        android:layout_below="@+id/lowShotsMissedEnterText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/hopperIntakeEnterText"
+        android:hint="Hopper Intake"
+        android:layout_below="@+id/hopperIntakeTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Climb Time"
+        android:id="@+id/climbTimeTV"
+        android:layout_below="@+id/hopperIntakeEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/climbTimeEnterText"
+        android:hint="Climb Time"
+        android:layout_below="@+id/climbTimeTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Climb Success"
+        android:id="@+id/climbSuccessTV"
+        android:layout_below="@+id/climbTimeEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/climbSuccessEnterText"
+        android:hint="Climb Success"
+        android:layout_below="@+id/climbSuccessTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
 </RelativeLayout>
+</ScrollView>
