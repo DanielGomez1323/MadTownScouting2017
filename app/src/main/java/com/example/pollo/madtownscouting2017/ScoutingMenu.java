@@ -1,6 +1,8 @@
 package com.example.pollo.madtownscouting2017;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +18,8 @@ public class ScoutingMenu extends AppCompatActivity {
     CheckBox redCheckBox;
     CheckBox blueCheckBox;
 
+    SQLiteDatabase myDB = null;
+    Cursor c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,15 @@ public class ScoutingMenu extends AppCompatActivity {
         startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
         redCheckBox = (CheckBox) findViewById(R.id.redCheckBox);
         blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
+        myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+        c = myDB.rawQuery("SELECT * FROM SteamWorks ORDER BY _id DESC LIMIT 1", null);
+        if (c.getCount()> 0){
+            c.moveToFirst();
+            int matchNumber = Integer.parseInt(c.getString(c.getColumnIndex("matchNumber"))) + 1;
+            matchNumberEditText.setText(String.valueOf(matchNumber));
+        }else{
+            matchNumberEditText.setText("1");
+        }
         redCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
