@@ -2,6 +2,7 @@ package com.example.pollo.madtownscouting2017;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -39,6 +40,18 @@ public class EditData extends AppCompatActivity {
     TextView highShotsMissedTV;
     EditText highShotsMissedEnterText;
     TextView lowShootSpeedTV;
+    EditText lowShootSpeedEnterText;
+    TextView lowShotsMissedTV;
+    EditText lowShotsMissedEnterText;
+    TextView hopperIntakeTV;
+    EditText hopperIntakeEnterText;
+    TextView climbTimeTV;
+    EditText climbTimeEnterText;
+    TextView climbSuccessTV;
+    EditText climbSuccessEnterText;
+    TextView tbhTV;
+    EditText tbhEnterText;
+    Button confirmEditsButton;
 
 
     @Override
@@ -76,6 +89,17 @@ public class EditData extends AppCompatActivity {
         highShotsMissedTV = (TextView)findViewById(R.id.highShotsMissedTV);
         highShotsMissedEnterText = (EditText)findViewById(R.id.highShotsMissedEnterText);
         lowShootSpeedTV = (TextView)findViewById(R.id.lowShootSpeedTV);
-
+        lowShootSpeedEnterText = (EditText)findViewById(R.id.lowShootSpeedEnterText);
+        lowShotsMissedTV = (TextView)findViewById(R.id.lowShotsMissedTV);
+        lowShotsMissedEnterText = (EditText)findViewById(R.id.lowShotsMissedEnterText);
+        hopperIntakeTV = (TextView)findViewById(R.id.hopperIntakeTV);
+        hopperIntakeEnterText = (EditText)findViewById(R.id.hopperIntakeEnterText);
+        climbTimeTV = (TextView)findViewById(R.id.climbTimeTV);
+        climbTimeEnterText = (EditText) findViewById(R.id.climbTimeEnterText);
+        climbSuccessTV = (TextView)findViewById(R.id.climbSuccessTV);
+        climbSuccessEnterText = (EditText)findViewById(R.id.climbSuccessEnterText);
+        tbhTV = (TextView)findViewById(R.id.tbhTV);
+        tbhEnterText = (EditText)findViewById(R.id.tbhEnterText);
+        confirmEditsButton = (Button)findViewById(R.id.confirmEditsButton);
     }
 }
