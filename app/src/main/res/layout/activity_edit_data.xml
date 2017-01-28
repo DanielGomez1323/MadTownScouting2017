@@ -300,7 +300,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
-        android:text="Low Speed Shot"
+        android:text="Low Shoot Speed"
         android:id="@+id/lowShootSpeedTV"
         android:layout_below="@+id/highShotsMissedEnterText"
         android:layout_alignParentLeft="true"
@@ -311,7 +311,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/lowShootSpeedEnterText"
-        android:hint="Low Speed Shot"
+        android:hint="Low Shoot Speed"
         android:layout_below="@+id/lowShootSpeedTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
@@ -391,13 +391,32 @@
         android:layout_below="@+id/climbSuccessTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="TBH"
+        android:id="@+id/tbhTV"
+        android:layout_below="@+id/climbSuccessEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/tbhEnterText"
+        android:hint="THB"
+        android:layout_below="@+id/tbhTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="?android:attr/buttonStyleSmall"
         android:text="Enter"
         android:id="@+id/confirmEditsButton"
-        android:layout_below="@+id/climbSuccessEnterText"
+        android:layout_below="@+id/tbhEnterText"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>
