@@ -29,6 +29,16 @@ public class EditData extends AppCompatActivity {
     TextView autoLowMissedTV;
     EditText autoLowMissedEnterText;
     TextView gearsPickedUpTV;
+    EditText gearsPickedUpEnterText;
+    TextView gearsHungTV;
+    EditText gearsHungEnterText;
+    TextView gearsDroppedTV;
+    EditText gearsDroppedEnterText;
+    TextView highShootSpeedTV;
+    EditText highShootSpeedEnterText;
+    TextView highShotsMissedTV;
+    EditText highShotsMissedEnterText;
+    TextView lowShootSpeedTV;
 
 
     @Override
@@ -49,13 +59,23 @@ public class EditData extends AppCompatActivity {
         autoGearSuccessEnterText = (EditText)findViewById(R.id.autoGearSuccessEnterText);
         autoHighScoredTV = (TextView)findViewById(R.id.autoHighScoredTV);
         autoHighScoredEnterText = (EditText)findViewById(R.id.autoHighScoredEnterText);
-        autoHighMissedTV = (TextView)findViewById(R.id.autoHighScoredTV);
+        autoHighMissedTV = (TextView)findViewById(R.id.autoHighMissedTV);
         autoHighMissedEnterText = (EditText)findViewById(R.id.autoHighMissedEnterText);
         autoLowScoredTV = (TextView)findViewById(R.id.autoLowScoredTV);
         autoLowScoredEnterText = (EditText)findViewById(R.id.autoLowScoredEnterText);
         autoLowMissedTV = (TextView)findViewById(R.id.autoLowMissedTV);
         autoLowMissedEnterText = (EditText)findViewById(R.id.autoLowMissedEnterText);
         gearsPickedUpTV = (TextView)findViewById(R.id.gearsPickedUpTV);
+        gearsPickedUpEnterText = (EditText)findViewById(R.id.gearsPickedUpEnterText);
+        gearsHungTV = (TextView)findViewById(R.id.gearsHungTV);
+        gearsHungEnterText = (EditText)findViewById(R.id.gearsHungEnterText);
+        gearsDroppedTV = (TextView)findViewById(R.id.gearsDroppedTV);
+        gearsDroppedEnterText = (EditText)findViewById(R.id.gearsDroppedEnterText);
+        highShootSpeedTV = (TextView)findViewById(R.id.highShootSpeedTV);
+        highShootSpeedEnterText = (EditText)findViewById(R.id.highShootSpeedEnterText);
+        highShotsMissedTV = (TextView)findViewById(R.id.highShotsMissedEnterText);
+        highShotsMissedEnterText = (EditText)findViewById(R.id.highShotsMissedEnterText);
+        lowShootSpeedTV = (TextView)findViewById(R.id.lowShootSpeedTV);
 
     }
 }
