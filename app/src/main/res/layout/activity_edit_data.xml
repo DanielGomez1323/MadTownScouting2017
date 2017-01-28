@@ -249,7 +249,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:ems="?android:textAppearanceMedium"
+        android:ems="10"
         android:id="@+id/gearsDroppedEnterText"
         android:hint="Gears Dropped"
         android:layout_below="@+id/gearsDroppedTV"
@@ -299,7 +299,7 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Low Speed Shot"
         android:id="@+id/lowShootSpeedTV"
-        android:layout_below="@+id/highShootSpeedEnterText"
+        android:layout_below="@+id/highShotsMissedEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
