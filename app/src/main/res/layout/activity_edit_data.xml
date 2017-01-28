@@ -391,6 +391,14 @@
         android:layout_below="@+id/climbSuccessTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/buttonStyleSmall"
+        android:text="Enter"
+        android:id="@+id/confirmEditsButton"
+        android:layout_below="@+id/climbSuccessEnterText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
 </ScrollView>

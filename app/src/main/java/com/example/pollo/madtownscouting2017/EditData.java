@@ -73,7 +73,7 @@ public class EditData extends AppCompatActivity {
         gearsDroppedEnterText = (EditText)findViewById(R.id.gearsDroppedEnterText);
         highShootSpeedTV = (TextView)findViewById(R.id.highShootSpeedTV);
         highShootSpeedEnterText = (EditText)findViewById(R.id.highShootSpeedEnterText);
-        highShotsMissedTV = (TextView)findViewById(R.id.highShotsMissedEnterText);
+        highShotsMissedTV = (TextView)findViewById(R.id.highShotsMissedTV);
         highShotsMissedEnterText = (EditText)findViewById(R.id.highShotsMissedEnterText);
         lowShootSpeedTV = (TextView)findViewById(R.id.lowShootSpeedTV);
 
