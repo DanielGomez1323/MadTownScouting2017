@@ -179,5 +179,33 @@
         android:layout_below="@+id/autoLowScoredTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Low Missed"
+        android:id="@+id/autoLowMissedTV"
+        android:layout_below="@+id/autoLowScoredEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoLowMissedEnterText"
+        android:hint="Auto Low Missed"
+        android:layout_below="@+id/autoLowMissedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Gears Picked Up"
+        android:id="@+id/gearsPickedUpTV"
+        android:layout_below="@+id/autoLowMissedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>
