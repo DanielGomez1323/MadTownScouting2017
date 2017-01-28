@@ -122,4 +122,62 @@
         android:layout_below="@+id/autoGearSuccessTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto High Scored"
+        android:id="@+id/autoHighScoredTV"
+        android:layout_below="@+id/autoGearSuccessEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoHighScoredEnterText"
+        android:hint="Auto High Scored"
+        android:layout_below="@+id/autoHighScoredTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto High Missed"
+        android:id="@+id/autoHighMissedTV"
+        android:layout_below="@+id/autoHighScoredEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoHighMissedEnterText"
+        android:hint="Auto High Missed"
+        android:layout_below="@+id/autoHighMissedTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Auto Low Scored"
+        android:id="@+id/autoLowScoredTV"
+        android:layout_below="@+id/autoHighMissedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/autoLowScoredEnterText"
+        android:hint="Auto Low Scored"
+        android:layout_below="@+id/autoLowScoredTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
 </RelativeLayout>
