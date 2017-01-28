@@ -215,15 +215,15 @@
         android:id="@+id/gearsPickedUpEnterText"
         android:hint="Gears Picked Up"
         android:layout_below="@+id/gearsPickedUpTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Gears Hung"
         android:id="@+id/gearsHungTV"
-        android:layout_below="@+id/gearsPickedUpTV"
+        android:layout_below="@+id/gearsPickedUpEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
     <EditText
@@ -293,5 +293,14 @@
         android:layout_below="@+id/highShotsMissedTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Low Speed Shot"
+        android:id="@+id/lowShootSpeedTV"
+        android:layout_below="@+id/highShootSpeedEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
 
 </RelativeLayout>
