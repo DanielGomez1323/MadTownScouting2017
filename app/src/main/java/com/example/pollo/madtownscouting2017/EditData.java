@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class EditData extends AppCompatActivity {
     TextView teamNumberTV;
     EditText teamNumberEnterText;
@@ -18,6 +20,16 @@ public class EditData extends AppCompatActivity {
     EditText autoGearAttemptEnterText;
     TextView autoGearSuccessTV;
     EditText autoGearSuccessEnterText;
+    TextView autoHighScoredTV;
+    EditText autoHighScoredEnterText;
+    TextView autoHighMissedTV;
+    EditText autoHighMissedEnterText;
+    TextView autoLowScoredTV;
+    EditText autoLowScoredEnterText;
+    TextView autoLowMissedTV;
+    EditText autoLowMissedEnterText;
+    TextView gearsPickedUpTV;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +47,15 @@ public class EditData extends AppCompatActivity {
         autoGearAttemptEnterText = (EditText)findViewById(R.id.autoGearAttemptEnterText);
         autoGearSuccessTV = (TextView)findViewById(R.id.autoGearSuccessTV);
         autoGearSuccessEnterText = (EditText)findViewById(R.id.autoGearSuccessEnterText);
+        autoHighScoredTV = (TextView)findViewById(R.id.autoHighScoredTV);
+        autoHighScoredEnterText = (EditText)findViewById(R.id.autoHighScoredEnterText);
+        autoHighMissedTV = (TextView)findViewById(R.id.autoHighScoredTV);
+        autoHighMissedEnterText = (EditText)findViewById(R.id.autoHighMissedEnterText);
+        autoLowScoredTV = (TextView)findViewById(R.id.autoLowScoredTV);
+        autoLowScoredEnterText = (EditText)findViewById(R.id.autoLowScoredEnterText);
+        autoLowMissedTV = (TextView)findViewById(R.id.autoLowMissedTV);
+        autoLowMissedEnterText = (EditText)findViewById(R.id.autoLowMissedEnterText);
+        gearsPickedUpTV = (TextView)findViewById(R.id.gearsPickedUpTV);
+
     }
 }
