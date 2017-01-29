@@ -1,5 +1,6 @@
 package com.example.pollo.madtownscouting2017;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -150,7 +151,6 @@ public class DataUpload extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_upload);
         lv = (ListView) findViewById(R.id.webListView);
-
         uploadButton = (Button) findViewById(R.id.sendToWebButton);
         deleteButton = (Button) findViewById(R.id.deleteButton);
         scrollUpButton = (Button) findViewById(R.id.ToTopButton);
@@ -176,6 +176,7 @@ public class DataUpload extends AppCompatActivity {
             try {
                 listAdapter = new dataListAdapter(DataUpload.this, c, 0);
                 lv.setAdapter(listAdapter);
+                lv.setLongClickable(true);
                 lv.setSelection(listAdapter.getCount() - 1);
                 c.moveToPosition(listAdapter.getCount() - 1);
                 _id = c.getString(c.getColumnIndex("_id"));
@@ -189,9 +190,25 @@ public class DataUpload extends AppCompatActivity {
                         match.loadDatabase(Integer.parseInt(_id));
                     }
                 });
+                lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+                                                   int pos, long id) {
+                        // TODO Auto-generated method stub
+                        Cursor cur = (Cursor) listAdapter.getItem(pos);
+                        cur.moveToPosition(pos);
+                        String editID = cur.getString(cur.getColumnIndex("_id"));
+                        Intent editIntent = new Intent(getApplicationContext(), EditData.class);
+                        editIntent.putExtra("ID", editID);
+                        startActivityForResult(editIntent, 1);
+                        return true;
+                    }
+                });
             } catch (Exception e) {
                 Log.d("ERROR", e.toString());
             }
+
+
             uploadButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -200,8 +217,8 @@ public class DataUpload extends AppCompatActivity {
                         if (json != null) {
                             new MyAsyncTask().execute(json);
                         }
-                    }else{
-                        Toast.makeText(getApplicationContext(),"Please select a match.", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Please select a match.", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -310,5 +327,19 @@ public class DataUpload extends AppCompatActivity {
         Cursor c2  = myDB.rawQuery(query, null);
         listAdapter.changeCursor(c2);
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
+        if (requestCode == 1) {
+            if(resultCode == Activity.RESULT_OK){
+                String match = data.getStringExtra("MATCH_NUMBER");
+                String teamN = data.getStringExtra("TEAM_NUMBER");
+                Toast.makeText(getApplicationContext(),"Team " + teamN + ", Match " + match + "updated.", Toast.LENGTH_SHORT).show();
+                updateList();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+
+            }
+        }
     }
+}

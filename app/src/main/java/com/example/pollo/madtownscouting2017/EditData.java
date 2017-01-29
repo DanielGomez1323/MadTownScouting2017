@@ -44,7 +44,7 @@ public class EditData extends AppCompatActivity {
 
     SQLiteDatabase myDB = null;
     Cursor c;
-    int id;
+    String id;
 
 
     @Override
@@ -75,7 +75,7 @@ public class EditData extends AppCompatActivity {
         confirmEditsButton = (Button)findViewById(R.id.confirmEditsButton);
 
         Intent intent = getIntent();
-        id = intent.getIntExtra("ID", 0);
+        id = intent.getStringExtra("ID");
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
         c = myDB.rawQuery("SELECT * FROM SteamWorks WHERE _id =" + id, null);
         c.moveToFirst();
@@ -137,12 +137,12 @@ public class EditData extends AppCompatActivity {
         Cursor cur = myDB.rawQuery("SELECT * FROM SteamWorks Where _id =" + id, null);
         cur.moveToFirst();
         tNumber = cur.getString(cur.getColumnIndex("teamNumber"));
-        mNumber = cur.getString(cur.getColumnIndex("teamColor"));
+        mNumber = cur.getString(cur.getColumnIndex("matchNumber"));
         cur.close();
         myDB.close();;
         Intent returnIntent = new Intent();
         returnIntent.putExtra("TEAM_NUMBER", tNumber);
-        returnIntent.putExtra("TEAM_COLOR",  mNumber);
+        returnIntent.putExtra("MATCH_NUMBER",  mNumber);
         setResult(Activity.RESULT_OK,returnIntent);
         finish();
     }

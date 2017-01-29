@@ -42,7 +42,7 @@ public class TeamRoster extends AppCompatActivity {
                         // the values of the ScoutingData instance with the data from that list component
                         // so that when you click the send data button it will send the data from the match that you have last clicked on
                         tNumber = cur.getString(cur.getColumnIndexOrThrow("teamNumber"));
-                        intent.putExtra("search", tNumber);
+                        intent.putExtra("search", "t" + tNumber);
                         goToSendData();
                     }
                 });
