@@ -90,11 +90,6 @@ public class TabbedScouting extends AppCompatActivity {
                 String gearsPickedUp = tb.getString("gearsPickedUp");
                 String gearsDropped = tb.getString("gearsDropped");
                 String gearsHung = tb.getString("gearsHung");
-                String highShootSpeed = tb.getString("highShootSpeed");
-                String highShotsMissed = tb.getString("highShotsMissed");
-                String lowShootSpeed = tb.getString("lowShootSpeed");
-                String lowShotsMissed = tb.getString("lowShotsMissed");
-                String hopperIntake = tb.getString("hopperIntake");
                 String climbTime = tb.getString("climbTime");
                 String climbSuccess = tb.getString("climbSuccess");
 
@@ -117,11 +112,6 @@ public class TabbedScouting extends AppCompatActivity {
                 c.put("gearsPickedUp", gearsPickedUp);
                 c.put("gearsDropped", gearsDropped);
                 c.put("gearsHung", gearsHung);
-                c.put("highShootSpeed", highShootSpeed);
-                c.put("highShotsMissed", highShotsMissed);
-                c.put("lowShootSpeed", lowShootSpeed);
-                c.put("lowShotsMissed", lowShotsMissed);
-                c.put("hopperIntake", hopperIntake);
                 c.put("climbTime", climbTime);
                 c.put("climbSuccess", climbSuccess);
 

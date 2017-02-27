@@ -86,7 +86,7 @@ public class StartMenu extends AppCompatActivity {
     public void createDatabase(){
         try{
             myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
-            myDB.execSQL("CREATE TABLE IF NOT EXISTS SteamWorks ( _id INTEGER PRIMARY KEY AUTOINCREMENT, teamNumber int, matchNumber int, teamColor int, autoGearAttempt int, autoGearSuccess int, autoHighScored int, autoLowScored int, autoHighMissed int, autoLowMissed int, baseLine int, gearsPickedUp int, gearsHung int, highShootSpeed int, highShotsMissed int, lowShootSpeed int, lowShotsMissed int, hopperIntake int, climbTime int, climbSuccess int, gearsDropped int, tbh varchar, rank int)");
+            myDB.execSQL("CREATE TABLE IF NOT EXISTS SteamWorks ( _id INTEGER PRIMARY KEY AUTOINCREMENT, teamNumber int, matchNumber int, teamColor int, autoGearAttempt int, autoGearSuccess int, autoHighScored int, autoLowScored int, autoHighMissed int, autoLowMissed int, baseLine int, gearsPickedUp int, gearsHung int, climbTime int, climbSuccess int, gearsDropped int, tbh varchar, rank int)");
             if (myDB != null)
                 myDB.close();
         } catch (SQLException e) {

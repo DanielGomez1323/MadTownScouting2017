@@ -60,11 +60,6 @@ public class DataUpload extends AppCompatActivity {
         String baseLine;
         String gearsPickedUp;
         String gearsHung;
-        String highShootSpeed;
-        String highShotsMissed;
-        String lowShootSpeed;
-        String lowShotsMissed;
-        String hopperIntake;
         String climbTime;
         String climbSuccess;
         String gearsDropped;
@@ -88,11 +83,6 @@ public class DataUpload extends AppCompatActivity {
                 baseLine = c.getString(c.getColumnIndex("baseLine"));
                 gearsPickedUp = c.getString(c.getColumnIndex("gearsPickedUp"));
                 gearsHung = c.getString(c.getColumnIndex("gearsHung"));
-                highShootSpeed = c.getString(c.getColumnIndex("highShootSpeed"));
-                highShotsMissed = c.getString(c.getColumnIndex("highShotsMissed"));
-                lowShootSpeed = c.getString(c.getColumnIndex("lowShootSpeed"));
-                lowShotsMissed = c.getString(c.getColumnIndex("lowShotsMissed"));
-                hopperIntake = c.getString(c.getColumnIndex("hopperIntake"));
                 climbTime = c.getString(c.getColumnIndex("climbTime"));
                 climbSuccess = c.getString(c.getColumnIndex("climbSuccess"));
                 gearsDropped = c.getString(c.getColumnIndex("gearsDropped"));
@@ -129,11 +119,6 @@ public class DataUpload extends AppCompatActivity {
             object.put("gearsPickedUp", data.gearsPickedUp);
             object.put("gearsHung", data.gearsHung);
             object.put("gearsDropped", data.gearsDropped);
-            object.put("highShootSpeed", data.highShootSpeed);
-            object.put("highShotsMissed", data.highShotsMissed);
-            object.put("lowShootSpeed", data.lowShootSpeed);
-            object.put("lowShotsMissed", data.lowShotsMissed);
-            object.put("hopperIntake", data.hopperIntake);
             object.put("climbTime", data.climbTime);
             object.put("climbSuccess", data.climbSuccess);
             object.put("rank", data.rank);

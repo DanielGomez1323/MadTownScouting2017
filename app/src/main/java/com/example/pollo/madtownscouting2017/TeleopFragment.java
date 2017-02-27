@@ -35,21 +35,6 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     TextView climbChronometer;
     long startTime;
     long climbTime;
-    SeekBar highBallRate;
-    TextView highBallRateText;
-    int highSpeed = 0;
-    SeekBar hignballmissedSeekBar;
-    TextView highmissedTextView;
-    int highMissed = 0;
-    SeekBar lowBallRate;
-    int lowSpeed = 0;
-    TextView lowBallTextView;
-    SeekBar lowballmissedSeekBar;
-    TextView lowballmissedTextView;
-    int lowballMissed = 0;
-    SeekBar hopperintakeSeekBar;
-    TextView hopperintakeTextView;
-    int hopperIntake = 0;
     CheckBox successfulClimbCHeckBox;
     int climbSuccess = 0;
 
@@ -87,17 +72,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         placedText = (TextView) rootView.findViewById(R.id.amountGearsPlacedTextView);
         startClimb = (Button) rootView.findViewById(R.id.startclimbButton);
         climbChronometer = (TextView) rootView.findViewById(R.id.climbChronometer);
-        highBallRate = (SeekBar) rootView.findViewById(R.id.ballrateSeekBar);
-        highBallRateText = (TextView) rootView.findViewById(R.id.ballrateTextView);
-        hignballmissedSeekBar = (SeekBar) rootView.findViewById(R.id.highballsmissedSeekBar);
-        highmissedTextView = (TextView) rootView.findViewById(R.id.highmissedTextView);
-        lowBallRate = (SeekBar) rootView.findViewById(R.id.lowballrateSeekBar);
-        lowballmissedSeekBar = (SeekBar) rootView.findViewById(R.id.lowballmissedSeekBar);
-        lowballmissedTextView = (TextView) rootView.findViewById(R.id.lowballmissedTextView);
-        hopperintakeSeekBar = (SeekBar) rootView.findViewById(R.id.hopperintakeSeekBar);
-        hopperintakeTextView = (TextView) rootView.findViewById(R.id.hopperintakeTextView);
         successfulClimbCHeckBox = (CheckBox) rootView.findViewById(R.id.successfulclimbcheckBox);
-        lowBallTextView = (TextView) rootView.findViewById(R.id.lowballTextView);
         startClimb.setText("Start");
         startClimb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,91 +130,6 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
                 placedText.setText(String.valueOf(placed));
             }
         });
-        highBallRate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                highBallRateText.setText("Ball Rate: " + String.valueOf(progress));
-                highSpeed = progress;
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        hignballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                highmissedTextView.setText("High Missed: " + String.valueOf(progress));
-                highMissed = progress;
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        lowBallRate.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                lowSpeed = progress;
-                lowBallTextView.setText("Low Ball Rate: " + String.valueOf(progress));
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        lowballmissedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                lowballmissedTextView.setText("Low Missed : " + String.valueOf(progress));
-                lowballMissed = progress;
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        hopperintakeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                hopperintakeTextView.setText("Hopper Intaken: " + String.valueOf(progress));
-                hopperIntake = progress;
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
         return rootView;
     }
     @Override
@@ -253,11 +143,6 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         b.putString("gearsPickedUp", String.valueOf(pickUps));
         b.putString("gearsDropped", String.valueOf(drops));
         b.putString("gearsHung", String.valueOf(placed));
-        b.putString("highShootSpeed", String.valueOf(highSpeed));
-        b.putString("highShotsMissed", String.valueOf(highMissed));
-        b.putString("lowShootSpeed", String.valueOf(lowSpeed));
-        b.putString("lowShotsMissed", String.valueOf(lowballMissed));
-        b.putString("hopperIntake", String.valueOf(hopperIntake));
         b.putString("climbTime", String.valueOf(climbTime));
         if (successfulClimbCHeckBox.isChecked()){
             b.putString("climbSuccess", "1");

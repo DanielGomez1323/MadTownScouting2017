@@ -147,227 +147,13 @@
             android:layout_centerHorizontal="true"
             android:textSize="10sp"/>
 
-        <SeekBar
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:id="@+id/ballrateSeekBar"
-            android:max="10"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/amountGearsPlacedTextView"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Ball Rate"
-            android:id="@+id/ballrateTextView"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/ballrateSeekBar"
-            android:textSize="11sp"
-            android:layout_marginTop="0dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="0"
-            android:id="@+id/zerorateTextView"
-            android:layout_below="@+id/ballrateSeekBar"
-            android:layout_toLeftOf="@+id/ballrateSeekBar"
-            android:layout_toStartOf="@+id/ballrateSeekBar"
-            android:textSize="11sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="10"
-            android:id="@+id/tenrateTextView"
-            android:layout_alignTop="@+id/ballrateTextView"
-            android:layout_toRightOf="@+id/teleopPeriodTextView"
-            android:layout_toEndOf="@+id/teleopPeriodTextView"
-            android:textSize="11sp"/>
-
-        <SeekBar
-            android:layout_width="200dp"
-            android:layout_height="35dp"
-            android:id="@+id/highballsmissedSeekBar"
-            android:max="100"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/ballrateTextView"
-            android:layout_alignRight="@id/ballrateSeekBar"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="High Missed"
-            android:id="@+id/highmissedTextView"
-            android:layout_below="@+id/highballsmissedSeekBar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceSmall"
-            android:text="0"
-            android:id="@+id/zeromissedTextView"
-            android:layout_below="@+id/highballsmissedSeekBar"
-            android:layout_toLeftOf="@+id/highballsmissedSeekBar"
-            android:layout_toStartOf="@+id/highballsmissedSeekBar"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceSmall"
-            android:text="100"
-            android:id="@+id/onehundredmissedTextView"
-            android:textSize="11sp"
-            android:layout_below="@+id/highballsmissedSeekBar"
-            android:layout_alignLeft="@+id/tenrateTextView"
-            android:layout_alignStart="@+id/tenrateTextView" />
-
-        <SeekBar
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:id="@+id/lowballrateSeekBar"
-            android:max="10"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/highmissedTextView"
-            android:layout_alignRight="@+id/highballsmissedSeekBar" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Low Ball Rate"
-            android:id="@+id/lowballTextView"
-            android:layout_below="@+id/lowballrateSeekBar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="0"
-            android:id="@+id/lowzerorateTextView"
-            android:layout_below="@+id/lowballrateSeekBar"
-            android:layout_toLeftOf="@+id/lowballrateSeekBar"
-            android:layout_toStartOf="@+id/lowballrateSeekBar"
-            android:textSize="11sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="10"
-            android:id="@+id/lowtenrateTextView"
-            android:layout_alignTop="@+id/lowballTextView"
-            android:layout_alignLeft="@+id/tenrateTextView"
-            android:layout_alignStart="@+id/tenrateTextView"
-            android:textSize="11sp"/>
-
-        <SeekBar
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:id="@+id/lowballmissedSeekBar"
-            android:max="100"
-            android:layout_below="@+id/lowballTextView"
-            android:layout_alignRight="@+id/lowballrateSeekBar"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="0"
-            android:id="@+id/zerolowmissedTextView"
-            android:layout_below="@+id/lowballmissedSeekBar"
-            android:layout_toLeftOf="@+id/lowballmissedSeekBar"
-            android:layout_toStartOf="@+id/lowballmissedSeekBar"
-            android:textSize="11sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Low Missed"
-            android:id="@+id/lowballmissedTextView"
-            android:layout_below="@+id/lowballmissedSeekBar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="100"
-            android:id="@+id/onehundredlowmissedTextView"
-            android:textSize="11sp"
-            android:layout_below="@+id/lowballmissedSeekBar"
-            android:layout_alignLeft="@+id/lowtenrateTextView"
-            android:layout_alignStart="@+id/lowtenrateTextView" />
-
-        <SeekBar
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:id="@+id/hopperintakeSeekBar"
-            android:max="100"
-            android:layout_below="@+id/lowballmissedTextView"
-            android:layout_alignRight="@+id/lowballmissedSeekBar"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="0"
-            android:id="@+id/zerointakenTextView"
-            android:layout_below="@+id/hopperintakeSeekBar"
-            android:layout_toLeftOf="@+id/hopperintakeSeekBar"
-            android:layout_toStartOf="@+id/hopperintakeSeekBar"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Hopper Intake"
-            android:id="@+id/hopperintakeTextView"
-            android:layout_below="@+id/hopperintakeSeekBar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:textSize="11sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="100"
-            android:id="@+id/onehundredhopperintakeTextView"
-            android:textSize="11sp"
-            android:layout_below="@+id/hopperintakeSeekBar"
-            android:layout_alignLeft="@+id/lowtenrateTextView"
-            android:layout_alignStart="@+id/lowtenrateTextView" />
-
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Successful Climb?"
             android:id="@+id/successfulclimbcheckBox"
             android:textSize="13sp"
-            android:layout_below="@+id/hopperintakeTextView"
+            android:layout_below="@+id/amountGearsPlacedTextView"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp" />
 
@@ -377,8 +163,7 @@
             android:id="@+id/climbChronometer"
             android:text="00"
             android:layout_alignBottom="@+id/startclimbButton"
-            android:layout_alignLeft="@+id/lowzerorateTextView"
-            android:layout_alignStart="@+id/lowzerorateTextView" />
+            android:layout_alignParentStart="true" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -398,8 +183,7 @@
             android:text="Reset"
             android:id="@+id/resetclimbButton"
             android:layout_below="@+id/successfulclimbcheckBox"
-            android:layout_alignLeft="@+id/onehundredhopperintakeTextView"
-            android:layout_alignStart="@+id/onehundredhopperintakeTextView" />
+            android:layout_alignParentEnd="true" />
 
     </RelativeLayout>
 </ScrollView>

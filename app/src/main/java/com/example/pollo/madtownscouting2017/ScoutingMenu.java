@@ -71,10 +71,10 @@ public class ScoutingMenu extends AppCompatActivity {
                             }
                             startActivity(autoIntent);
                         }else{
-                            Toast.makeText(getApplicationContext(), "Select a team color.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Select a team color dude.", Toast.LENGTH_SHORT).show();
                         }
                     }else{
-                        Toast.makeText(getApplicationContext(),"Enter a match number.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Enter a match number hombre.", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     Toast.makeText(getApplicationContext(),"Enter a valid team number por favor", Toast.LENGTH_SHORT).show();

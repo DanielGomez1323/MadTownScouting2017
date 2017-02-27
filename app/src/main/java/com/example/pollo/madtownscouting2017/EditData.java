@@ -28,11 +28,6 @@ public class EditData extends AppCompatActivity {
     EditText gearsPickedUpEnterText;
     EditText gearsHungEnterText;
     EditText gearsDroppedEnterText;
-    EditText highShootSpeedEnterText;
-    EditText highShotsMissedEnterText;
-    EditText lowShootSpeedEnterText;
-    EditText lowShotsMissedEnterText;
-    EditText hopperIntakeEnterText;
     EditText climbTimeEnterText;
     EditText climbSuccessEnterText;
     EditText tbhEnterText;
@@ -64,11 +59,6 @@ public class EditData extends AppCompatActivity {
         gearsPickedUpEnterText = (EditText)findViewById(R.id.gearsPickedUpEnterText);
         gearsHungEnterText = (EditText)findViewById(R.id.gearsHungEnterText);
         gearsDroppedEnterText = (EditText)findViewById(R.id.gearsDroppedEnterText);
-        highShootSpeedEnterText = (EditText)findViewById(R.id.highShootSpeedEnterText);
-        highShotsMissedEnterText = (EditText)findViewById(R.id.highShotsMissedEnterText);
-        lowShootSpeedEnterText = (EditText)findViewById(R.id.lowShootSpeedEnterText);
-        lowShotsMissedEnterText = (EditText)findViewById(R.id.lowShotsMissedEnterText);
-        hopperIntakeEnterText = (EditText)findViewById(R.id.hopperIntakeEnterText);
         climbTimeEnterText = (EditText) findViewById(R.id.climbTimeEnterText);
         climbSuccessEnterText = (EditText)findViewById(R.id.climbSuccessEnterText);
         tbhEnterText = (EditText)findViewById(R.id.tbhEnterText);
@@ -94,11 +84,6 @@ public class EditData extends AppCompatActivity {
             gearsPickedUpEnterText.setText(c.getString(c.getColumnIndex("gearsPickedUp")), TextView.BufferType.EDITABLE);
             gearsHungEnterText.setText(c.getString(c.getColumnIndex("gearsHung")), TextView.BufferType.EDITABLE);
             gearsDroppedEnterText.setText(c.getString(c.getColumnIndex("gearsDropped")), TextView.BufferType.EDITABLE);
-            highShootSpeedEnterText.setText(c.getString(c.getColumnIndex("highShootSpeed")), TextView.BufferType.EDITABLE);
-            highShotsMissedEnterText.setText(c.getString(c.getColumnIndex("highShotsMissed")), TextView.BufferType.EDITABLE);
-            lowShootSpeedEnterText.setText(c.getString(c.getColumnIndex("lowShootSpeed")), TextView.BufferType.EDITABLE);
-            lowShotsMissedEnterText.setText(c.getString(c.getColumnIndex("lowShotsMissed")), TextView.BufferType.EDITABLE);
-            hopperIntakeEnterText.setText(c.getString(c.getColumnIndex("hopperIntake")), TextView.BufferType.EDITABLE);
             climbTimeEnterText.setText(c.getString(c.getColumnIndex("climbTime")), TextView.BufferType.EDITABLE);
             climbSuccessEnterText.setText(c.getString(c.getColumnIndex("climbSuccess")), TextView.BufferType.EDITABLE);
             tbhEnterText.setText(c.getString(c.getColumnIndex("tbh")), TextView.BufferType.EDITABLE);
@@ -125,11 +110,7 @@ public class EditData extends AppCompatActivity {
             ", autoHighMissed = " + autoHighMissedEnterText.getText().toString() + ", autoLowScored = " +
             autoLowScoredEnterText.getText().toString() + ", autoLowMissed = " + autoLowMissedEnterText.getText().toString() +
             ", gearsPickedUp = " + gearsPickedUpEnterText.getText().toString() + ", gearsHung = " +
-            gearsHungEnterText.getText().toString() + ", gearsDropped = " + gearsDroppedEnterText.getText().toString() +
-            ", highShootSpeed = " + highShootSpeedEnterText.getText().toString() + ", highShotsMissed = " +
-            highShotsMissedEnterText.getText().toString() + ", lowShootSpeed = " + lowShootSpeedEnterText.getText().toString() +
-            ", lowShotsMissed = " + lowShotsMissedEnterText.getText().toString() + ", hopperIntake = " +
-            hopperIntakeEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
+            gearsHungEnterText.getText().toString() + ", gearsDropped = " + gearsDroppedEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
             ", climbSuccess = " + climbSuccessEnterText.getText().toString() + ", tbh = " + tbh + "' WHERE _id = " + id);
         }catch (SQLException e){
             System.out.print(e);

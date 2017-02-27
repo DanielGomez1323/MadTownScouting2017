@@ -33,11 +33,6 @@ public class dataListAdapter extends CursorAdapter{
         TextView gearsPickedUpTextView = (TextView) view.findViewById(R.id.gearsPickedUpTextView);
         TextView gearsHungTextView = (TextView) view.findViewById(R.id.gearsHungTextView);
         TextView gearsDroppedTextView = (TextView) view.findViewById(R.id.gearsDroppedTextView);
-        TextView highShootSpeedTextView = (TextView) view.findViewById(R.id.highShootSpeedTextView);
-        TextView highShotsMissedTextView = (TextView) view.findViewById(R.id.highShotsMissedTextView);
-        TextView lowShootSpeedTextView = (TextView) view.findViewById(R.id.lowShootSpeedTextView);
-        TextView lowShotsMissedTextView = (TextView) view.findViewById(R.id.lowShotsMissedTextView);
-        TextView hopperIntakeTextView = (TextView) view.findViewById(R.id.hopperIntakeTextView);
         TextView climbTimeTextView = (TextView) view.findViewById(R.id.climbTimeTextView);
         TextView climbSuccessTextView = (TextView) view.findViewById(R.id.climbSuccessTextView);
         TextView rankTextView = (TextView) view.findViewById(R.id.rankTextView);
@@ -55,11 +50,6 @@ public class dataListAdapter extends CursorAdapter{
         gearsPickedUpTextView.setText(gearsPickedUpTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsPickedUp")));
         gearsHungTextView.setText(gearsHungTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsHung")));
         gearsDroppedTextView.setText(gearsDroppedTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsDropped")));
-        highShootSpeedTextView.setText(highShootSpeedTextView.getText() + cursor.getString(cursor.getColumnIndex("highShootSpeed")));
-        highShotsMissedTextView.setText(highShotsMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("highShotsMissed")));
-        lowShootSpeedTextView.setText(lowShootSpeedTextView.getText() + cursor.getString(cursor.getColumnIndex("lowShootSpeed")));
-        lowShotsMissedTextView.setText(lowShotsMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("lowShotsMissed")));
-        hopperIntakeTextView.setText(hopperIntakeTextView.getText() + cursor.getString(cursor.getColumnIndex("hopperIntake")));
         climbTimeTextView.setText(climbTimeTextView.getText() + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         rankTextView.setText(rankTextView.getText() + cursor.getString(cursor.getColumnIndex("rank")));
@@ -88,11 +78,6 @@ public class dataListAdapter extends CursorAdapter{
         gearsPickedUpTextView.setText("Gears Picked Up " + cursor.getString(cursor.getColumnIndex("gearsPickedUp")));
         gearsHungTextView.setText("Gears Hung " + cursor.getString(cursor.getColumnIndex("gearsHung")));
         gearsDroppedTextView.setText("Gears Dropped " + cursor.getString(cursor.getColumnIndex("gearsDropped")));
-        highShootSpeedTextView.setText("High Shoot Speed " + cursor.getString(cursor.getColumnIndex("highShootSpeed")));
-        highShotsMissedTextView.setText("High Shots Missed " + cursor.getString(cursor.getColumnIndex("highShotsMissed")));
-        lowShootSpeedTextView.setText("Low Shoot Speed " + cursor.getString(cursor.getColumnIndex("lowShootSpeed")));
-        lowShotsMissedTextView.setText("Low Shots Missed " + cursor.getString(cursor.getColumnIndex("lowShotsMissed")));
-        hopperIntakeTextView.setText("Hopper Intake " + cursor.getString(cursor.getColumnIndex("hopperIntake")));
         climbTimeTextView.setText("Climb Time " + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText("Climb Success " + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         rankTextView.setText("Rank " + cursor.getString(cursor.getColumnIndex("rank")));
