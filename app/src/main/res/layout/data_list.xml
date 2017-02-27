@@ -111,10 +111,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Rank "
-        android:id="@+id/rankTextView"
+        android:text="Climb Time "
+        android:id="@+id/climbTimeTextView"
         android:layout_toRightOf="@+id/climbSuccessTextView"
         android:layout_below="@+id/gearsHungTextView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rank "
+        android:id="@+id/rankTextView"
+        android:layout_toRightOf="@+id/climbTimeTextView"
+        android:layout_below="@+id/gearsDroppedTextView"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
