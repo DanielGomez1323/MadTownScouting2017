@@ -158,37 +158,49 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp" />
 
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:id="@+id/climbChronometer"
-            android:text="00"
-            android:textSize="30sp"
-            android:layout_alignTop="@+id/startclimbButton"
-            android:layout_alignLeft="@+id/decreaseGearsPlacedButton"
-            android:layout_alignStart="@+id/decreaseGearsPlacedButton" />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="160dp"
-            android:layout_height="40dp"
-            android:text="Start/Stop"
-            android:id="@+id/startclimbButton"
-            android:textSize="18sp"
+        <SeekBar
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/climbTimeSeekBar"
+            android:layout_marginTop="5dp"
+            android:max="20"
+            android:progress="0"
+            android:indeterminate="false"
+            android:minWidth="250dp"
             android:layout_below="@+id/successfulclimbcheckBox"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"/>
+            android:layout_centerHorizontal="true" />
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="90dp"
-            android:layout_height="40dp"
-            android:textSize="18sp"
-            android:text="Reset"
-            android:id="@+id/resetclimbButton"
-            android:layout_alignTop="@+id/startclimbButton"
-            android:layout_alignRight="@+id/increaseGearsPickedUpButton"
-            android:layout_alignEnd="@+id/increaseGearsPlacedButton" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/zeroTimeTextView"
+            android:textSize="25dp"
+            android:layout_below="@+id/climbTimeSeekBar"
+            android:layout_alignLeft="@+id/climbTimeSeekBar"
+            android:layout_alignStart="@+id/climbTimeSeekBar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="ClimbTime: 0"
+            android:id="@+id/climbCountTextView"
+            android:textSize="25dp"
+            android:layout_below="@+id/climbTimeSeekBar"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="20"
+            android:id="@+id/twentyTimeTextView"
+            android:textSize="25dp"
+            android:layout_below="@+id/climbTimeSeekBar"
+            android:layout_alignRight="@+id/climbTimeSeekBar"
+            android:layout_alignEnd="@+id/climbTimeSeekBar"/>
 
     </RelativeLayout>
 </ScrollView>

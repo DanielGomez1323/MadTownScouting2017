@@ -2,17 +2,18 @@ package com.example.pollo.madtownscouting2017;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.Chronometer;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.security.SecureRandom;
 
 /**
  * Created by 19IsaacD740 on 1/13/2017.
@@ -31,14 +32,18 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     int pickUps = 0;
     int drops = 0;
     int placed = 0;
-    Button startClimb;
-    TextView climbChronometer;
-    long startTime;
-    long climbTime;
+    //Button startClimb;
+    //Button stopClimb;
+    //private Chronometer climbChronometer;
+    //TextView climbChronometer;
+    //long startTime;
     CheckBox successfulClimbCHeckBox;
-    int climbSuccess = 0;
+    SeekBar climbTimeSeekBar;
+    TextView climbCountTextView;
+    int climbTime = 0;
+    //int climbSuccess = 0;
 
-    Handler timerHandler = new Handler();
+    /*Handler timerHandler = new Handler();
     Runnable timerRunnable = new Runnable() {
         @Override
         public void run() {
@@ -49,7 +54,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
             seconds = seconds % 60;
             climbChronometer.setText(String.valueOf(seconds));
         }
-    };
+    };*/
 
     public static TeleopFragment newInstance() {
         TeleopFragment fragment = new TeleopFragment();
@@ -70,24 +75,14 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         pickUpText = (TextView) rootView.findViewById(R.id.amountGearsPickedUpTextView);
         dropText = (TextView) rootView.findViewById(R.id.amountGearsDroppedTextView);
         placedText = (TextView) rootView.findViewById(R.id.amountGearsPlacedTextView);
-        startClimb = (Button) rootView.findViewById(R.id.startclimbButton);
-        climbChronometer = (TextView) rootView.findViewById(R.id.climbChronometer);
+        //startClimb = (Button) rootView.findViewById(R.id.startclimbButton);
+        //stopClimb = (Button) rootView.findViewById(R.id.stopclimbButton);
+        /*climbChronometer = (Chronometer) rootView.findViewById(R.id.climbChronometer);
+        climbChronometer = (Chronometer) rootView.findViewById(R.id.start).setOnClickListener(this);
+        climbChronometer = (Chronometer) rootView.findViewById(R.id.stop).setOnClickListener(this);*/
         successfulClimbCHeckBox = (CheckBox) rootView.findViewById(R.id.successfulclimbcheckBox);
-        startClimb.setText("Start");
-        startClimb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Button b = (Button) v;
-                if (b.getText().equals("stop")) {
-                    timerHandler.removeCallbacks(timerRunnable);
-                    b.setText("Start");
-                } else {
-                    startTime = System.currentTimeMillis();
-                    timerHandler.postDelayed(timerRunnable, 0);
-                    b.setText("Stop");
-                }
-            }
-        });
+        climbTimeSeekBar = (SeekBar) rootView.findViewById(R.id.climbTimeSeekBar);
+        climbCountTextView = (TextView) rootView.findViewById(R.id.climbCountTextView);
         decreasePickUpsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,14 +125,35 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
                 placedText.setText(String.valueOf(placed));
             }
         });
+        climbTimeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                climbCountTextView.setText("ClimbTime: " + progress);
+                climbTime = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
         return rootView;
     }
-    @Override
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.test, menu);
+        return true;
+    }
     public void onPause() {
         super.onPause();
         timerHandler.removeCallbacks(timerRunnable);
         startClimb.setText("Start");
-    }
+    }*/
     public Bundle getData(){
         Bundle b = new Bundle();
         b.putString("gearsPickedUp", String.valueOf(pickUps));
@@ -152,4 +168,24 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
 
         return b;
     }
+    /*@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.start:
+                climbChronometer.setBase(SystemClock.elapsedRealtime());
+                climbChronometer.start();
+                break;
+            case R.id.stop:
+                climbChronometer.stop();
+                break;
+        }
+    }*/
 }
