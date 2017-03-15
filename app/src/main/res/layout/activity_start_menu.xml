@@ -75,5 +75,13 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/addPhoto" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Event"
+        android:id="@+id/chooseEventButtons"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/viewPhoto"/>
+
 </RelativeLayout>
 </ScrollView>
