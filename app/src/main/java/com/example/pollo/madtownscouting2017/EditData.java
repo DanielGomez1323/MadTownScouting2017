@@ -28,6 +28,7 @@ public class EditData extends AppCompatActivity {
     EditText gearsPickedUpEnterText;
     EditText gearsHungEnterText;
     EditText gearsDroppedEnterText;
+    EditText gearsDroppedHumanEnterText;
     EditText climbTimeEnterText;
     EditText climbSuccessEnterText;
     EditText tbhEnterText;
@@ -59,6 +60,7 @@ public class EditData extends AppCompatActivity {
         gearsPickedUpEnterText = (EditText)findViewById(R.id.gearsPickedUpEnterText);
         gearsHungEnterText = (EditText)findViewById(R.id.gearsHungEnterText);
         gearsDroppedEnterText = (EditText)findViewById(R.id.gearsDroppedEnterText);
+        gearsDroppedHumanEnterText = (EditText)findViewById(R.id.gearsDroppedHumanEnterText);
         climbTimeEnterText = (EditText) findViewById(R.id.climbTimeEnterText);
         climbSuccessEnterText = (EditText)findViewById(R.id.climbSuccessEnterText);
         tbhEnterText = (EditText)findViewById(R.id.tbhEnterText);
@@ -84,6 +86,7 @@ public class EditData extends AppCompatActivity {
             gearsPickedUpEnterText.setText(c.getString(c.getColumnIndex("gearsPickedUp")), TextView.BufferType.EDITABLE);
             gearsHungEnterText.setText(c.getString(c.getColumnIndex("gearsHung")), TextView.BufferType.EDITABLE);
             gearsDroppedEnterText.setText(c.getString(c.getColumnIndex("gearsDropped")), TextView.BufferType.EDITABLE);
+            gearsDroppedHumanEnterText.setText(c.getString(c.getColumnIndex("gearsDroppedHuman")), TextView.BufferType.EDITABLE);
             climbTimeEnterText.setText(c.getString(c.getColumnIndex("climbTime")), TextView.BufferType.EDITABLE);
             climbSuccessEnterText.setText(c.getString(c.getColumnIndex("climbSuccess")), TextView.BufferType.EDITABLE);
             tbhEnterText.setText(c.getString(c.getColumnIndex("tbh")), TextView.BufferType.EDITABLE);
@@ -110,7 +113,7 @@ public class EditData extends AppCompatActivity {
             ", autoHighMissed = " + autoHighMissedEnterText.getText().toString() + ", autoLowScored = " +
             autoLowScoredEnterText.getText().toString() + ", autoLowMissed = " + autoLowMissedEnterText.getText().toString() +
             ", gearsPickedUp = " + gearsPickedUpEnterText.getText().toString() + ", gearsHung = " +
-            gearsHungEnterText.getText().toString() + ", gearsDropped = " + gearsDroppedEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
+            gearsHungEnterText.getText().toString() + ", gearsDropped = " + gearsDroppedEnterText.getText().toString() + ", gearsDroppedHuman = " + gearsDroppedHumanEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
             ", climbSuccess = " + climbSuccessEnterText.getText().toString() + ", tbh = '" + tbh + "' WHERE _id = " + id);
         }catch (SQLException e){
             System.out.print(e);

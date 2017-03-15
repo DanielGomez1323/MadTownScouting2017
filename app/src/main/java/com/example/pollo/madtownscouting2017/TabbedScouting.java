@@ -89,6 +89,7 @@ public class TabbedScouting extends AppCompatActivity {
                 Bundle tb = teleopFragment.getData();
                 String gearsPickedUp = tb.getString("gearsPickedUp");
                 String gearsDropped = tb.getString("gearsDropped");
+                String gearsDroppedHuman = tb.getString("gearsDroppedHuman");
                 String gearsHung = tb.getString("gearsHung");
                 String climbTime = tb.getString("climbTime");
                 String climbSuccess = tb.getString("climbSuccess");
@@ -111,6 +112,7 @@ public class TabbedScouting extends AppCompatActivity {
 
                 c.put("gearsPickedUp", gearsPickedUp);
                 c.put("gearsDropped", gearsDropped);
+                c.put("gearsDroppedHuman", gearsDroppedHuman);
                 c.put("gearsHung", gearsHung);
                 c.put("climbTime", climbTime);
                 c.put("climbSuccess", climbSuccess);

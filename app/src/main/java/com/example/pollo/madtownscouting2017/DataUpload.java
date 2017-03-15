@@ -42,7 +42,7 @@ public class DataUpload extends AppCompatActivity {
     Button scrollUpButton;
     Match match;
     String query;
-    String address = "http://www.gorohi.com/1323/2017/data.php";
+    String address = "http://www.gorohi.com/1323/2017/cvr/data.php";
     String _id;
     dataListAdapter listAdapter;
 
@@ -63,6 +63,7 @@ public class DataUpload extends AppCompatActivity {
         String climbTime;
         String climbSuccess;
         String gearsDropped;
+        String gearsDroppedHuman;
         String tbh;
         String rank;
 
@@ -86,6 +87,7 @@ public class DataUpload extends AppCompatActivity {
                 climbTime = c.getString(c.getColumnIndex("climbTime"));
                 climbSuccess = c.getString(c.getColumnIndex("climbSuccess"));
                 gearsDropped = c.getString(c.getColumnIndex("gearsDropped"));
+                gearsDroppedHuman = c.getString(c.getColumnIndex("gearsDroppedHuman"));
                 tbh = c.getString(c.getColumnIndex("tbh"));
                 rank = c.getString(c.getColumnIndex("rank"));
                 Toast.makeText(getApplicationContext(), "Team " + teamNumber + ", Match " + matchNumber + " selected", Toast.LENGTH_SHORT).show();
@@ -119,6 +121,7 @@ public class DataUpload extends AppCompatActivity {
             object.put("gearsPickedUp", data.gearsPickedUp);
             object.put("gearsHung", data.gearsHung);
             object.put("gearsDropped", data.gearsDropped);
+            object.put("gearsDroppedHuman", data.gearsDroppedHuman);
             object.put("climbTime", data.climbTime);
             object.put("climbSuccess", data.climbSuccess);
             object.put("rank", data.rank);

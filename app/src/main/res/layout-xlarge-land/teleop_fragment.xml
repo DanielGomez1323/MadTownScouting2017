@@ -80,7 +80,7 @@
             android:layout_height="50dp"
             android:text="-"
             android:id="@+id/decreaseGearsDroppedButton"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_below="@+id/gearsDroppedTextView"
             android:layout_alignLeft="@+id/decreaseGearsPickedUpButton"
             android:paddingTop="5dp"/>
@@ -90,7 +90,7 @@
             android:layout_height="50dp"
             android:text="+"
             android:id="@+id/increaseGearsDroppedButton"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_below="@+id/gearsDroppedTextView"
             android:layout_alignLeft="@+id/increaseGearsPickedUpButton"
             android:paddingTop="5dp"/>
@@ -108,10 +108,53 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="Gears Dropped(Human):"
+            android:id="@+id/gearsDroppedHumanTextView"
+            android:layout_below="@+id/amountGearsDroppedTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textSize="40sp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="-"
+            android:id="@+id/decreaseGearsDroppedHumanButton"
+            android:layout_below="@+id/gearsDroppedHumanTextView"
+            android:layout_alignRight="@+id/decreaseGearsDroppedButton"
+            android:layout_alignEnd="@+id/decreaseGearsDroppedButton"
+            android:layout_marginTop="15dp"
+            android:paddingTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/amountGearsDroppedHumanTextView"
+            android:layout_alignBottom="@+id/decreaseGearsDroppedHumanButton"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:id="@+id/increaseGearsDroppedHumanButton"
+            android:layout_below="@+id/gearsDroppedHumanTextView"
+            android:layout_alignLeft="@+id/increaseGearsDroppedButton"
+            android:layout_alignStart="@+id/increaseGearsDroppedButton"
+            android:layout_marginTop="15dp"
+            android:paddingTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Gears Placed:"
             android:id="@+id/gearsPlacedTextView"
-            android:layout_below="@+id/decreaseGearsDroppedButton"
+            android:layout_below="@+id/decreaseGearsDroppedHumanButton"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:textSize="40sp"/>
@@ -121,7 +164,7 @@
             android:layout_height="50dp"
             android:text="-"
             android:id="@+id/decreaseGearsPlacedButton"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_below="@+id/gearsPlacedTextView"
             android:layout_alignRight="@+id/decreaseGearsDroppedButton"
             android:paddingTop="5dp"/>
@@ -131,7 +174,7 @@
             android:layout_height="50dp"
             android:text="+"
             android:id="@+id/increaseGearsPlacedButton"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_below="@+id/gearsPlacedTextView"
             android:layout_alignLeft="@+id/increaseGearsDroppedButton"
             android:paddingTop="5dp"/>

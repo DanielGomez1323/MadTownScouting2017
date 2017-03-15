@@ -103,18 +103,25 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Gears Dropped(Human) "
+        android:id="@+id/gearsDroppedHumanTextView"
+        android:layout_below="@+id/gearsPickedUpTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Climb Success "
         android:id="@+id/climbSuccessTextView"
-        android:layout_below="@+id/gearsPickedUpTextView"/>
+        android:layout_toRightOf="@+id/gearsDroppedHumanTextView"
+        android:layout_below="@+id/gearsHungTextView"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Climb Time "
         android:id="@+id/climbTimeTextView"
-        android:layout_toRightOf="@+id/climbSuccessTextView"
-        android:layout_below="@+id/gearsHungTextView"/>
+        android:layout_below="@+id/gearsDroppedHumanTextView"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -123,13 +130,14 @@
         android:text="Rank "
         android:id="@+id/rankTextView"
         android:layout_toRightOf="@+id/climbTimeTextView"
-        android:layout_below="@+id/gearsDroppedTextView"/>
+        android:layout_below="@+id/gearsDroppedHumanTextView"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="TBH "
         android:id="@+id/tBHTextView"
-        android:layout_below="@+id/rankTextView"/>
+        android:layout_toRightOf="@+id/rankTextView"
+        android:layout_below="@id/gearsDroppedHumanTextView"/>
 
 </RelativeLayout>
