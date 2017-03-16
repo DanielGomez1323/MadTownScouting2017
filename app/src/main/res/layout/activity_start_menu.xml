@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Search"
         android:id="@+id/searchButton"
+        android:drawableStart="@android:drawable/ic_menu_search"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -38,40 +39,57 @@
         android:layout_height="wrap_content"
         android:text="Scout"
         android:id="@+id/scoutButton"
+        android:drawableStart="@android:drawable/ic_menu_agenda"
         android:layout_below="@+id/searchButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/uploadData"
+        android:layout_alignEnd="@+id/uploadData" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload"
         android:id="@+id/uploadData"
+        android:drawableStart="@android:drawable/ic_menu_upload"
         android:layout_below="@+id/scoutButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/teamsView"
+        android:layout_alignEnd="@+id/teamsView" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Teams"
         android:id="@+id/teamsView"
+        android:drawableStart="@drawable/ic_action_ppl"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/uploadData"/>
+        android:layout_below="@+id/uploadData"
+        android:layout_alignRight="@+id/addPhoto"
+        android:layout_alignEnd="@+id/addPhoto" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Photo"
         android:id="@+id/addPhoto"
-        android:layout_alignRight="@+id/teamsView"
-        android:layout_below="@+id/teamsView" />
+        android:drawableStart="@android:drawable/ic_menu_camera"
+        android:layout_below="@+id/teamsView"
+        android:layout_alignRight="@+id/viewPhoto"
+        android:layout_alignEnd="@+id/viewPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="View Photos"
         android:id="@+id/viewPhoto"
+        android:drawableStart="@android:drawable/ic_menu_gallery"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/addPhoto" />
 
@@ -80,8 +98,11 @@
         android:layout_height="wrap_content"
         android:text="Choose Event"
         android:id="@+id/chooseEventButtons"
+        android:drawableStart="@drawable/ic_action_cal"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/viewPhoto"/>
+        android:layout_below="@+id/viewPhoto"
+        android:layout_alignRight="@+id/viewPhoto"
+        android:layout_alignEnd="@+id/viewPhoto" />
 
 </RelativeLayout>
 </ScrollView>
