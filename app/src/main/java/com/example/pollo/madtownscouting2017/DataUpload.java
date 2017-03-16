@@ -159,7 +159,27 @@ public class DataUpload extends AppCompatActivity {
             }
         }
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+
+        Cursor cursor = myDB.rawQuery("SELECT * FROM Events WHERE _id = 1", null);
+        cursor.moveToFirst();
+        switch(cursor.getString(cursor.getColumnIndex("event"))){
+            case "CVR":
+                address = "http://www.gorohi.com/1323/2017/cvr/data.php";
+                break;
+            case "Davis":
+                address = "http://www.gorohi.com/1323/2017/davis/data.php";
+                break;
+            case "Houston":
+                address = "http://www.gorohi.com/1323/2017/houston/data.php";
+                break;
+            default:
+                address = "http://www.gorohi.com/1323/2017/davis/data.php";
+                break;
+        }
+        cursor.close();
+
         c = myDB.rawQuery(query, null);
+        c.moveToFirst();
         if (c.getCount() > 0) {
             try {
                 listAdapter = new dataListAdapter(DataUpload.this, c, 0);

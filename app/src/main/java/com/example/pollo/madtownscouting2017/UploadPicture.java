@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -99,7 +100,7 @@ public class UploadPicture extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //on upload button Click
-                if(selectedFilePath != null){
+                if (selectedFilePath != null) {
                     dialog = ProgressDialog.show(UploadPicture.this, "", "Uploading File...", true);
 
                     new Thread(new Runnable() {
@@ -109,11 +110,27 @@ public class UploadPicture extends AppCompatActivity {
                             uploadFile(selectedFilePath);
                         }
                     }).start();
-                }else{
-                    Toast.makeText(UploadPicture.this,"Please choose a File First", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(UploadPicture.this, "Please choose a File First", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+        Cursor cursor = myDB.rawQuery("SELECT * FROM Events WHERE _id = 1", null);
+        cursor.moveToFirst();
+        switch(cursor.getString(cursor.getColumnIndex("event"))){
+            case "CVR":
+                SERVER_URL = "http://www.gorohi.com/1323/2017/cvr/picupload.php";
+                break;
+            case "Davis":
+                SERVER_URL = "http://www.gorohi.com/1323/2017/davis/picupload.php";
+                break;
+            case "Houston":
+                SERVER_URL = "http://www.gorohi.com/1323/2017/houston/picupload.php";
+                break;
+            default:
+                SERVER_URL = "http://www.gorohi.com/1323/2017/davis/picupload.php";
+                break;
+        }
     }
 
     public static Bitmap rotateImage(Bitmap source, float angle) {

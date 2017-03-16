@@ -49,8 +49,9 @@
         <activity android:name=".PictureList" />
         <activity android:name=".UploadPicture" />
         <activity android:name=".TeamPictureSelection" />
-        <activity android:name=".TeamRoster"/>
-        <activity android:name=".EditData"/>
+        <activity android:name=".TeamRoster" />
+        <activity android:name=".EditData" />
+        <activity android:name=".Events"></activity>
     </application>
 
 </manifest>
