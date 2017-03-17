@@ -16,7 +16,7 @@
         android:id="@+id/autoTextView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="40sp"/>
+        android:textSize="50sp"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_below="@+id/autoTextView"
         android:layout_centerHorizontal="true"
         android:checked="false"
-        android:textSize="30sp"/>
+        android:textSize="40sp"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -36,10 +36,9 @@
         android:id="@+id/gearAttemptCheckBox"
         android:layout_marginTop="50dp"
         android:checked="false"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:layout_below="@+id/baselineCheckBox"
-        android:layout_toRightOf="@+id/zeroTextView"
-        android:layout_toEndOf="@+id/zeroTextView" />
+        android:layout_centerHorizontal="true"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -50,7 +49,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:checked="false"
-        android:textSize="30sp"/>
+        android:textSize="40sp"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -59,10 +58,8 @@
         android:id="@+id/highCheckBox"
         android:layout_marginTop="50dp"
         android:checked="false"
-        android:textSize="30sp"
-        android:layout_below="@+id/gearSuccessCheckBox"
-        android:layout_toLeftOf="@+id/baselineCheckBox"
-        android:layout_toStartOf="@+id/baselineCheckBox" />
+        android:textSize="40sp"
+        android:layout_below="@+id/gearSuccessCheckBox" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -70,13 +67,13 @@
         android:text="Low goal?"
         android:id="@+id/lowCheckBox"
         android:checked="false"
-        android:textSize="30sp"
-        android:layout_alignTop="@+id/highCheckBox"
-        android:layout_toRightOf="@+id/baselineCheckBox"
-        android:layout_toEndOf="@+id/baselineCheckBox" />
+        android:textSize="40sp"
+        android:layout_below="@+id/gearSuccessCheckBox"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/highCheckBox" />
 
     <SeekBar
-        android:layout_width="400dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/autoBallsSeekBar"
         android:layout_below="@+id/lowCheckBox"
@@ -85,7 +82,7 @@
         android:max="10"
         android:progress="0"
         android:indeterminate="false"
-        android:minWidth="250dp" />
+        android:minWidth="500dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -96,7 +93,7 @@
         android:layout_below="@+id/autoBallsSeekBar"
         android:layout_alignLeft="@+id/autoBallsSeekBar"
         android:layout_alignStart="@+id/autoBallsSeekBar"
-        android:textSize="30sp"/>
+        android:textSize="35sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -104,7 +101,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="10"
         android:id="@+id/tenTextView"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:layout_below="@+id/autoBallsSeekBar"
         android:layout_toRightOf="@+id/autoBallsSeekBar"
         android:layout_toEndOf="@+id/autoBallsSeekBar" />
@@ -116,6 +113,6 @@
         android:id="@+id/ballCountTextView"
         android:layout_below="@+id/autoBallsSeekBar"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp"/>
+        android:textSize="35sp"/>
 
 </RelativeLayout>
