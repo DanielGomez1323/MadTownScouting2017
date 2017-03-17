@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.pollo.madtownscouting2017.TeleopPeriod">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Gears Picked Up:"
+            android:id="@+id/gearsPickedUpTextView"
+            android:textSize="20sp"
+            android:layout_below="@+id/teleopPeriodTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Teleoperated Period"
+            android:id="@+id/teleopPeriodTextView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="40sp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="-"
+            android:id="@+id/decreaseGearsPickedUpButton"
+            android:paddingTop="5dp"
+            android:layout_below="@+id/gearsPickedUpTextView"
+            android:layout_toLeftOf="@+id/successfulclimbcheckBox"
+            android:layout_toStartOf="@+id/successfulclimbcheckBox" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="+"
+            android:id="@+id/increaseGearsPickedUpButton"
+            android:paddingTop="5dp"
+            android:layout_below="@+id/gearsPickedUpTextView"
+            android:layout_toRightOf="@+id/successfulclimbcheckBox"
+            android:layout_toEndOf="@+id/successfulclimbcheckBox" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/amountGearsPickedUpTextView"
+            android:textSize="15sp"
+            android:layout_alignBottom="@+id/increaseGearsPickedUpButton"
+            android:layout_alignLeft="@+id/amountGearsDroppedTextView"
+            android:layout_alignStart="@+id/amountGearsDroppedTextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Gears Dropped:"
+            android:id="@+id/gearsDroppedTextView"
+            android:layout_below="@+id/amountGearsPickedUpTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="-"
+            android:id="@+id/decreaseGearsDroppedButton"
+            android:layout_below="@+id/gearsDroppedTextView"
+            android:layout_alignRight="@+id/decreaseGearsPickedUpButton"
+            android:layout_alignEnd="@+id/decreaseGearsPickedUpButton"
+            android:paddingTop="10dp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="+"
+            android:id="@+id/increaseGearsDroppedButton"
+            android:layout_below="@+id/gearsDroppedTextView"
+            android:layout_alignLeft="@+id/increaseGearsPickedUpButton"
+            android:layout_alignStart="@+id/increaseGearsPickedUpButton"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/amountGearsDroppedTextView"
+            android:layout_alignBottom="@+id/increaseGearsDroppedButton"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="Gears Dropped(Human):"
+            android:id="@+id/gearsDroppedHumanTextView"
+            android:layout_below="@+id/amountGearsDroppedTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="-"
+            android:id="@+id/decreaseGearsDroppedHumanButton"
+            android:layout_below="@+id/gearsDroppedHumanTextView"
+            android:layout_alignRight="@+id/decreaseGearsDroppedButton"
+            android:layout_alignEnd="@+id/decreaseGearsDroppedButton"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/amountGearsDroppedHumanTextView"
+            android:layout_alignBottom="@+id/decreaseGearsDroppedHumanButton"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="+"
+            android:id="@+id/increaseGearsDroppedHumanButton"
+            android:layout_below="@+id/gearsDroppedHumanTextView"
+            android:layout_alignLeft="@+id/increaseGearsDroppedButton"
+            android:layout_alignStart="@+id/increaseGearsDroppedButton"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Gears Placed:"
+            android:id="@+id/gearsPlacedTextView"
+            android:layout_below="@+id/amountGearsDroppedHumanTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="-"
+            android:id="@+id/decreaseGearsPlacedButton"
+            android:layout_below="@+id/gearsPlacedTextView"
+            android:layout_alignRight="@+id/decreaseGearsDroppedHumanButton"
+            android:layout_alignEnd="@+id/decreaseGearsDroppedHumanButton"
+            android:paddingTop="10dp"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:text="+"
+            android:id="@+id/increaseGearsPlacedButton"
+            android:layout_below="@+id/gearsPlacedTextView"
+            android:layout_alignLeft="@+id/increaseGearsDroppedHumanButton"
+            android:layout_alignStart="@+id/increaseGearsDroppedHumanButton"
+            android:paddingTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="0"
+            android:id="@+id/amountGearsPlacedTextView"
+            android:layout_alignBottom="@+id/increaseGearsPlacedButton"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Successful Climb?"
+            android:id="@+id/successfulclimbcheckBox"
+            android:textSize="20sp"
+            android:layout_below="@+id/amountGearsPlacedTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp" />
+
+        <SeekBar
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/climbTimeSeekBar"
+            android:layout_marginTop="25dp"
+            android:max="20"
+            android:progress="0"
+            android:indeterminate="false"
+            android:minWidth="250dp"
+            android:layout_below="@+id/successfulclimbcheckBox"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="0"
+            android:id="@+id/zeroTimeTextView"
+            android:layout_below="@+id/climbTimeSeekBar"
+            android:layout_alignLeft="@+id/climbTimeSeekBar"
+            android:layout_alignStart="@+id/climbTimeSeekBar"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="ClimbTime: 0"
+            android:id="@+id/climbCountTextView"
+            android:layout_below="@+id/climbTimeSeekBar"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:text="20"
+            android:id="@+id/twentyTimeTextView"
+            android:layout_below="@+id/climbTimeSeekBar"
+            android:layout_alignRight="@+id/climbTimeSeekBar"
+            android:layout_alignEnd="@+id/climbTimeSeekBar"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+</ScrollView>
