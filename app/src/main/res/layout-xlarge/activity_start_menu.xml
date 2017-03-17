@@ -30,6 +30,7 @@
         android:layout_height="70dp"
         android:text="Search"
         android:id="@+id/searchButton"
+        android:drawableStart="@android:drawable/ic_menu_search"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -41,6 +42,7 @@
         android:text="Scout"
         android:id="@+id/scoutButton"
         android:layout_below="@+id/searchButton"
+        android:drawableStart="@android:drawable/ic_menu_agenda"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp"
@@ -52,6 +54,7 @@
         android:text="Upload"
         android:id="@+id/uploadData"
         android:layout_below="@+id/scoutButton"
+        android:drawableStart="@android:drawable/ic_menu_upload"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp"
@@ -64,6 +67,7 @@
         android:id="@+id/teamsView"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/uploadData"
+        android:drawableStart="@drawable/ic_action_ppl"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"/>
 
@@ -73,6 +77,7 @@
         android:text="Add Photo"
         android:id="@+id/addPhoto"
         android:layout_alignRight="@+id/teamsView"
+        android:drawableStart="@android:drawable/ic_menu_camera"
         android:layout_below="@+id/teamsView"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"/>
@@ -84,6 +89,7 @@
         android:id="@+id/viewPhoto"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/addPhoto"
+        android:drawableStart="@android:drawable/ic_menu_gallery"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"/>
 
@@ -93,6 +99,7 @@
         android:text="Choose Event"
         android:id="@+id/chooseEventButtons"
         android:layout_below="@+id/viewPhoto"
+        android:drawableStart="@drawable/ic_action_cal"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"/>
 
