@@ -65,7 +65,6 @@ public class DataUpload extends AppCompatActivity {
         String gearsDropped;
         String gearsDroppedHuman;
         String tbh;
-        String rank;
 
         public void loadDatabase(int id) {
             myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
@@ -89,7 +88,6 @@ public class DataUpload extends AppCompatActivity {
                 gearsDropped = c.getString(c.getColumnIndex("gearsDropped"));
                 gearsDroppedHuman = c.getString(c.getColumnIndex("gearsDroppedHuman"));
                 tbh = c.getString(c.getColumnIndex("tbh"));
-                rank = c.getString(c.getColumnIndex("rank"));
                 Toast.makeText(getApplicationContext(), "Team " + teamNumber + ", Match " + matchNumber + " selected", Toast.LENGTH_SHORT).show();
             }
         }
@@ -124,7 +122,6 @@ public class DataUpload extends AppCompatActivity {
             object.put("gearsDroppedHuman", data.gearsDroppedHuman);
             object.put("climbTime", data.climbTime);
             object.put("climbSuccess", data.climbSuccess);
-            object.put("rank", data.rank);
             object.put("tbh", data.tbh);
             return object.toString();
         } catch (Exception e) {

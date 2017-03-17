@@ -97,7 +97,6 @@ public class TabbedScouting extends AppCompatActivity {
                 NotesFragment notesFragment = (NotesFragment) getSupportFragmentManager().findFragmentByTag(f.get(2).getTag());
                 Bundle nb = notesFragment.getData();
                 String tbh = nb.getString("tbh");
-                String rank = nb.getString("rank");
 
                 c.put("teamNumber", teamNumber);
                 c.put("teamColor", teamColor);
@@ -118,10 +117,9 @@ public class TabbedScouting extends AppCompatActivity {
                 c.put("climbSuccess", climbSuccess);
 
                 c.put("tbh", tbh);
-                c.put("rank", rank);
 
-                if (rank != "error") {
-                    myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+
+                myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
                     try {
                         myDB.insertOrThrow("SteamWorks", null, c);
                     }catch (SQLException s){
@@ -132,9 +130,6 @@ public class TabbedScouting extends AppCompatActivity {
                     }
                     Intent list = new Intent(getApplicationContext(), DataUpload.class);
                     startActivity(list);
-                }else{
-                    Toast.makeText(getApplicationContext(), "Select a valid rank", Toast.LENGTH_SHORT).show();
-                }
             }
         });
 

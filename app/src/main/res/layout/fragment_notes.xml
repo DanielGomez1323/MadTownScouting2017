@@ -24,33 +24,4 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2nd Pick"
-        android:id="@+id/secondPickCheckBox"
-        android:layout_below="@+id/tbhEditText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:checked="false" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1st Pick"
-        android:id="@+id/firstPickCheckBox"
-        android:layout_alignBottom="@+id/secondPickCheckBox"
-        android:layout_toLeftOf="@+id/secondPickCheckBox"
-        android:layout_toStartOf="@+id/secondPickCheckBox"
-        android:checked="false" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do Not Pick"
-        android:id="@+id/dnpCheckBox"
-        android:layout_alignBottom="@+id/secondPickCheckBox"
-        android:layout_toRightOf="@+id/secondPickCheckBox"
-        android:layout_toEndOf="@+id/secondPickCheckBox"
-        android:checked="false" />
 </RelativeLayout>

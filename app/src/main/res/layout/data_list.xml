@@ -122,22 +122,13 @@
         android:text="Climb Time "
         android:id="@+id/climbTimeTextView"
         android:layout_below="@+id/gearsDroppedHumanTextView"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Rank "
-        android:id="@+id/rankTextView"
-        android:layout_toRightOf="@+id/climbTimeTextView"
-        android:layout_below="@+id/gearsDroppedHumanTextView"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="TBH "
         android:id="@+id/tBHTextView"
-        android:layout_toRightOf="@+id/rankTextView"
-        android:layout_below="@id/gearsDroppedHumanTextView"/>
+        android:layout_below="@+id/gearsDroppedHumanTextView"
+        android:layout_toRightOf="@+id/climbTimeTextView" />
 
 </RelativeLayout>
