@@ -34,8 +34,8 @@
             android:textSize="40sp"/>
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="-"
             android:id="@+id/decreaseGearsPickedUpButton"
             android:paddingTop="5dp"
@@ -44,8 +44,8 @@
             android:layout_toStartOf="@+id/successfulclimbcheckBox" />
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="+"
             android:id="@+id/increaseGearsPickedUpButton"
             android:paddingTop="5dp"
@@ -76,8 +76,8 @@
             android:textSize="20sp"/>
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="-"
             android:id="@+id/decreaseGearsDroppedButton"
             android:layout_below="@+id/gearsDroppedTextView"
@@ -86,8 +86,8 @@
             android:paddingTop="10dp"/>
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="+"
             android:id="@+id/increaseGearsDroppedButton"
             android:layout_below="@+id/gearsDroppedTextView"
@@ -117,8 +117,8 @@
             android:textSize="20sp"/>
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="-"
             android:id="@+id/decreaseGearsDroppedHumanButton"
             android:layout_below="@+id/gearsDroppedHumanTextView"
@@ -137,8 +137,8 @@
             android:textSize="15sp"/>
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="+"
             android:id="@+id/increaseGearsDroppedHumanButton"
             android:layout_below="@+id/gearsDroppedHumanTextView"
@@ -158,8 +158,8 @@
             android:textSize="20sp"/>
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="-"
             android:id="@+id/decreaseGearsPlacedButton"
             android:layout_below="@+id/gearsPlacedTextView"
@@ -168,8 +168,8 @@
             android:paddingTop="10dp"/>
 
         <Button
-            android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_width="60dp"
+            android:layout_height="35dp"
             android:text="+"
             android:id="@+id/increaseGearsPlacedButton"
             android:layout_below="@+id/gearsPlacedTextView"
@@ -195,13 +195,13 @@
             android:textSize="20sp"
             android:layout_below="@+id/amountGearsPlacedTextView"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp" />
+            android:layout_marginTop="15dp" />
 
         <SeekBar
             android:layout_width="450dp"
             android:layout_height="wrap_content"
             android:id="@+id/climbTimeSeekBar"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:max="20"
             android:progress="0"
             android:indeterminate="false"
