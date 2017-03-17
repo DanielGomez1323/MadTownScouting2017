@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="10"
+        android:text="20"
         android:textSize="30sp"
         android:id="@+id/tenTextView"
         android:layout_alignBottom="@+id/zeroTextView"
