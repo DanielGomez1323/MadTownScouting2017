@@ -83,7 +83,7 @@
         android:layout_below="@+id/lowCheckBox"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="31dp"
-        android:max="10"
+        android:max="20"
         android:progress="0"
         android:indeterminate="false"
         android:minWidth="600dp"/>
