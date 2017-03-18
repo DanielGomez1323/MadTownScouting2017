@@ -319,9 +319,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
+        android:text="Alliance KPA"
+        android:id="@+id/allianceKPATV"
+        android:layout_below="@+id/climbSuccessEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/allianceKPAEditText"
+        android:hint="Alliance KPA"
+        android:layout_below="@+id/allianceKPATV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
         android:text="TBH"
         android:id="@+id/tbhTV"
-        android:layout_below="@+id/climbSuccessEnterText"
+        android:layout_below="@+id/allianceKPAEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
     <EditText

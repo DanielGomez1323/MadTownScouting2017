@@ -251,5 +251,26 @@
             android:layout_alignEnd="@+id/climbTimeSeekBar"
             android:layout_marginTop="5dp" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="Alliance KPA"
+            android:textSize="35dp"
+            android:id="@+id/allianceKPATextView"
+            android:layout_below="@id/climbCountTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/allianceKPAEnterText"
+            android:hint="10"
+            android:layout_below="@+id/allianceKPATextView"
+            android:layout_alignParentRight="true"/>
+
     </RelativeLayout>
 </ScrollView>

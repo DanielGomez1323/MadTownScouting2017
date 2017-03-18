@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Chronometer;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -45,6 +46,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     SeekBar climbTimeSeekBar;
     TextView climbCountTextView;
     int climbTime = 0;
+    EditText allianceKPAEnterText;
     //int climbSuccess = 0;
 
     /*Handler timerHandler = new Handler();
@@ -90,6 +92,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         successfulClimbCHeckBox = (CheckBox) rootView.findViewById(R.id.successfulclimbcheckBox);
         climbTimeSeekBar = (SeekBar) rootView.findViewById(R.id.climbTimeSeekBar);
         climbCountTextView = (TextView) rootView.findViewById(R.id.climbCountTextView);
+        allianceKPAEnterText = (EditText) rootView.findViewById(R.id.allianceKPAEnterText);
         decreasePickUpsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -142,7 +145,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         increasePlacedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                placed ++;
+                placed++;
                 placedText.setText(String.valueOf(placed));
             }
         });
@@ -182,6 +185,7 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         b.putString("gearsDroppedHuman", String.valueOf(humanDrops));
         b.putString("gearsHung", String.valueOf(placed));
         b.putString("climbTime", String.valueOf(climbTime));
+        b.putString("allianceKPA", allianceKPAEnterText.getText().toString());
         if (successfulClimbCHeckBox.isChecked()){
             b.putString("climbSuccess", "1");
         }else{

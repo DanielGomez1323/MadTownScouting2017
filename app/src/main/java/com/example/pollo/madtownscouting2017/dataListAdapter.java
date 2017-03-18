@@ -36,6 +36,7 @@ public class dataListAdapter extends CursorAdapter{
         TextView gearsDroppedHumanTextView = (TextView) view.findViewById(R.id.gearsDroppedHumanTextView);
         TextView climbTimeTextView = (TextView) view.findViewById(R.id.climbTimeTextView);
         TextView climbSuccessTextView = (TextView) view.findViewById(R.id.climbSuccessTextView);
+        TextView allianceKPATextView = (TextView) view.findViewById(R.id.allianceKPATextView);
         TextView tBHTextView = (TextView) view.findViewById(R.id.tBHTextView);
         teamNumberTextView.setText(teamNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText(matchNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("matchNumber")));
@@ -53,6 +54,7 @@ public class dataListAdapter extends CursorAdapter{
         gearsDroppedHumanTextView.setText(gearsDroppedHumanTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsDroppedHuman")));
         climbTimeTextView.setText(climbTimeTextView.getText() + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
+        allianceKPATextView.setText(allianceKPATextView.getText() + cursor.getString(cursor.getColumnIndex("allianceKPA")));
         tBHTextView.setText(tBHTextView.getText() + cursor.getString(cursor.getColumnIndex("tbh")));
         teamNumberTextView.setText("Team " + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText("Match " + cursor.getString(cursor.getColumnIndex("matchNumber")));
@@ -81,6 +83,7 @@ public class dataListAdapter extends CursorAdapter{
         gearsDroppedHumanTextView.setText("Gears Dropped(Human) " + cursor.getString(cursor.getColumnIndex("gearsDroppedHuman")));
         climbTimeTextView.setText("Climb Time " + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText("Climb Success " + cursor.getString(cursor.getColumnIndex("climbSuccess")));
+        allianceKPATextView.setText("Alliance KPA " + cursor.getString(cursor.getColumnIndex("allianceKPA")));
         tBHTextView.setText("TBH " + cursor.getString(cursor.getColumnIndex("tbh")));
     }
     public View newView(Context context, Cursor cursor, ViewGroup parent) {

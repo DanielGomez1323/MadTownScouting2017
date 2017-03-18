@@ -93,6 +93,7 @@ public class TabbedScouting extends AppCompatActivity {
                 String gearsHung = tb.getString("gearsHung");
                 String climbTime = tb.getString("climbTime");
                 String climbSuccess = tb.getString("climbSuccess");
+                String allianceKPA = tb.getString("allianceKPA");
 
                 NotesFragment notesFragment = (NotesFragment) getSupportFragmentManager().findFragmentByTag(f.get(2).getTag());
                 Bundle nb = notesFragment.getData();
@@ -115,6 +116,7 @@ public class TabbedScouting extends AppCompatActivity {
                 c.put("gearsHung", gearsHung);
                 c.put("climbTime", climbTime);
                 c.put("climbSuccess", climbSuccess);
+                c.put("allianceKPA", allianceKPA);
 
                 c.put("tbh", tbh);
 

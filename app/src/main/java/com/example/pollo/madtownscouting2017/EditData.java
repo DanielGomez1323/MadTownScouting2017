@@ -31,6 +31,7 @@ public class EditData extends AppCompatActivity {
     EditText gearsDroppedHumanEnterText;
     EditText climbTimeEnterText;
     EditText climbSuccessEnterText;
+    EditText allianceKPAEditText;
     EditText tbhEnterText;
 
     Button confirmEditsButton;
@@ -63,6 +64,7 @@ public class EditData extends AppCompatActivity {
         gearsDroppedHumanEnterText = (EditText)findViewById(R.id.gearsDroppedHumanEnterText);
         climbTimeEnterText = (EditText) findViewById(R.id.climbTimeEnterText);
         climbSuccessEnterText = (EditText)findViewById(R.id.climbSuccessEnterText);
+        allianceKPAEditText = (EditText)findViewById(R.id.allianceKPAEditText);
         tbhEnterText = (EditText)findViewById(R.id.tbhEnterText);
         confirmEditsButton = (Button)findViewById(R.id.confirmEditsButton);
 
@@ -89,6 +91,7 @@ public class EditData extends AppCompatActivity {
             gearsDroppedHumanEnterText.setText(c.getString(c.getColumnIndex("gearsDroppedHuman")), TextView.BufferType.EDITABLE);
             climbTimeEnterText.setText(c.getString(c.getColumnIndex("climbTime")), TextView.BufferType.EDITABLE);
             climbSuccessEnterText.setText(c.getString(c.getColumnIndex("climbSuccess")), TextView.BufferType.EDITABLE);
+            allianceKPAEditText.setText(c.getString(c.getColumnIndex("allianceKPA")), TextView.BufferType.EDITABLE);
             tbhEnterText.setText(c.getString(c.getColumnIndex("tbh")), TextView.BufferType.EDITABLE);
         }
         c.close();
@@ -114,7 +117,7 @@ public class EditData extends AppCompatActivity {
             autoLowScoredEnterText.getText().toString() + ", autoLowMissed = " + autoLowMissedEnterText.getText().toString() +
             ", gearsPickedUp = " + gearsPickedUpEnterText.getText().toString() + ", gearsHung = " +
             gearsHungEnterText.getText().toString() + ", gearsDropped = " + gearsDroppedEnterText.getText().toString() + ", gearsDroppedHuman = " + gearsDroppedHumanEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
-            ", climbSuccess = " + climbSuccessEnterText.getText().toString() + ", tbh = '" + tbh + "' WHERE _id = " + id);
+            ", climbSuccess = " + climbSuccessEnterText.getText().toString() + ", allianceKPA = " + allianceKPAEditText.getText().toString() + ", tbh = '" + tbh + "' WHERE _id = " + id);
         }catch (SQLException e){
             System.out.print(e);
         }

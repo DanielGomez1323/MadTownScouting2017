@@ -64,6 +64,7 @@ public class DataUpload extends AppCompatActivity {
         String climbSuccess;
         String gearsDropped;
         String gearsDroppedHuman;
+        String allianceKPA;
         String tbh;
 
         public void loadDatabase(int id) {
@@ -87,6 +88,7 @@ public class DataUpload extends AppCompatActivity {
                 climbSuccess = c.getString(c.getColumnIndex("climbSuccess"));
                 gearsDropped = c.getString(c.getColumnIndex("gearsDropped"));
                 gearsDroppedHuman = c.getString(c.getColumnIndex("gearsDroppedHuman"));
+                allianceKPA = c.getString(c.getColumnIndex("allianceKPA"));
                 tbh = c.getString(c.getColumnIndex("tbh"));
                 Toast.makeText(getApplicationContext(), "Team " + teamNumber + ", Match " + matchNumber + " selected", Toast.LENGTH_SHORT).show();
             }
@@ -122,6 +124,7 @@ public class DataUpload extends AppCompatActivity {
             object.put("gearsDroppedHuman", data.gearsDroppedHuman);
             object.put("climbTime", data.climbTime);
             object.put("climbSuccess", data.climbSuccess);
+            object.put("allianceKPA", data.allianceKPA);
             object.put("tbh", data.tbh);
             return object.toString();
         } catch (Exception e) {
