@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="Search"
         android:id="@+id/searchButton"
-        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawableLeft="@android:drawable/ic_menu_search"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:text="Scout"
         android:id="@+id/scoutButton"
-        android:drawableStart="@android:drawable/ic_menu_agenda"
+        android:drawableLeft="@android:drawable/ic_menu_agenda"
         android:layout_below="@+id/searchButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="Upload"
         android:id="@+id/uploadData"
-        android:drawableStart="@android:drawable/ic_menu_upload"
+        android:drawableLeft="@android:drawable/ic_menu_upload"
         android:layout_below="@+id/scoutButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:text="Teams"
         android:id="@+id/teamsView"
-        android:drawableStart="@drawable/ic_action_ppl"
+        android:drawableLeft="@drawable/ic_action_ppl"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/uploadData"
         android:layout_alignRight="@+id/addPhoto"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:text="Add Photo"
         android:id="@+id/addPhoto"
-        android:drawableStart="@android:drawable/ic_menu_camera"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
         android:layout_below="@+id/teamsView"
         android:layout_alignRight="@+id/viewPhoto"
         android:layout_alignEnd="@+id/viewPhoto"
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:text="View Photos"
         android:id="@+id/viewPhoto"
-        android:drawableStart="@android:drawable/ic_menu_gallery"
+        android:drawableLeft="@android:drawable/ic_menu_gallery"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/addPhoto" />
 
@@ -98,11 +98,22 @@
         android:layout_height="wrap_content"
         android:text="Choose Event"
         android:id="@+id/chooseEventButtons"
-        android:drawableStart="@drawable/ic_action_cal"
+        android:drawableLeft="@drawable/ic_action_cal"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/viewPhoto"
         android:layout_alignRight="@+id/viewPhoto"
         android:layout_alignEnd="@+id/viewPhoto" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timerButton"
+        android:layout_alignParentLeft="true"
+        android:text="Timer"
+        android:drawableLeft="@android:drawable/ic_media_play"
+        android:layout_below="@+id/chooseEventButtons"
+        android:layout_alignRight="@+id/chooseEventButtons"
+        android:layout_alignEnd="@+id/chooseEventButtons"
+        android:layout_marginTop="3dp"/>
 
 </RelativeLayout>
 </ScrollView>

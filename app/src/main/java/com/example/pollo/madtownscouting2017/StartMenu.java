@@ -21,6 +21,7 @@ public class StartMenu extends AppCompatActivity {
     Button addPhoto;
     Button viewPhoto;
     Button eventsButton;
+    Button timerButton;
     SQLiteDatabase myDB = null;
 
     @Override
@@ -35,6 +36,7 @@ public class StartMenu extends AppCompatActivity {
         addPhoto = (Button) findViewById(R.id.addPhoto);
         viewPhoto = (Button) findViewById(R.id.viewPhoto);
         eventsButton = (Button) findViewById(R.id.chooseEventButtons);
+        timerButton = (Button)findViewById(R.id.timerButton);
 
         createPicturesDatabase();
         createDatabase();
@@ -90,6 +92,13 @@ public class StartMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent eventsIntent = new Intent(getApplicationContext(), Events.class);
                 startActivity(eventsIntent);
+            }
+        });
+        timerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent timerIntent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(timerIntent);
             }
         });
     }
