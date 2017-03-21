@@ -109,7 +109,6 @@
         android:id="@+id/timerButton"
         android:layout_alignParentLeft="true"
         android:text="Timer"
-        android:drawableLeft="@android:drawable/ic_media_play"
         android:layout_below="@+id/chooseEventButtons"
         android:layout_alignRight="@+id/chooseEventButtons"
         android:layout_alignEnd="@+id/chooseEventButtons"

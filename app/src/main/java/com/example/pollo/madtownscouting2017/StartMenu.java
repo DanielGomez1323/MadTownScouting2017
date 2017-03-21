@@ -97,7 +97,7 @@ public class StartMenu extends AppCompatActivity {
         timerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent timerIntent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent timerIntent = new Intent(getApplicationContext(), Main2Activity.class);
                 startActivity(timerIntent);
             }
         });
