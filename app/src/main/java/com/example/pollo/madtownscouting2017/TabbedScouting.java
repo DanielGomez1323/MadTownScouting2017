@@ -91,6 +91,8 @@ public class TabbedScouting extends AppCompatActivity {
                 String gearsDropped = tb.getString("gearsDropped");
                 String gearsDroppedHuman = tb.getString("gearsDroppedHuman");
                 String gearsHung = tb.getString("gearsHung");
+                String reachRopeTime = tb.getString("reachRopeTime");
+                String alignTime = tb.getString("alignTime");
                 String climbTime = tb.getString("climbTime");
                 String climbSuccess = tb.getString("climbSuccess");
                 String allianceKPA = tb.getString("allianceKPA");
@@ -114,6 +116,8 @@ public class TabbedScouting extends AppCompatActivity {
                 c.put("gearsDropped", gearsDropped);
                 c.put("gearsDroppedHuman", gearsDroppedHuman);
                 c.put("gearsHung", gearsHung);
+                c.put("reachRopeTime", reachRopeTime);
+                c.put("alignTime", alignTime);
                 c.put("climbTime", climbTime);
                 c.put("climbSuccess", climbSuccess);
                 c.put("allianceKPA", allianceKPA);

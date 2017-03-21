@@ -60,6 +60,8 @@ public class DataUpload extends AppCompatActivity {
         String baseLine;
         String gearsPickedUp;
         String gearsHung;
+        String reachRopeTime;
+        String alignTime;
         String climbTime;
         String climbSuccess;
         String gearsDropped;
@@ -84,6 +86,8 @@ public class DataUpload extends AppCompatActivity {
                 baseLine = c.getString(c.getColumnIndex("baseLine"));
                 gearsPickedUp = c.getString(c.getColumnIndex("gearsPickedUp"));
                 gearsHung = c.getString(c.getColumnIndex("gearsHung"));
+                reachRopeTime = c.getString(c.getColumnIndex("reachRopeTime"));
+                alignTime = c.getString(c.getColumnIndex("alignTime"));
                 climbTime = c.getString(c.getColumnIndex("climbTime"));
                 climbSuccess = c.getString(c.getColumnIndex("climbSuccess"));
                 gearsDropped = c.getString(c.getColumnIndex("gearsDropped"));
@@ -122,6 +126,8 @@ public class DataUpload extends AppCompatActivity {
             object.put("gearsHung", data.gearsHung);
             object.put("gearsDropped", data.gearsDropped);
             object.put("gearsDroppedHuman", data.gearsDroppedHuman);
+            object.put("reachRopeTime", data.reachRopeTime);
+            object.put("alignTime", data.alignTime);
             object.put("climbTime", data.climbTime);
             object.put("climbSuccess", data.climbSuccess);
             object.put("allianceKPA", data.allianceKPA);

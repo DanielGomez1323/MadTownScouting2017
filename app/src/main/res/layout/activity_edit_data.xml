@@ -281,9 +281,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
+        android:text="Rope Reached Time"
+        android:id="@+id/reachRopeTimeTV"
+        android:layout_below="@+id/gearsDroppedHumanEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/reachRopeTimeEnterText"
+        android:hint="Reach Rope Time"
+        android:layout_below="@+id/reachRopeTimeTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Align Time"
+        android:id="@+id/alignTimeTV"
+        android:layout_below="@+id/reachRopeTimeEnterText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/alignTimeEnterText"
+        android:hint="Align Time"
+        android:layout_below="@+id/alignTimeTV"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
         android:text="Climb Time"
         android:id="@+id/climbTimeTV"
-        android:layout_below="@+id/gearsDroppedHumanEnterText"
+        android:layout_below="@+id/alignTimeEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
     <EditText

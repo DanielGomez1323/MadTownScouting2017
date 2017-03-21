@@ -43,6 +43,12 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     //TextView climbChronometer;
     //long startTime;
     CheckBox successfulClimbCHeckBox;
+    SeekBar reachRopeTimeSeekBar;
+    TextView reachRopeTimeTextView;
+    int reachRopeTime = 0;
+    SeekBar alignTimeSeekBar;
+    TextView alignCountTextView;
+    int alignTime = 0;
     SeekBar climbTimeSeekBar;
     TextView climbCountTextView;
     int climbTime = 0;
@@ -90,6 +96,10 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         climbChronometer = (Chronometer) rootView.findViewById(R.id.start).setOnClickListener(this);
         climbChronometer = (Chronometer) rootView.findViewById(R.id.stop).setOnClickListener(this);*/
         successfulClimbCHeckBox = (CheckBox) rootView.findViewById(R.id.successfulclimbcheckBox);
+        alignTimeSeekBar = (SeekBar) rootView.findViewById(R.id.alignTimeSeekBar);
+        alignCountTextView = (TextView) rootView.findViewById(R.id.alignCountTextView);
+        reachRopeTimeSeekBar = (SeekBar) rootView.findViewById(R.id.reachRopeTimeSeekBar);
+        reachRopeTimeTextView = (TextView) rootView.findViewById(R.id.reachRopeTimeTextView);
         climbTimeSeekBar = (SeekBar) rootView.findViewById(R.id.climbTimeSeekBar);
         climbCountTextView = (TextView) rootView.findViewById(R.id.climbCountTextView);
         allianceKPAEnterText = (EditText) rootView.findViewById(R.id.allianceKPAEnterText);
@@ -166,6 +176,40 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
 
             }
         });
+        reachRopeTimeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                reachRopeTimeTextView.setText("Reach Rope Time: " + progress);
+                reachRopeTime = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        alignTimeSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                alignCountTextView.setText("Align Time: " + progress);
+                alignTime = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
         return rootView;
     }
     /*@Override
@@ -184,6 +228,8 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         b.putString("gearsDropped", String.valueOf(drops));
         b.putString("gearsDroppedHuman", String.valueOf(humanDrops));
         b.putString("gearsHung", String.valueOf(placed));
+        b.putString("reachRopeTime", String.valueOf(reachRopeTime));
+        b.putString("alignTime", String.valueOf(alignTime));
         b.putString("climbTime", String.valueOf(climbTime));
         b.putString("allianceKPA", allianceKPAEnterText.getText().toString());
         if (successfulClimbCHeckBox.isChecked()){

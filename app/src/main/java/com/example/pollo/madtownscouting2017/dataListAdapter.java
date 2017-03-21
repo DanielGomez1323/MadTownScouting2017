@@ -34,6 +34,8 @@ public class dataListAdapter extends CursorAdapter{
         TextView gearsHungTextView = (TextView) view.findViewById(R.id.gearsHungTextView);
         TextView gearsDroppedTextView = (TextView) view.findViewById(R.id.gearsDroppedTextView);
         TextView gearsDroppedHumanTextView = (TextView) view.findViewById(R.id.gearsDroppedHumanTextView);
+        TextView ropeTimeTextView = (TextView) view.findViewById(R.id.ropeTimeTextView);
+        TextView alignTimeTextView = (TextView) view.findViewById(R.id.alignTimeTextView);
         TextView climbTimeTextView = (TextView) view.findViewById(R.id.climbTimeTextView);
         TextView climbSuccessTextView = (TextView) view.findViewById(R.id.climbSuccessTextView);
         TextView allianceKPATextView = (TextView) view.findViewById(R.id.allianceKPATextView);
@@ -52,6 +54,8 @@ public class dataListAdapter extends CursorAdapter{
         gearsHungTextView.setText(gearsHungTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsHung")));
         gearsDroppedTextView.setText(gearsDroppedTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsDropped")));
         gearsDroppedHumanTextView.setText(gearsDroppedHumanTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsDroppedHuman")));
+        ropeTimeTextView.setText(ropeTimeTextView.getText() + cursor.getString(cursor.getColumnIndex("reachRopeTime")));
+        alignTimeTextView.setText(alignTimeTextView.getText() + cursor.getString(cursor.getColumnIndex("alignTime")));
         climbTimeTextView.setText(climbTimeTextView.getText() + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         allianceKPATextView.setText(allianceKPATextView.getText() + cursor.getString(cursor.getColumnIndex("allianceKPA")));
@@ -81,6 +85,8 @@ public class dataListAdapter extends CursorAdapter{
         gearsHungTextView.setText("Gears Hung " + cursor.getString(cursor.getColumnIndex("gearsHung")));
         gearsDroppedTextView.setText("Gears Dropped " + cursor.getString(cursor.getColumnIndex("gearsDropped")));
         gearsDroppedHumanTextView.setText("Gears Dropped(Human) " + cursor.getString(cursor.getColumnIndex("gearsDroppedHuman")));
+        ropeTimeTextView.setText("Rope Reached Time " + cursor.getString(cursor.getColumnIndex("reachRopeTime")));
+        alignTimeTextView.setText("Align Time " + cursor.getString(cursor.getColumnIndex("alignTime")));
         climbTimeTextView.setText("Climb Time " + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText("Climb Success " + cursor.getString(cursor.getColumnIndex("climbSuccess")));
         allianceKPATextView.setText("Alliance KPA " + cursor.getString(cursor.getColumnIndex("allianceKPA")));

@@ -29,6 +29,8 @@ public class EditData extends AppCompatActivity {
     EditText gearsHungEnterText;
     EditText gearsDroppedEnterText;
     EditText gearsDroppedHumanEnterText;
+    EditText reachRopeTimeEnterText;
+    EditText alignTimeEnterText;
     EditText climbTimeEnterText;
     EditText climbSuccessEnterText;
     EditText allianceKPAEditText;
@@ -62,6 +64,8 @@ public class EditData extends AppCompatActivity {
         gearsHungEnterText = (EditText)findViewById(R.id.gearsHungEnterText);
         gearsDroppedEnterText = (EditText)findViewById(R.id.gearsDroppedEnterText);
         gearsDroppedHumanEnterText = (EditText)findViewById(R.id.gearsDroppedHumanEnterText);
+        reachRopeTimeEnterText = (EditText)findViewById(R.id.reachRopeTimeEnterText);
+        alignTimeEnterText = (EditText)findViewById(R.id.alignTimeEnterText);
         climbTimeEnterText = (EditText) findViewById(R.id.climbTimeEnterText);
         climbSuccessEnterText = (EditText)findViewById(R.id.climbSuccessEnterText);
         allianceKPAEditText = (EditText)findViewById(R.id.allianceKPAEditText);
@@ -89,6 +93,8 @@ public class EditData extends AppCompatActivity {
             gearsHungEnterText.setText(c.getString(c.getColumnIndex("gearsHung")), TextView.BufferType.EDITABLE);
             gearsDroppedEnterText.setText(c.getString(c.getColumnIndex("gearsDropped")), TextView.BufferType.EDITABLE);
             gearsDroppedHumanEnterText.setText(c.getString(c.getColumnIndex("gearsDroppedHuman")), TextView.BufferType.EDITABLE);
+            reachRopeTimeEnterText.setText(c.getString(c.getColumnIndex("reachRopeTime")), TextView.BufferType.EDITABLE);
+            alignTimeEnterText.setText(c.getString(c.getColumnIndex("alignTime")), TextView.BufferType.EDITABLE);
             climbTimeEnterText.setText(c.getString(c.getColumnIndex("climbTime")), TextView.BufferType.EDITABLE);
             climbSuccessEnterText.setText(c.getString(c.getColumnIndex("climbSuccess")), TextView.BufferType.EDITABLE);
             allianceKPAEditText.setText(c.getString(c.getColumnIndex("allianceKPA")), TextView.BufferType.EDITABLE);
@@ -116,7 +122,9 @@ public class EditData extends AppCompatActivity {
             ", autoHighMissed = " + autoHighMissedEnterText.getText().toString() + ", autoLowScored = " +
             autoLowScoredEnterText.getText().toString() + ", autoLowMissed = " + autoLowMissedEnterText.getText().toString() +
             ", gearsPickedUp = " + gearsPickedUpEnterText.getText().toString() + ", gearsHung = " +
-            gearsHungEnterText.getText().toString() + ", gearsDropped = " + gearsDroppedEnterText.getText().toString() + ", gearsDroppedHuman = " + gearsDroppedHumanEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
+            gearsHungEnterText.getText().toString() + ", gearsDropped = " + gearsDroppedEnterText.getText().toString() +
+            ", gearsDroppedHuman = " + gearsDroppedHumanEnterText.getText().toString() + ", reachRopeTime = " +
+            reachRopeTimeEnterText.getText().toString() + ", alignTime = " + alignTimeEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
             ", climbSuccess = " + climbSuccessEnterText.getText().toString() + ", allianceKPA = " + allianceKPAEditText.getText().toString() + ", tbh = '" + tbh + "' WHERE _id = " + id);
         }catch (SQLException e){
             System.out.print(e);

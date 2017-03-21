@@ -118,25 +118,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Rope Reached Time "
+        android:id="@+id/ropeTimeTextView"
+        android:layout_below="@+id/gearsDroppedHumanTextView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="Align Time "
+        android:id="@+id/alignTimeTextView"
+        android:layout_below="@+id/gearsDroppedHumanTextView"
+        android:layout_toRightOf="@+id/ropeTimeTextView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Climb Time "
         android:id="@+id/climbTimeTextView"
-        android:layout_below="@+id/gearsDroppedHumanTextView"/>
+        android:layout_below="@+id/climbSuccessTextView"
+        android:layout_toRightOf="@+id/alignTimeTextView"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Alliance KPA "
         android:id="@+id/allianceKPATextView"
-        android:layout_below="@id/gearsDroppedHumanTextView"
-        android:layout_toRightOf="@+id/climbTimeTextView"/>
+        android:layout_below="@id/ropeTimeTextView"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="TBH "
         android:id="@+id/tBHTextView"
-        android:layout_below="@+id/gearsDroppedHumanTextView"
-        android:layout_toRightOf="@+id/allianceKPATextView" />
+        android:layout_below="@+id/ropeTimeTextView"
+        android:layout_toRightOf="@+id/allianceKPATextView"/>
 
 </RelativeLayout>
