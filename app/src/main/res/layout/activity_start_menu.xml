@@ -103,17 +103,6 @@
         android:layout_below="@+id/viewPhoto"
         android:layout_alignRight="@+id/viewPhoto"
         android:layout_alignEnd="@+id/viewPhoto" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/timerButton"
-        android:layout_alignParentLeft="true"
-        android:text="Timer"
-        android:drawableLeft="@android:drawable/ic_media_play"
-        android:layout_below="@+id/chooseEventButtons"
-        android:layout_alignRight="@+id/chooseEventButtons"
-        android:layout_alignEnd="@+id/chooseEventButtons"
-        android:layout_marginTop="3dp"/>
 
 </RelativeLayout>
 </ScrollView>
