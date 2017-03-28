@@ -17,140 +17,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Gears Picked Up:"
-            android:id="@+id/gearsPickedUpTextView"
-            android:textSize="35sp"
-            android:layout_marginTop="50dp"
-            android:layout_below="@+id/teleopPeriodTextView"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Teleoperated Period"
             android:id="@+id/teleopPeriodTextView"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:textSize="47sp"
-            android:layout_marginTop="5dp"/>
-
-        <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
-            android:text="-"
-            android:id="@+id/decreaseGearsPickedUpButton"
-            android:layout_below="@+id/gearsPickedUpTextView"
-            android:layout_toLeftOf="@+id/gearsPickedUpTextView"
-            android:layout_toStartOf="@+id/gearsPickedUpTextView"
-            android:paddingTop="20dp"
-            android:layout_marginTop="10dp" />
-
-        <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
-            android:text="+"
-            android:id="@+id/increaseGearsPickedUpButton"
-            android:paddingTop="20dp"
-            android:layout_alignTop="@+id/decreaseGearsPickedUpButton"
-            android:layout_toRightOf="@+id/gearsPickedUpTextView"
-            android:layout_toEndOf="@+id/gearsPickedUpTextView" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="0"
-            android:id="@+id/amountGearsPickedUpTextView"
-            android:textSize="30sp"
-            android:layout_alignBottom="@+id/increaseGearsPickedUpButton"
-            android:layout_alignLeft="@+id/amountGearsDroppedTextView"
-            android:layout_alignStart="@+id/amountGearsDroppedTextView" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Gears Dropped:"
-            android:id="@+id/gearsDroppedTextView"
-            android:layout_below="@+id/amountGearsPickedUpTextView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:textSize="35sp"/>
-
-        <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
-            android:text="-"
-            android:id="@+id/decreaseGearsDroppedButton"
-            android:layout_below="@+id/gearsDroppedTextView"
-            android:layout_alignRight="@+id/decreaseGearsPickedUpButton"
-            android:layout_alignEnd="@+id/decreaseGearsPickedUpButton"
-            android:paddingTop="20dp"
-            android:layout_marginTop="10dp" />
-
-        <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
-            android:text="+"
-            android:id="@+id/increaseGearsDroppedButton"
-            android:layout_below="@+id/gearsDroppedTextView"
-            android:layout_alignLeft="@+id/increaseGearsPickedUpButton"
-            android:layout_alignStart="@+id/increaseGearsPickedUpButton"
-            android:paddingTop="20dp"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="0"
-            android:id="@+id/amountGearsDroppedTextView"
-            android:layout_alignBottom="@+id/increaseGearsDroppedButton"
-            android:layout_centerHorizontal="true"
-            android:textSize="35sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:text="Gears Dropped(Human):"
-            android:id="@+id/gearsDroppedHumanTextView"
-            android:layout_below="@+id/amountGearsDroppedTextView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:textSize="35sp"/>
-
-        <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
-            android:text="-"
-            android:id="@+id/decreaseGearsDroppedHumanButton"
-            android:layout_below="@+id/gearsDroppedHumanTextView"
-            android:layout_alignRight="@+id/decreaseGearsDroppedButton"
-            android:layout_alignEnd="@+id/decreaseGearsDroppedButton"
-            android:paddingTop="20dp"
-            android:layout_marginTop="10dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:text="0"
-            android:id="@+id/amountGearsDroppedHumanTextView"
-            android:layout_alignBottom="@+id/decreaseGearsDroppedHumanButton"
-            android:layout_centerHorizontal="true"
-            android:textSize="35sp"/>
-
-        <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
-            android:text="+"
-            android:id="@+id/increaseGearsDroppedHumanButton"
-            android:paddingTop="20dp"
-            android:layout_alignBottom="@+id/amountGearsDroppedHumanTextView"
-            android:layout_alignLeft="@+id/increaseGearsDroppedButton"
-            android:layout_alignStart="@+id/increaseGearsDroppedButton" />
+            android:textSize="40sp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -158,31 +29,28 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Gears Placed:"
             android:id="@+id/gearsPlacedTextView"
-            android:layout_below="@+id/amountGearsDroppedHumanTextView"
+            android:layout_below="@+id/teleopPeriodTextView"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp"
-            android:textSize="35sp"/>
+            android:layout_marginTop="30dp"
+            android:textSize="30sp"/>
 
         <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
             android:text="-"
             android:id="@+id/decreaseGearsPlacedButton"
-            android:paddingTop="20dp"
-            android:layout_alignBottom="@+id/amountGearsPlacedTextView"
-            android:layout_toLeftOf="@+id/gearsPickedUpTextView"
-            android:layout_toStartOf="@+id/gearsPickedUpTextView" />
+            android:layout_below="@+id/gearsPlacedTextView"
+            android:layout_toRightOf="@+id/teleopPeriodTextView"
+            android:paddingTop="5dp"/>
 
         <Button
-            android:layout_width="90dp"
-            android:layout_height="45dp"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
             android:text="+"
             android:id="@+id/increaseGearsPlacedButton"
             android:layout_below="@+id/gearsPlacedTextView"
-            android:layout_alignLeft="@+id/increaseGearsDroppedButton"
-            android:layout_alignStart="@+id/increaseGearsDroppedButton"
-            android:paddingTop="20dp"
-            android:layout_marginTop="10dp" />
+            android:layout_toLeftOf="@+id/teleopPeriodTextView"
+            android:paddingTop="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -192,28 +60,18 @@
             android:id="@+id/amountGearsPlacedTextView"
             android:layout_alignBottom="@+id/increaseGearsPlacedButton"
             android:layout_centerHorizontal="true"
-            android:textSize="35sp"/>
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Successful Climb?"
-            android:id="@+id/successfulclimbcheckBox"
-            android:textSize="35sp"
-            android:layout_below="@+id/amountGearsPlacedTextView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="35dp" />
+            android:textSize="25sp"/>
 
         <SeekBar
             android:layout_width="600dp"
             android:layout_height="wrap_content"
             android:id="@+id/climbTimeSeekBar"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="30dp"
             android:max="20"
             android:progress="0"
             android:indeterminate="false"
             android:minWidth="250dp"
-            android:layout_below="@+id/successfulclimbcheckBox"
+            android:layout_below="@+id/amountGearsPlacedTextView"
             android:layout_centerHorizontal="true" />
 
         <TextView
@@ -221,56 +79,42 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceSmall"
             android:text="0"
+            android:textSize="25sp"
             android:id="@+id/zeroTimeTextView"
-            android:textSize="30dp"
             android:layout_below="@+id/climbTimeSeekBar"
             android:layout_alignLeft="@+id/climbTimeSeekBar"
-            android:layout_alignStart="@+id/climbTimeSeekBar"
-            android:layout_marginTop="5dp" />
+            android:layout_alignStart="@+id/climbTimeSeekBar"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceSmall"
             android:text="ClimbTime: 0"
+            android:textSize="25sp"
             android:id="@+id/climbCountTextView"
-            android:textSize="35dp"
             android:layout_below="@+id/climbTimeSeekBar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="6dp" />
+            android:layout_centerHorizontal="true"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceSmall"
             android:text="20"
+            android:textSize="25sp"
             android:id="@+id/twentyTimeTextView"
-            android:textSize="30dp"
             android:layout_below="@+id/climbTimeSeekBar"
             android:layout_alignRight="@+id/climbTimeSeekBar"
-            android:layout_alignEnd="@+id/climbTimeSeekBar"
-            android:layout_marginTop="5dp" />
+            android:layout_alignEnd="@+id/climbTimeSeekBar"/>
 
-        <TextView
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:text="Alliance KPA"
-            android:textSize="35dp"
-            android:id="@+id/allianceKPATextView"
-            android:layout_below="@id/climbCountTextView"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="25dp"/>
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
-            android:id="@+id/allianceKPAEnterText"
-            android:hint="10"
-            android:layout_below="@+id/allianceKPATextView"
-            android:layout_alignParentRight="true"/>
+            android:text="Successful Climb?"
+            android:id="@+id/successfulclimbcheckBox"
+            android:textSize="30sp"
+            android:layout_below="@+id/climbCountTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
 
     </RelativeLayout>
 </ScrollView>
