@@ -115,22 +115,6 @@ public class UploadPicture extends AppCompatActivity {
                 }
             }
         });
-        Cursor cursor = myDB.rawQuery("SELECT * FROM Events WHERE _id = 1", null);
-        cursor.moveToFirst();
-        switch(cursor.getString(cursor.getColumnIndex("event"))){
-            case "CVR":
-                SERVER_URL = "http://www.gorohi.com/1323/2017/cvr/picupload.php";
-                break;
-            case "Davis":
-                SERVER_URL = "http://www.gorohi.com/1323/2017/davis/picupload.php";
-                break;
-            case "Houston":
-                SERVER_URL = "http://www.gorohi.com/1323/2017/houston/picupload.php";
-                break;
-            default:
-                SERVER_URL = "http://www.gorohi.com/1323/2017/davis/picupload.php";
-                break;
-        }
     }
 
     public static Bitmap rotateImage(Bitmap source, float angle) {

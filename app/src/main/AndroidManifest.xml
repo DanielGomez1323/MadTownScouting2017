@@ -51,7 +51,6 @@
         <activity android:name=".TeamPictureSelection" />
         <activity android:name=".TeamRoster" />
         <activity android:name=".EditData" />
-        <activity android:name=".Events"></activity>
     </application>
 
 </manifest>

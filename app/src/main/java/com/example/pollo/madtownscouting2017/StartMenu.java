@@ -20,7 +20,6 @@ public class StartMenu extends AppCompatActivity {
     Button teamsView;
     Button addPhoto;
     Button viewPhoto;
-    Button eventsButton;
     SQLiteDatabase myDB = null;
 
     @Override
@@ -34,11 +33,9 @@ public class StartMenu extends AppCompatActivity {
         teamsView = (Button) findViewById(R.id.teamsView);
         addPhoto = (Button) findViewById(R.id.addPhoto);
         viewPhoto = (Button) findViewById(R.id.viewPhoto);
-        eventsButton = (Button) findViewById(R.id.chooseEventButtons);
 
         createPicturesDatabase();
         createDatabase();
-        createEventsDatabase();
 
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
@@ -85,13 +82,6 @@ public class StartMenu extends AppCompatActivity {
                 startActivity(viewPhotoIntent);
             }
         });
-        eventsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent eventsIntent = new Intent(getApplicationContext(), Events.class);
-                startActivity(eventsIntent);
-            }
-        });
     }
     public void createDatabase(){
         try{
@@ -107,22 +97,6 @@ public class StartMenu extends AppCompatActivity {
         try{
             myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
             myDB.execSQL("CREATE TABLE IF NOT EXISTS TeamPictures ( _id INTEGER PRIMARY KEY AUTOINCREMENT, teamNumber int, pic1 VARCHAR)");
-            if (myDB != null)
-                myDB.close();
-        } catch (SQLException e) {
-            Log.e("Error", "Error", e);
-        }
-    }
-    public void createEventsDatabase(){
-        try{
-            myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
-            myDB.execSQL("CREATE TABLE IF NOT EXISTS Events ( _id INTEGER PRIMARY KEY AUTOINCREMENT, event VARCHAR)");
-            Cursor c = myDB.rawQuery("SELECT * FROM Events", null);
-            c.moveToFirst();
-            if(c.getCount() <= 0) {
-                myDB.execSQL("INSERT INTO Events (_id, event) VALUES (1, 'Davis')");
-            }
-            c.close();
             if (myDB != null)
                 myDB.close();
         } catch (SQLException e) {
