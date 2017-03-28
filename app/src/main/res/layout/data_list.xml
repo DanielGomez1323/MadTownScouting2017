@@ -25,20 +25,29 @@
         android:text="Blue"
         android:id="@+id/teamColorTextView"
         android:layout_below="@+id/matchNumberTextView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Robot Position "
+        android:layout_below="@+id/teamColorTextView"
+        android:id="@+id/robotPositionTV"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Auto Gear Success "
         android:id="@+id/autoGearSuccessTextView"
-        android:layout_below="@+id/teamColorTextView"/>
+        android:layout_below="@+id/robotPositionTV"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Auto High "
         android:id="@+id/autoHighScoredTextView"
-        android:layout_below="@+id/teamColorTextView"
+        android:layout_below="@+id/robotPositionTV"
         android:layout_toRightOf="@+id/autoGearSuccessTextView"/>
     <TextView
         android:layout_width="wrap_content"
