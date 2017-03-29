@@ -82,6 +82,23 @@ public class StartMenu extends AppCompatActivity {
                 startActivity(viewPhotoIntent);
             }
         });
+<<<<<<< HEAD
+        eventsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent eventsIntent = new Intent(getApplicationContext(), Events.class);
+                startActivity(eventsIntent);
+            }
+        });
+        timerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent timerIntent = new Intent(getApplicationContext(), Main2Activity.class);
+                startActivity(timerIntent);
+            }
+        });
+=======
+>>>>>>> origin/master
     }
     public void createDatabase(){
         try{

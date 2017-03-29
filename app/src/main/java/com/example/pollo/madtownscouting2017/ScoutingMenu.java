@@ -6,10 +6,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.lang.reflect.Array;
 
 public class ScoutingMenu extends AppCompatActivity {
     EditText teamNumberEditText;
@@ -29,6 +34,7 @@ public class ScoutingMenu extends AppCompatActivity {
         startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
         redCheckBox = (CheckBox) findViewById(R.id.redCheckBox);
         blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
+
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
         c = myDB.rawQuery("SELECT * FROM SteamWorks ORDER BY _id DESC LIMIT 1", null);
         if (c.getCount()> 0){

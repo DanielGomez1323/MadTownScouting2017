@@ -23,7 +23,6 @@
         <activity android:name=".ScoutingMenu" />
         <activity android:name=".DataUpload" />
         <activity android:name=".addPhoto" />
-        <activity android:name=".teamsView" />
         <activity android:name=".TeleopPeriod" />
         <activity
             android:name=".TabbedScouting"
@@ -50,6 +49,11 @@
         <activity android:name=".TeamPictureSelection" />
         <activity android:name=".TeamRoster" />
         <activity android:name=".EditData" />
+<<<<<<< HEAD
+        <activity android:name=".Events" /><![CDATA[
+        =======
+>>>>>>> origin/master
+    ]]>
     </application>
 
 </manifest>
