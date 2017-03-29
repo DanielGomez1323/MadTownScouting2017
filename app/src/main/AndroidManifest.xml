@@ -49,11 +49,6 @@
         <activity android:name=".TeamPictureSelection" />
         <activity android:name=".TeamRoster" />
         <activity android:name=".EditData" />
-<<<<<<< HEAD
-        <activity android:name=".Events" /><![CDATA[
-        =======
->>>>>>> origin/master
-    ]]>
     </application>
 
 </manifest>
