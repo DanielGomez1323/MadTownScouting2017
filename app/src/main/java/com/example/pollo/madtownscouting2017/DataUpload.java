@@ -42,7 +42,7 @@ public class DataUpload extends AppCompatActivity {
     Button scrollUpButton;
     Match match;
     String query;
-    String address = "http://www.gorohi.com/1323/2017/cvr/data.php";
+    String address = "http://www.gorohi.com/1323/2017/houston/data.php";
     String _id;
     dataListAdapter listAdapter;
 
@@ -51,20 +51,12 @@ public class DataUpload extends AppCompatActivity {
         String matchNumber;
         String teamColor;
 
-        String autoGearAttempt;
+        //String robotPosition;
         String autoGearSuccess;
         String autoHighScored;
-        String autoLowScored;
-        String autoHighMissed;
-        String autoLowMissed;
-        String baseLine;
-        String gearsPickedUp;
         String gearsHung;
         String climbTime;
         String climbSuccess;
-        String gearsDropped;
-        String gearsDroppedHuman;
-        String allianceKPA;
         String tbh;
 
         public void loadDatabase(int id) {
@@ -75,20 +67,12 @@ public class DataUpload extends AppCompatActivity {
                 teamNumber = c.getString(c.getColumnIndex("teamNumber"));
                 matchNumber = c.getString(c.getColumnIndex("matchNumber"));
                 teamColor = c.getString(c.getColumnIndex("teamColor"));
-                autoGearAttempt = c.getString(c.getColumnIndex("autoGearAttempt"));
+                //robotPosition = c.getString(c.getColumnIndex("robotPosition"));
                 autoGearSuccess = c.getString(c.getColumnIndex("autoGearSuccess"));
                 autoHighScored = c.getString(c.getColumnIndex("autoHighScored"));
-                autoLowScored = c.getString(c.getColumnIndex("autoLowScored"));
-                autoHighMissed = c.getString(c.getColumnIndex("autoHighMissed"));
-                autoLowMissed = c.getString(c.getColumnIndex("autoLowMissed"));
-                baseLine = c.getString(c.getColumnIndex("baseLine"));
-                gearsPickedUp = c.getString(c.getColumnIndex("gearsPickedUp"));
                 gearsHung = c.getString(c.getColumnIndex("gearsHung"));
                 climbTime = c.getString(c.getColumnIndex("climbTime"));
                 climbSuccess = c.getString(c.getColumnIndex("climbSuccess"));
-                gearsDropped = c.getString(c.getColumnIndex("gearsDropped"));
-                gearsDroppedHuman = c.getString(c.getColumnIndex("gearsDroppedHuman"));
-                allianceKPA = c.getString(c.getColumnIndex("allianceKPA"));
                 tbh = c.getString(c.getColumnIndex("tbh"));
                 Toast.makeText(getApplicationContext(), "Team " + teamNumber + ", Match " + matchNumber + " selected", Toast.LENGTH_SHORT).show();
             }
@@ -111,20 +95,12 @@ public class DataUpload extends AppCompatActivity {
             object.put("teamNumber", data.teamNumber);
             object.put("matchNumber", data.matchNumber);
             object.put("teamColor", data.teamColor);
-            object.put("baseLine", data.baseLine);
-            object.put("autoGearAttempt", data.autoGearAttempt);
+            //object.put("robotPosition", data.robotPosition);
             object.put("autoGearSuccess", data.autoGearSuccess);
             object.put("autoHighScored", data.autoHighScored);
-            object.put("autoHighMissed", data.autoHighMissed);
-            object.put("autoLowScored", data.autoLowScored);
-            object.put("autoLowMissed", data.autoLowMissed);
-            object.put("gearsPickedUp", data.gearsPickedUp);
             object.put("gearsHung", data.gearsHung);
-            object.put("gearsDropped", data.gearsDropped);
-            object.put("gearsDroppedHuman", data.gearsDroppedHuman);
             object.put("climbTime", data.climbTime);
             object.put("climbSuccess", data.climbSuccess);
-            object.put("allianceKPA", data.allianceKPA);
             object.put("tbh", data.tbh);
             return object.toString();
         } catch (Exception e) {
@@ -209,7 +185,7 @@ public class DataUpload extends AppCompatActivity {
                             new MyAsyncTask().execute(json);
                         }
                     } else {
-                        Toast.makeText(getApplicationContext(), "Please select a match.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Hey, select a match man.", Toast.LENGTH_SHORT).show();
                     }
                 }
             });

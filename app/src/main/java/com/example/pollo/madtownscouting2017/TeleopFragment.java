@@ -21,22 +21,10 @@ import android.widget.TextView;
  */
 public class TeleopFragment extends android.support.v4.app.Fragment{
 
-    Button decreasePickUpsButton;
-    Button increasePickUpsButton;
-    TextView pickUpText;
-    Button decreaseDropsButton;
-    Button increaseDropsButton;
-    TextView dropText;
-    Button decreaseHumanDropsButton;
-    Button increaseHumanDropsButton;
-    TextView humanDropText;
     Button decreasePlacedButton;
     Button increasePlacedButton;
     TextView placedText;
-    int pickUps = 0;
-    int drops = 0;
     int placed = 0;
-    int humanDrops = 0;
     //Button startClimb;
     //Button stopClimb;
     //private Chronometer climbChronometer;
@@ -46,7 +34,6 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     SeekBar climbTimeSeekBar;
     TextView climbCountTextView;
     int climbTime = 0;
-    EditText allianceKPAEnterText;
     //int climbSuccess = 0;
 
     /*Handler timerHandler = new Handler();
@@ -72,17 +59,8 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.teleop_fragment, container, false);
-        decreasePickUpsButton = (Button) rootView.findViewById(R.id.decreaseGearsPickedUpButton);
-        increasePickUpsButton = (Button) rootView.findViewById(R.id.increaseGearsPickedUpButton);
-        decreaseDropsButton = (Button) rootView.findViewById(R.id.decreaseGearsDroppedButton);
-        increaseDropsButton = (Button) rootView.findViewById(R.id.increaseGearsDroppedButton);
-        decreaseHumanDropsButton = (Button) rootView.findViewById(R.id.decreaseGearsDroppedHumanButton);
-        increaseHumanDropsButton = (Button) rootView.findViewById(R.id.increaseGearsDroppedHumanButton);
         decreasePlacedButton = (Button) rootView.findViewById(R.id.decreaseGearsPlacedButton);
         increasePlacedButton = (Button) rootView.findViewById(R.id.increaseGearsPlacedButton);
-        pickUpText = (TextView) rootView.findViewById(R.id.amountGearsPickedUpTextView);
-        dropText = (TextView) rootView.findViewById(R.id.amountGearsDroppedTextView);
-        humanDropText = (TextView) rootView.findViewById(R.id.amountGearsDroppedHumanTextView);
         placedText = (TextView) rootView.findViewById(R.id.amountGearsPlacedTextView);
         //startClimb = (Button) rootView.findViewById(R.id.startclimbButton);
         //stopClimb = (Button) rootView.findViewById(R.id.stopclimbButton);
@@ -92,49 +70,6 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
         successfulClimbCHeckBox = (CheckBox) rootView.findViewById(R.id.successfulclimbcheckBox);
         climbTimeSeekBar = (SeekBar) rootView.findViewById(R.id.climbTimeSeekBar);
         climbCountTextView = (TextView) rootView.findViewById(R.id.climbCountTextView);
-        allianceKPAEnterText = (EditText) rootView.findViewById(R.id.allianceKPAEnterText);
-        decreasePickUpsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pickUps --;
-                pickUpText.setText(String.valueOf(pickUps));
-            }
-        });
-        increasePickUpsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pickUps ++;
-                pickUpText.setText(String.valueOf(pickUps));
-            }
-        });
-        decreaseHumanDropsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                humanDrops --;
-                humanDropText.setText(String.valueOf(humanDrops));
-            }
-        });
-        increaseHumanDropsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                humanDrops ++;
-                humanDropText.setText(String.valueOf(humanDrops));
-            }
-        });
-        decreaseDropsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drops --;
-                dropText.setText(String.valueOf(drops));
-            }
-        });
-        increaseDropsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drops++;
-                dropText.setText(String.valueOf(drops));
-            }
-        });
         decreasePlacedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -180,12 +115,8 @@ public class TeleopFragment extends android.support.v4.app.Fragment{
     }*/
     public Bundle getData(){
         Bundle b = new Bundle();
-        b.putString("gearsPickedUp", String.valueOf(pickUps));
-        b.putString("gearsDropped", String.valueOf(drops));
-        b.putString("gearsDroppedHuman", String.valueOf(humanDrops));
         b.putString("gearsHung", String.valueOf(placed));
         b.putString("climbTime", String.valueOf(climbTime));
-        b.putString("allianceKPA", allianceKPAEnterText.getText().toString());
         if (successfulClimbCHeckBox.isChecked()){
             b.putString("climbSuccess", "1");
         }else{

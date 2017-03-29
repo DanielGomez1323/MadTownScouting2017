@@ -24,7 +24,6 @@
         <activity android:name=".DataUpload" />
         <activity android:name=".addPhoto" />
         <activity android:name=".teamsView" />
-        <activity android:name=".AutoPeriod" />
         <activity android:name=".TeleopPeriod" />
         <activity
             android:name=".TabbedScouting"

@@ -14,11 +14,11 @@ import android.widget.TextView;
  */
 public class AutoFragment extends android.support.v4.app.Fragment {
 
-    CheckBox baselineCheckBox;
-    CheckBox gearAttemptCheckBox;
+
+    CheckBox leftStartPeg;
+    CheckBox middleStartPeg;
+    CheckBox rightStartPeg;
     CheckBox gearSuccessCheckBox;
-    CheckBox highCheckBox;
-    CheckBox lowCheckBox;
     SeekBar autoBallsSeekBar;
     TextView ballCountTextView;
     int autoBallsMade = 0;
@@ -36,11 +36,10 @@ public class AutoFragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.auto_period_fragment, container, false);
 
-        baselineCheckBox = (CheckBox) rootView.findViewById(R.id.baselineCheckBox);
-        gearAttemptCheckBox = (CheckBox) rootView.findViewById(R.id.gearAttemptCheckBox);
+        leftStartPeg = (CheckBox) rootView.findViewById(R.id.leftStartPeg);
+        middleStartPeg = (CheckBox) rootView.findViewById(R.id.middleStartPeg);
+        rightStartPeg = (CheckBox) rootView.findViewById(R.id.rightStartPeg);
         gearSuccessCheckBox = (CheckBox) rootView.findViewById(R.id.gearSuccessCheckBox);
-        highCheckBox = (CheckBox) rootView.findViewById(R.id.highCheckBox);
-        lowCheckBox = (CheckBox) rootView.findViewById(R.id.lowCheckBox);
         autoBallsSeekBar = (SeekBar) rootView.findViewById(R.id.autoBallsSeekBar);
         ballCountTextView = (TextView) rootView.findViewById(R.id.ballCountTextView);
 
@@ -67,37 +66,19 @@ public class AutoFragment extends android.support.v4.app.Fragment {
 
     public Bundle getData(){
         Bundle b = new Bundle();
-        if(baselineCheckBox.isChecked()){
-            b.putString("baseLine", "1");
-        }else{
-            b.putString("baseLine", "0");
-        }
-        if(gearAttemptCheckBox.isChecked()){
-            b.putString("autoGearAttempt", "1");
-        }else{
-            b.putString("autoGearAttempt", "0");
-        }
+        /*if(leftStartPeg.isChecked()){
+            b.putString("robotPosition", "0");
+        }else if(middleStartPeg.isChecked()){
+            b.putString("robotPosition", "1");
+        }else if(rightStartPeg.isChecked()){
+            b.putString("robotPosition", "2");
+        }*/
         if(gearSuccessCheckBox.isChecked()){
             b.putString("autoGearSuccess", "1");
         }else{
             b.putString("autoGearSuccess", "0");
         }
-        if (highCheckBox.isChecked()){
-            b.putString("autoHighScored", String.valueOf(autoBallsMade));
-            b.putString("autoLowScored", "0");
-            b.putString("autoHighMissed", String.valueOf(10 - autoBallsMade));
-            b.putString("autoLowMissed", "0");
-        }else if (lowCheckBox.isChecked()){
-            b.putString("autoHighScored", "0");
-            b.putString("autoLowScored", String.valueOf(autoBallsMade));
-            b.putString("autoHighMissed", "0");
-            b.putString("autoLowMissed", String.valueOf(10 - autoBallsMade));
-        }else{
-            b.putString("autoHighScored", "0");
-            b.putString("autoLowScored", "0");
-            b.putString("autoHighMissed", "0");
-            b.putString("autoLowMissed", "0");
-        }
+        b.putString("autoHighScored", String.valueOf(autoBallsMade));
         return b;
     }
 }

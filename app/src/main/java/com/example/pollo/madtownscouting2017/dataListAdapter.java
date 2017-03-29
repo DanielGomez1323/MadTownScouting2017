@@ -23,38 +23,22 @@ public class dataListAdapter extends CursorAdapter{
         TextView teamNumberTextView = (TextView) view.findViewById(R.id.teamNumberTextView);
         TextView matchNumberTextView = (TextView) view.findViewById(R.id.matchNumberTextView);
         TextView teamColorTextView = (TextView) view.findViewById(R.id.teamColorTextView);
-        TextView baselineTextView = (TextView) view.findViewById(R.id.baselineTextView);
-        TextView autoGearAttemptTextView = (TextView) view.findViewById(R.id.autoGearAttemptTextView);
+        //TextView robotPositionTextView = (TextView) view.findViewById(R.id.robotPositionTV);
         TextView autoGearSuccessTextView = (TextView) view.findViewById(R.id.autoGearSuccessTextView);
         TextView autoHighScoredTextView = (TextView) view.findViewById(R.id.autoHighScoredTextView);
-        TextView autoHighMissedTextView = (TextView) view.findViewById(R.id.autoHighMissedTextView);
-        TextView autoLowScoredTextView = (TextView) view.findViewById(R.id.autoLowScoredTextView);
-        TextView autoLowMissedTextView = (TextView) view.findViewById(R.id.autoLowMissedTextView);
-        TextView gearsPickedUpTextView = (TextView) view.findViewById(R.id.gearsPickedUpTextView);
         TextView gearsHungTextView = (TextView) view.findViewById(R.id.gearsHungTextView);
-        TextView gearsDroppedTextView = (TextView) view.findViewById(R.id.gearsDroppedTextView);
-        TextView gearsDroppedHumanTextView = (TextView) view.findViewById(R.id.gearsDroppedHumanTextView);
         TextView climbTimeTextView = (TextView) view.findViewById(R.id.climbTimeTextView);
         TextView climbSuccessTextView = (TextView) view.findViewById(R.id.climbSuccessTextView);
-        TextView allianceKPATextView = (TextView) view.findViewById(R.id.allianceKPATextView);
         TextView tBHTextView = (TextView) view.findViewById(R.id.tBHTextView);
         teamNumberTextView.setText(teamNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText(matchNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("matchNumber")));
         teamColorTextView.setText(teamColorTextView.getText() + cursor.getString(cursor.getColumnIndex("teamColor")));
-        baselineTextView.setText(baselineTextView.getText() + cursor.getString(cursor.getColumnIndex("baseLine")));
-        autoGearAttemptTextView.setText(autoGearAttemptTextView.getText() + cursor.getString(cursor.getColumnIndex("autoGearAttempt")));
+        //robotPositionTextView.setText(robotPositionTextView.getText() + cursor.getString(cursor.getColumnIndex("robotPosition")));
         autoGearSuccessTextView.setText(autoGearSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("autoGearSuccess")));
         autoHighScoredTextView.setText(autoHighScoredTextView.getText() + cursor.getString(cursor.getColumnIndex("autoHighScored")));
-        autoHighMissedTextView.setText(autoHighMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("autoHighMissed")));
-        autoLowScoredTextView.setText(autoLowScoredTextView.getText() + cursor.getString(cursor.getColumnIndex("autoLowScored")));
-        autoLowMissedTextView.setText(autoLowMissedTextView.getText() + cursor.getString(cursor.getColumnIndex("autoLowMissed")));
-        gearsPickedUpTextView.setText(gearsPickedUpTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsPickedUp")));
         gearsHungTextView.setText(gearsHungTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsHung")));
-        gearsDroppedTextView.setText(gearsDroppedTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsDropped")));
-        gearsDroppedHumanTextView.setText(gearsDroppedHumanTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsDroppedHuman")));
         climbTimeTextView.setText(climbTimeTextView.getText() + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText(climbSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("climbSuccess")));
-        allianceKPATextView.setText(allianceKPATextView.getText() + cursor.getString(cursor.getColumnIndex("allianceKPA")));
         tBHTextView.setText(tBHTextView.getText() + cursor.getString(cursor.getColumnIndex("tbh")));
         teamNumberTextView.setText("Team " + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText("Match " + cursor.getString(cursor.getColumnIndex("matchNumber")));
@@ -69,21 +53,27 @@ public class dataListAdapter extends CursorAdapter{
             default:
                 break;
         }
+        /*String robotPosition = cursor.getString(cursor.getColumnIndex("robotPosition"));
+        switch(cursor.getString(cursor.getColumnIndex("robotPosition"))){
+            case "0":
+                robotPosition = "Left Peg";
+                break;
+            case "1":
+                robotPosition = "Middle Peg";
+                break;
+            case "2":
+                robotPosition = "Right Peg";
+                break;
+            default:
+                break;
+        }*/
         teamColorTextView.setText(color);
-        baselineTextView.setText("Baseline " + cursor.getString(cursor.getColumnIndex("baseLine")));
-        autoGearAttemptTextView.setText("Auto Gear Attempt " + cursor.getString(cursor.getColumnIndex("autoGearAttempt")));
+        //robotPositionTextView.setText(robotPosition);
         autoGearSuccessTextView.setText("Auto Gear Success " + cursor.getString(cursor.getColumnIndex("autoGearSuccess")));
         autoHighScoredTextView.setText("Auto High Scored " + cursor.getString(cursor.getColumnIndex("autoHighScored")));
-        autoHighMissedTextView.setText("Auto High Missed " + cursor.getString(cursor.getColumnIndex("autoHighMissed")));
-        autoLowScoredTextView.setText("Auto Low Scored " + cursor.getString(cursor.getColumnIndex("autoLowScored")));
-        autoLowMissedTextView.setText("Auto Low Missed " + cursor.getString(cursor.getColumnIndex("autoLowMissed")));
-        gearsPickedUpTextView.setText("Gears Picked Up " + cursor.getString(cursor.getColumnIndex("gearsPickedUp")));
         gearsHungTextView.setText("Gears Hung " + cursor.getString(cursor.getColumnIndex("gearsHung")));
-        gearsDroppedTextView.setText("Gears Dropped " + cursor.getString(cursor.getColumnIndex("gearsDropped")));
-        gearsDroppedHumanTextView.setText("Gears Dropped(Human) " + cursor.getString(cursor.getColumnIndex("gearsDroppedHuman")));
         climbTimeTextView.setText("Climb Time " + cursor.getString(cursor.getColumnIndex("climbTime")));
         climbSuccessTextView.setText("Climb Success " + cursor.getString(cursor.getColumnIndex("climbSuccess")));
-        allianceKPATextView.setText("Alliance KPA " + cursor.getString(cursor.getColumnIndex("allianceKPA")));
         tBHTextView.setText("TBH " + cursor.getString(cursor.getColumnIndex("tbh")));
     }
     public View newView(Context context, Cursor cursor, ViewGroup parent) {

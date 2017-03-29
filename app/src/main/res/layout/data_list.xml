@@ -31,7 +31,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Robot Position "
-        android:layout_below="@+id/teamColorTextView"
+        android:layout_below="@+id/matchNumberTextView"
+        android:layout_toRightOf="@+id/teamColorTextView"
         android:id="@+id/robotPositionTV"/>
 
     <TextView
