@@ -69,7 +69,7 @@ public class UploadPicture extends AppCompatActivity {
         c = myDB.query("TeamPictures", columns, "_id = ?", new String[]{id}, null, null, null);
         c.moveToFirst();
         try {
-            if(c.getCount() > 0) {
+            if (c.getCount() > 0) {
                 selectedFilePath = c.getString(c.getColumnIndex("pic1"));
                 teamNumber = c.getString(c.getColumnIndexOrThrow("teamNumber"));
                 bp = BitmapFactory.decodeFile(selectedFilePath);
@@ -78,8 +78,8 @@ public class UploadPicture extends AppCompatActivity {
         } catch (Exception e) {
             Log.d("ERROR", e.toString());
         }
-        int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION,6);
-        switch(orientation) {
+        int orientation = ei.getAttributeInt(ExifInterface.TAG_ORIENTATION, 6);
+        switch (orientation) {
             case ExifInterface.ORIENTATION_ROTATE_90:
                 bp = rotateImage(bp, 90);
                 break;
@@ -115,22 +115,6 @@ public class UploadPicture extends AppCompatActivity {
                 }
             }
         });
-        Cursor cursor = myDB.rawQuery("SELECT * FROM Events WHERE _id = 1", null);
-        cursor.moveToFirst();
-        switch(cursor.getString(cursor.getColumnIndex("event"))){
-            case "CVR":
-                SERVER_URL = "http://www.gorohi.com/1323/2017/cvr/picupload.php";
-                break;
-            case "Davis":
-                SERVER_URL = "http://www.gorohi.com/1323/2017/davis/picupload.php";
-                break;
-            case "Houston":
-                SERVER_URL = "http://www.gorohi.com/1323/2017/houston/picupload.php";
-                break;
-            default:
-                SERVER_URL = "http://www.gorohi.com/1323/2017/davis/picupload.php";
-                break;
-        }
     }
 
     public static Bitmap rotateImage(Bitmap source, float angle) {

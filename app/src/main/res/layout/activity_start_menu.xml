@@ -92,6 +92,7 @@
         android:drawableLeft="@android:drawable/ic_menu_gallery"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/addPhoto" />
+<<<<<<< HEAD
 
     <Button
         android:layout_width="wrap_content"
@@ -114,5 +115,7 @@
         android:layout_alignEnd="@+id/chooseEventButtons"
         android:layout_marginTop="3dp"/>
 
+=======
+>>>>>>> origin/master
 </RelativeLayout>
 </ScrollView>

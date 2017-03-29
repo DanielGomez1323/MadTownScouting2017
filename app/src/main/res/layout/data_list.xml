@@ -11,132 +11,81 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Match "
         android:id="@+id/matchNumberTextView"
-        android:layout_toRightOf="@+id/teamNumberTextView"/>
+        android:layout_below="@+id/teamNumberTextView"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Blue"
         android:id="@+id/teamColorTextView"
-        android:layout_toRightOf="@+id/matchNumberTextView"/>
+        android:layout_below="@+id/matchNumberTextView"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Baseline Crossed "
-        android:id="@+id/baselineTextView"
-        android:layout_below="@+id/teamNumberTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Auto Gear Attempt "
-        android:id="@+id/autoGearAttemptTextView"
-        android:layout_below="@+id/baselineTextView"/>
+        android:text="Robot Position "
+        android:layout_below="@+id/matchNumberTextView"
+        android:layout_toRightOf="@+id/teamColorTextView"
+        android:id="@+id/robotPositionTV"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Auto Gear Success "
         android:id="@+id/autoGearSuccessTextView"
-        android:layout_toRightOf="@+id/autoGearAttemptTextView"
-        android:layout_below="@+id/baselineTextView"/>
+        android:layout_below="@+id/robotPositionTV"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Auto High "
         android:id="@+id/autoHighScoredTextView"
-        android:layout_below="@+id/autoGearAttemptTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Auto High Missed "
-        android:id="@+id/autoHighMissedTextView"
-        android:layout_toRightOf="@+id/autoHighScoredTextView"
-        android:layout_below="@+id/autoGearAttemptTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Auto Low "
-        android:id="@+id/autoLowScoredTextView"
-        android:layout_below="@+id/autoHighScoredTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Auto Low Missed "
-        android:id="@+id/autoLowMissedTextView"
-        android:layout_toRightOf="@+id/autoLowScoredTextView"
-        android:layout_below="@+id/autoHighScoredTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Gears Picked Up "
-        android:id="@+id/gearsPickedUpTextView"
-        android:layout_below="@+id/autoLowScoredTextView"/>
+        android:layout_below="@+id/robotPositionTV"
+        android:layout_toRightOf="@+id/autoGearSuccessTextView"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Gears Hung "
         android:id="@+id/gearsHungTextView"
-        android:layout_toRightOf="@+id/gearsPickedUpTextView"
-        android:layout_below="@+id/autoLowScoredTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Gears Dropped "
-        android:id="@+id/gearsDroppedTextView"
-        android:layout_toRightOf="@+id/gearsHungTextView"
-        android:layout_below="@+id/autoLowMissedTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Gears Dropped(Human) "
-        android:id="@+id/gearsDroppedHumanTextView"
-        android:layout_below="@+id/gearsPickedUpTextView"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Climb Success "
-        android:id="@+id/climbSuccessTextView"
-        android:layout_toRightOf="@+id/gearsDroppedHumanTextView"
-        android:layout_below="@+id/gearsHungTextView"/>
+        android:layout_below="@+id/autoGearSuccessTextView"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Climb Time "
         android:id="@+id/climbTimeTextView"
-        android:layout_below="@+id/gearsDroppedHumanTextView"/>
+        android:layout_below="@+id/autoGearSuccessTextView"
+        android:layout_toRightOf="@+id/gearsHungTextView"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Alliance KPA "
-        android:id="@+id/allianceKPATextView"
-        android:layout_below="@id/gearsDroppedHumanTextView"
-        android:layout_toRightOf="@+id/climbTimeTextView"/>
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Climb Success "
+        android:id="@+id/climbSuccessTextView"
+        android:layout_toRightOf="@+id/climbTimeTextView"
+        android:layout_below="@+id/autoHighScoredTextView"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="TBH "
         android:id="@+id/tBHTextView"
-        android:layout_below="@+id/gearsDroppedHumanTextView"
-        android:layout_toRightOf="@+id/allianceKPATextView" />
+        android:layout_below="@id/gearsHungTextView"/>
 
 </RelativeLayout>

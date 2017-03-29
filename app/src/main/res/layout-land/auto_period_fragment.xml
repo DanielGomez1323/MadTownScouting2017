@@ -13,78 +13,88 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Autonomous Period"
+        android:textSize="30dp"
         android:id="@+id/autoTextView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="25sp"/>
+        android:layout_centerHorizontal="true" />
 
-    <CheckBox
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Baseline Crossed?"
-        android:id="@+id/baselineCheckBox"
-        android:layout_marginTop="10dp"
+        android:id="@+id/locationOfRobotTextView"
+        android:text="Location Of Robot"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/autoTextView"
-        android:layout_centerHorizontal="true"
-        android:checked="false"
-        android:textSize="15dp"/>
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Attempted to place gear?"
-        android:id="@+id/gearAttemptCheckBox"
-        android:layout_below="@+id/baselineCheckBox"
+        android:id="@+id/leftStartPeg"
+        android:text="Left Peg"
+        android:textSize="18sp"
+        android:buttonTint="#4169e1"
+        android:layout_below="@+id/locationOfRobotTextView"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentLeft="true"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/middleStartPeg"
+        android:text="Middle Peg"
+        android:textSize="18sp"
+        android:buttonTint="#4169e1"
+        android:layout_above="@+id/gearSuccessCheckBox"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:checked="false"
-        android:textSize="15sp"/>
+        android:layout_alignTop="@+id/leftStartPeg"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rightStartPeg"
+        android:text="Right Peg"
+        android:textSize="18sp"
+        android:buttonTint="#4169e1"
+        android:layout_above="@+id/gearSuccessCheckBox"
+        android:layout_alignParentRight="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gear successfully placed?"
+        android:textSize="20dp"
         android:id="@+id/gearSuccessCheckBox"
-        android:layout_below="@+id/gearAttemptCheckBox"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/leftStartPeg"
+        android:layout_marginTop="15dp"
         android:checked="false"
-        android:textSize="15sp"/>
+        android:buttonTint="#4169e1"/>
 
-    <CheckBox
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="High goal?"
-        android:id="@+id/highCheckBox"
-        android:layout_marginTop="10dp"
-        android:checked="false"
-        android:layout_below="@+id/gearSuccessCheckBox"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="15sp"/>
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Low goal?"
-        android:id="@+id/lowCheckBox"
-        android:layout_alignTop="@+id/highCheckBox"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:checked="false"
-        android:textSize="15sp"/>
+        android:id="@+id/autoBallTextView"
+        android:text="AutoBall Shots:"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:layout_below="@id/gearSuccessCheckBox"
+        android:layout_marginTop="15dp"
+        android:textColor="#000000" />
 
     <SeekBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/autoBallsSeekBar"
-        android:layout_below="@+id/lowCheckBox"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:max="20"
+        android:max="50"
         android:progress="0"
         android:indeterminate="false"
-        android:minWidth="275dp" />
+        android:minWidth="275dp"
+        android:layout_below="@+id/autoBallTextView"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -101,20 +111,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="20"
+        android:text="50"
         android:textSize="15dp"
         android:id="@+id/tenTextView"
-        android:layout_alignBottom="@+id/zeroTextView"
+        android:layout_alignTop="@+id/ballCountTextView"
         android:layout_alignRight="@+id/autoBallsSeekBar"
-        android:layout_marginLeft="250dp"/>
+        android:layout_alignEnd="@+id/autoBallsSeekBar" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Balls Made: 0"
+        android:textSize="15dp"
         android:id="@+id/ballCountTextView"
         android:layout_below="@+id/autoBallsSeekBar"
-        android:layout_centerHorizontal="true"
-        android:textSize="15sp"/>
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

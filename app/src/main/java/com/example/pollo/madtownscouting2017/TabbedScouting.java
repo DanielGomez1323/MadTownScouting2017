@@ -77,23 +77,15 @@ public class TabbedScouting extends AppCompatActivity {
                 List<Fragment> f = getSupportFragmentManager().getFragments();
                 AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentByTag(f.get(0).getTag());
                 Bundle ab = autoFragment.getData();
-                String baseLine = ab.getString("baseLine");
-                String autoGearAttempt = ab.getString("autoGearAttempt");
+                //String robotPosition = ab.getString("robotPosition");
                 String autoGearSuccess = ab.getString("autoGearSuccess");
                 String autoHighScored = ab.getString("autoHighScored");
-                String autoHighMissed = ab.getString("autoHighMissed");
-                String autoLowScored = ab.getString("autoLowScored");
-                String autoLowMissed = ab.getString("autoLowMissed");
 
                 TeleopFragment teleopFragment = (TeleopFragment) getSupportFragmentManager().findFragmentByTag(f.get(1).getTag());
                 Bundle tb = teleopFragment.getData();
-                String gearsPickedUp = tb.getString("gearsPickedUp");
-                String gearsDropped = tb.getString("gearsDropped");
-                String gearsDroppedHuman = tb.getString("gearsDroppedHuman");
                 String gearsHung = tb.getString("gearsHung");
                 String climbTime = tb.getString("climbTime");
                 String climbSuccess = tb.getString("climbSuccess");
-                String allianceKPA = tb.getString("allianceKPA");
 
                 NotesFragment notesFragment = (NotesFragment) getSupportFragmentManager().findFragmentByTag(f.get(2).getTag());
                 Bundle nb = notesFragment.getData();
@@ -102,21 +94,13 @@ public class TabbedScouting extends AppCompatActivity {
                 c.put("teamNumber", teamNumber);
                 c.put("teamColor", teamColor);
                 c.put("matchNumber", matchNumber);
-                c.put("baseLine", baseLine);
-                c.put("autoGearAttempt", autoGearAttempt);
+                //c.put("robotPosition", robotPosition);
                 c.put("autoGearSuccess", autoGearSuccess);
                 c.put("autoHighScored", autoHighScored);
-                c.put("autoHighMissed", autoHighMissed);
-                c.put("autoLowScored", autoLowScored);
-                c.put("autoLowMissed", autoLowMissed);
 
-                c.put("gearsPickedUp", gearsPickedUp);
-                c.put("gearsDropped", gearsDropped);
-                c.put("gearsDroppedHuman", gearsDroppedHuman);
                 c.put("gearsHung", gearsHung);
                 c.put("climbTime", climbTime);
                 c.put("climbSuccess", climbSuccess);
-                c.put("allianceKPA", allianceKPA);
 
                 c.put("tbh", tbh);
 

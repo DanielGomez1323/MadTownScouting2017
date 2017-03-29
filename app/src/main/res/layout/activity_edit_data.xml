@@ -11,6 +11,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.pollo.madtownscouting2017.EditData">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,6 +21,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,6 +32,7 @@
         android:layout_below="@+id/teamNumberTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,6 +42,7 @@
         android:layout_below="@+id/teamNumberEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,6 +53,7 @@
         android:layout_below="@+id/matchNumberTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,6 +63,7 @@
         android:layout_below="@+id/matchNumberEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,53 +74,36 @@
         android:layout_below="@+id/teamColorTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Crossed BaseLine"
-        android:id="@+id/crossedBaselineTV"
         android:layout_below="@+id/teamColorEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:text="Robot Position"
+        android:id="@+id/robotPositionTextView"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentLeft="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/baselineCrossedEnterText"
-        android:hint="Baseline Crossed"
-        android:layout_below="@+id/crossedBaselineTV"
+        android:layout_below="@+id/robotPositionTextView"
+        android:id="@+id/robotPositionEditText"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Auto Gear Attempted"
-        android:id="@+id/autoGearAttemptTV"
-        android:layout_below="@+id/baselineCrossedEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:hint="Robot Positon"
         android:inputType="number"
-        android:ems="10"
-        android:id="@+id/autoGearAttemptEnterText"
-        android:hint="Auto Gear Attempted"
-        android:layout_below="@+id/autoGearAttemptTV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:ems="10" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Auto Gear Success"
         android:id="@+id/autoGearSuccessTV"
-        android:layout_below="@+id/autoGearAttemptEnterText"
+        android:layout_below="@+id/robotPositionEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,6 +114,7 @@
         android:layout_below="@+id/autoGearSuccessTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -134,6 +124,7 @@
         android:layout_below="@+id/autoGearSuccessEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -144,91 +135,17 @@
         android:layout_below="@+id/autoHighScoredTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Auto High Missed"
-        android:id="@+id/autoHighMissedTV"
-        android:layout_below="@+id/autoHighScoredEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/autoHighMissedEnterText"
-        android:hint="Auto High Missed"
-        android:layout_below="@+id/autoHighMissedTV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Auto Low Scored"
-        android:id="@+id/autoLowScoredTV"
-        android:layout_below="@+id/autoHighMissedEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/autoLowScoredEnterText"
-        android:hint="Auto Low Scored"
-        android:layout_below="@+id/autoLowScoredTV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Auto Low Missed"
-        android:id="@+id/autoLowMissedTV"
-        android:layout_below="@+id/autoLowScoredEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/autoLowMissedEnterText"
-        android:hint="Auto Low Missed"
-        android:layout_below="@+id/autoLowMissedTV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Gears Picked Up"
-        android:id="@+id/gearsPickedUpTV"
-        android:layout_below="@+id/autoLowMissedEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/gearsPickedUpEnterText"
-        android:hint="Gears Picked Up"
-        android:layout_below="@+id/gearsPickedUpTV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Gears Hung"
         android:id="@+id/gearsHungTV"
-        android:layout_below="@+id/gearsPickedUpEnterText"
+        android:layout_below="@+id/autoHighScoredEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -239,53 +156,17 @@
         android:layout_below="@+id/gearsHungTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Gears Dropped"
-        android:id="@+id/gearsDroppedTV"
-        android:layout_below="@+id/gearsHungEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/gearsDroppedEnterText"
-        android:hint="Gears Dropped"
-        android:layout_below="@+id/gearsDroppedTV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Gears Dropped(Human)"
-        android:id="@+id/gearsDroppedHumanTV"
-        android:layout_below="@+id/gearsDroppedEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/gearsDroppedHumanEnterText"
-        android:hint="Gears Dropped(Human)"
-        android:layout_below="@+id/gearsDroppedHumanTV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Climb Time"
         android:id="@+id/climbTimeTV"
-        android:layout_below="@+id/gearsDroppedHumanEnterText"
+        android:layout_below="@+id/gearsHungEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -296,6 +177,7 @@
         android:layout_below="@+id/climbTimeTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -305,6 +187,7 @@
         android:layout_below="@+id/climbTimeEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -315,44 +198,28 @@
         android:layout_below="@+id/climbSuccessTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="Alliance KPA"
-        android:id="@+id/allianceKPATV"
-        android:layout_below="@+id/climbSuccessEnterText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/allianceKPAEditText"
-        android:hint="Alliance KPA"
-        android:layout_below="@+id/allianceKPATV"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:textAppearanceMedium"
         android:text="TBH"
         android:id="@+id/tbhTV"
-        android:layout_below="@+id/allianceKPAEditText"
+        android:layout_below="@+id/climbSuccessEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/tbhEnterText"
-        android:hint="THB"
+        android:hint="TBH"
         android:layout_below="@+id/tbhTV"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -362,5 +229,6 @@
         android:layout_below="@+id/tbhEnterText"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
 </ScrollView>

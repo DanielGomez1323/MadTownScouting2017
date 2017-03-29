@@ -24,7 +24,6 @@
         <activity android:name=".DataUpload" />
         <activity android:name=".addPhoto" />
         <activity android:name=".teamsView" />
-        <activity android:name=".AutoPeriod" />
         <activity android:name=".TeleopPeriod" />
         <activity
             android:name=".TabbedScouting"
@@ -51,8 +50,11 @@
         <activity android:name=".TeamPictureSelection" />
         <activity android:name=".TeamRoster" />
         <activity android:name=".EditData" />
+<<<<<<< HEAD
         <activity android:name=".Events" />
         <activity android:name=".Main2Activity"></activity>
+=======
+>>>>>>> origin/master
     </application>
 
 </manifest>
