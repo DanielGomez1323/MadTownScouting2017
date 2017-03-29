@@ -92,30 +92,6 @@
         android:drawableLeft="@android:drawable/ic_menu_gallery"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/addPhoto" />
-<<<<<<< HEAD
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose Event"
-        android:id="@+id/chooseEventButtons"
-        android:drawableLeft="@drawable/ic_action_cal"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/viewPhoto"
-        android:layout_alignRight="@+id/viewPhoto"
-        android:layout_alignEnd="@+id/viewPhoto" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/timerButton"
-        android:layout_alignParentLeft="true"
-        android:text="Timer"
-        android:layout_below="@+id/chooseEventButtons"
-        android:layout_alignRight="@+id/chooseEventButtons"
-        android:layout_alignEnd="@+id/chooseEventButtons"
-        android:layout_marginTop="3dp"/>
-
-=======
->>>>>>> origin/master
 </RelativeLayout>
 </ScrollView>
