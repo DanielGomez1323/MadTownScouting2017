@@ -77,7 +77,7 @@ public class TabbedScouting extends AppCompatActivity {
                 List<Fragment> f = getSupportFragmentManager().getFragments();
                 AutoFragment autoFragment = (AutoFragment) getSupportFragmentManager().findFragmentByTag(f.get(0).getTag());
                 Bundle ab = autoFragment.getData();
-                //String robotPosition = ab.getString("robotPosition");
+                String robotPosition = ab.getString("robotPosition");
                 String autoGearSuccess = ab.getString("autoGearSuccess");
                 String autoHighScored = ab.getString("autoHighScored");
 
@@ -94,7 +94,7 @@ public class TabbedScouting extends AppCompatActivity {
                 c.put("teamNumber", teamNumber);
                 c.put("teamColor", teamColor);
                 c.put("matchNumber", matchNumber);
-                //c.put("robotPosition", robotPosition);
+                c.put("robotPosition", robotPosition);
                 c.put("autoGearSuccess", autoGearSuccess);
                 c.put("autoHighScored", autoHighScored);
 

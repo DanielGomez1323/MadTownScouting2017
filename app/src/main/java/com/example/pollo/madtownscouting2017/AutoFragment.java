@@ -43,6 +43,33 @@ public class AutoFragment extends android.support.v4.app.Fragment {
         autoBallsSeekBar = (SeekBar) rootView.findViewById(R.id.autoBallsSeekBar);
         ballCountTextView = (TextView) rootView.findViewById(R.id.ballCountTextView);
 
+        leftStartPeg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(leftStartPeg.isChecked()){
+                    middleStartPeg.setChecked(false);
+                    rightStartPeg.setChecked(false);
+                }
+            }
+        });
+        middleStartPeg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(middleStartPeg.isChecked()){
+                    leftStartPeg.setChecked(false);
+                    rightStartPeg.setChecked(false);
+                }
+            }
+        });
+        rightStartPeg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rightStartPeg.isChecked()){
+                    leftStartPeg.setChecked(false);
+                    middleStartPeg.setChecked(false);
+                }
+            }
+        });
         autoBallsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -66,13 +93,13 @@ public class AutoFragment extends android.support.v4.app.Fragment {
 
     public Bundle getData(){
         Bundle b = new Bundle();
-        /*if(leftStartPeg.isChecked()){
+        if(leftStartPeg.isChecked()){
             b.putString("robotPosition", "0");
         }else if(middleStartPeg.isChecked()){
             b.putString("robotPosition", "1");
         }else if(rightStartPeg.isChecked()){
             b.putString("robotPosition", "2");
-        }*/
+        }
         if(gearSuccessCheckBox.isChecked()){
             b.putString("autoGearSuccess", "1");
         }else{

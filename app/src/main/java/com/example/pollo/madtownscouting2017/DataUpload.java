@@ -51,7 +51,7 @@ public class DataUpload extends AppCompatActivity {
         String matchNumber;
         String teamColor;
 
-        //String robotPosition;
+        String robotPosition;
         String autoGearSuccess;
         String autoHighScored;
         String gearsHung;
@@ -67,7 +67,7 @@ public class DataUpload extends AppCompatActivity {
                 teamNumber = c.getString(c.getColumnIndex("teamNumber"));
                 matchNumber = c.getString(c.getColumnIndex("matchNumber"));
                 teamColor = c.getString(c.getColumnIndex("teamColor"));
-                //robotPosition = c.getString(c.getColumnIndex("robotPosition"));
+                robotPosition = c.getString(c.getColumnIndex("robotPosition"));
                 autoGearSuccess = c.getString(c.getColumnIndex("autoGearSuccess"));
                 autoHighScored = c.getString(c.getColumnIndex("autoHighScored"));
                 gearsHung = c.getString(c.getColumnIndex("gearsHung"));
@@ -95,7 +95,7 @@ public class DataUpload extends AppCompatActivity {
             object.put("teamNumber", data.teamNumber);
             object.put("matchNumber", data.matchNumber);
             object.put("teamColor", data.teamColor);
-            //object.put("robotPosition", data.robotPosition);
+            object.put("robotPosition", data.robotPosition);
             object.put("autoGearSuccess", data.autoGearSuccess);
             object.put("autoHighScored", data.autoHighScored);
             object.put("gearsHung", data.gearsHung);

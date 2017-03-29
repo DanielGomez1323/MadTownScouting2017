@@ -82,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/robotPositionTextView"
-        android:id="@+id/robotPositionEditText"
+        android:id="@+id/robotPositionEnterText"
         android:layout_alignParentRight="true"
         android:hint="Robot Positon"
         android:inputType="number"
@@ -95,7 +95,7 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:text="Auto Gear Success"
         android:id="@+id/autoGearSuccessTV"
-        android:layout_below="@+id/robotPositionEditText"
+        android:layout_below="@+id/robotPositionEnterText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
     <EditText

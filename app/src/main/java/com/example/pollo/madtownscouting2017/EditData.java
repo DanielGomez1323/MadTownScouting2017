@@ -18,7 +18,7 @@ public class EditData extends AppCompatActivity {
     EditText teamNumberEnterText;
     EditText matchNumberEnterText;
     EditText teamColorEnterText;
-    EditText robotPositionEditText;
+    EditText robotPositionEnterText;
     EditText autoGearSuccessEnterText;
     EditText autoHighScoredEnterText;
     EditText gearsHungEnterText;
@@ -43,7 +43,8 @@ public class EditData extends AppCompatActivity {
         teamNumberEnterText = (EditText)findViewById(R.id.teamNumberEnterText);
         matchNumberEnterText = (EditText)findViewById(R.id.matchNumberEnterText);
         teamColorEnterText = (EditText)findViewById(R.id.teamColorEnterText);
-        robotPositionEditText = (EditText)findViewById(R.id.robotPositionEditText);
+        robotPositionEnterText = (EditText)findViewById(R.id.robotPositionEnterText);
+        autoHighScoredEnterText = (EditText)findViewById(R.id.autoHighScoredEnterText);
         autoGearSuccessEnterText = (EditText)findViewById(R.id.autoGearSuccessEnterText);
         gearsHungEnterText = (EditText)findViewById(R.id.gearsHungEnterText);
         climbTimeEnterText = (EditText) findViewById(R.id.climbTimeEnterText);
@@ -61,7 +62,7 @@ public class EditData extends AppCompatActivity {
             teamNumberEnterText.setText(c.getString(c.getColumnIndex("teamNumber")), TextView.BufferType.EDITABLE);
             matchNumberEnterText.setText(c.getString(c.getColumnIndex("matchNumber")), TextView.BufferType.EDITABLE);
             teamColorEnterText.setText(c.getString(c.getColumnIndex("teamColor")), TextView.BufferType.EDITABLE);
-            //robotPositionEditText.setText(c.getString(c.getColumnIndex("robotPosition")), TextView.BufferType.EDITABLE);
+            robotPositionEnterText.setText(c.getString(c.getColumnIndex("robotPosition")), TextView.BufferType.EDITABLE);
             autoGearSuccessEnterText.setText(c.getString(c.getColumnIndex("autoGearSuccess")), TextView.BufferType.EDITABLE);
             autoHighScoredEnterText.setText(c.getString(c.getColumnIndex("autoHighScored")), TextView.BufferType.EDITABLE);
             gearsHungEnterText.setText(c.getString(c.getColumnIndex("gearsHung")), TextView.BufferType.EDITABLE);
@@ -85,7 +86,7 @@ public class EditData extends AppCompatActivity {
             tbh = tbh.replace("'","*");
             myDB.execSQL("UPDATE SteamWorks SET teamNumber = " + teamNumberEnterText.getText().toString() +
             ", matchNumber = " + matchNumberEnterText.getText().toString() + ", teamColor = " +
-            teamColorEnterText.getText().toString() + /*", robotPosition = " + robotPositionEditText.getText().toString() + */", autoGearSuccess = " + autoGearSuccessEnterText.getText().toString() +
+            teamColorEnterText.getText().toString() + ", robotPosition = " + robotPositionEnterText.getText().toString() + ", autoGearSuccess = " + autoGearSuccessEnterText.getText().toString() +
             ", autoHighScored = " + autoHighScoredEnterText.getText().toString() + ", gearsHung = " +
             gearsHungEnterText.getText().toString() + ", climbTime = " + climbTimeEnterText.getText().toString() +
             ", climbSuccess = " + climbSuccessEnterText.getText().toString() + ", tbh = '" + tbh + "' WHERE _id = " + id);

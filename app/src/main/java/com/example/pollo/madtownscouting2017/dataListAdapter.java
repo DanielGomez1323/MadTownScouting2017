@@ -23,7 +23,7 @@ public class dataListAdapter extends CursorAdapter{
         TextView teamNumberTextView = (TextView) view.findViewById(R.id.teamNumberTextView);
         TextView matchNumberTextView = (TextView) view.findViewById(R.id.matchNumberTextView);
         TextView teamColorTextView = (TextView) view.findViewById(R.id.teamColorTextView);
-        //TextView robotPositionTextView = (TextView) view.findViewById(R.id.robotPositionTV);
+        TextView robotPositionTextView = (TextView) view.findViewById(R.id.robotPositionTV);
         TextView autoGearSuccessTextView = (TextView) view.findViewById(R.id.autoGearSuccessTextView);
         TextView autoHighScoredTextView = (TextView) view.findViewById(R.id.autoHighScoredTextView);
         TextView gearsHungTextView = (TextView) view.findViewById(R.id.gearsHungTextView);
@@ -33,7 +33,7 @@ public class dataListAdapter extends CursorAdapter{
         teamNumberTextView.setText(teamNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("teamNumber")));
         matchNumberTextView.setText(matchNumberTextView.getText() + cursor.getString(cursor.getColumnIndex("matchNumber")));
         teamColorTextView.setText(teamColorTextView.getText() + cursor.getString(cursor.getColumnIndex("teamColor")));
-        //robotPositionTextView.setText(robotPositionTextView.getText() + cursor.getString(cursor.getColumnIndex("robotPosition")));
+        robotPositionTextView.setText(robotPositionTextView.getText() + cursor.getString(cursor.getColumnIndex("robotPosition")));
         autoGearSuccessTextView.setText(autoGearSuccessTextView.getText() + cursor.getString(cursor.getColumnIndex("autoGearSuccess")));
         autoHighScoredTextView.setText(autoHighScoredTextView.getText() + cursor.getString(cursor.getColumnIndex("autoHighScored")));
         gearsHungTextView.setText(gearsHungTextView.getText() + cursor.getString(cursor.getColumnIndex("gearsHung")));
@@ -53,7 +53,7 @@ public class dataListAdapter extends CursorAdapter{
             default:
                 break;
         }
-        /*String robotPosition = cursor.getString(cursor.getColumnIndex("robotPosition"));
+        String robotPosition = cursor.getString(cursor.getColumnIndex("robotPosition"));
         switch(cursor.getString(cursor.getColumnIndex("robotPosition"))){
             case "0":
                 robotPosition = "Left Peg";
@@ -66,9 +66,9 @@ public class dataListAdapter extends CursorAdapter{
                 break;
             default:
                 break;
-        }*/
+        }
         teamColorTextView.setText(color);
-        //robotPositionTextView.setText(robotPosition);
+        robotPositionTextView.setText(robotPosition);
         autoGearSuccessTextView.setText("Auto Gear Success " + cursor.getString(cursor.getColumnIndex("autoGearSuccess")));
         autoHighScoredTextView.setText("Auto High Scored " + cursor.getString(cursor.getColumnIndex("autoHighScored")));
         gearsHungTextView.setText("Gears Hung " + cursor.getString(cursor.getColumnIndex("gearsHung")));
