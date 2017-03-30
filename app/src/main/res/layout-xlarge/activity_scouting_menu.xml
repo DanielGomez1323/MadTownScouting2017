@@ -96,7 +96,8 @@
         android:layout_marginEnd="75dp"
         android:layout_alignTop="@+id/redCheckBox"
         android:layout_toLeftOf="@+id/redCheckBox"
-        android:layout_toStartOf="@+id/redCheckBox" />
+        android:layout_toStartOf="@+id/redCheckBox"
+        android:buttonTint="#4169e1"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -107,15 +108,18 @@
         android:layout_below="@+id/teamColorTextView"
         android:layout_alignLeft="@+id/matchNumberEditText"
         android:layout_alignStart="@+id/matchNumberEditText"
-        android:layout_marginTop="51dp" />
+        android:layout_marginTop="51dp"
+        android:buttonTint="#ff0000"/>
 
     <AutoCompleteTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Team Number"
+        android:ems="10"
+        android:textSize="25sp"
         android:id="@+id/autoCompTeamNumberTextView"
-        android:layout_above="@+id/startScoutingButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/blueCheckBox"
+        android:layout_marginTop="65dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
