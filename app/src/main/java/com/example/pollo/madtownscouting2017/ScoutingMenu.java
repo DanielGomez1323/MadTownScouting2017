@@ -25,7 +25,7 @@ public class ScoutingMenu extends AppCompatActivity {
     AutoCompleteTextView autoCompTeamNumberTextView;
 
 
-    String [] teamNumber = {"1323", "254", "1678", "1671", "199", "100", "3313", "5012", "973", "971", "514" };
+    String [] teamNumber = {"1323", "254", "1678", "1671", "199", "100", "3313", "5012", "973", "971", "514", "1700" };
 
     SQLiteDatabase myDB = null;
     Cursor c;
@@ -40,8 +40,7 @@ public class ScoutingMenu extends AppCompatActivity {
         blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
         autoCompTeamNumberTextView = (AutoCompleteTextView) findViewById(R.id.autoCompTeamNumberTextView);
 
-        ArrayAdapter adapter = new
-                ArrayAdapter(this, android.R.layout.simple_list_item_1, teamNumber);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,teamNumber);
 
         autoCompTeamNumberTextView.setAdapter(adapter);
         autoCompTeamNumberTextView.setThreshold(1);
