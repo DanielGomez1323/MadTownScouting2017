@@ -22,6 +22,10 @@ public class ScoutingMenu extends AppCompatActivity {
     Button startScoutingButton;
     CheckBox redCheckBox;
     CheckBox blueCheckBox;
+    AutoCompleteTextView autoCompTeamNumberTextView;
+
+
+    String [] teamNumber = {"1323", "254", "1678", "1671", "199", "100", "3313", "5012", "973", "971", "514" };
 
     SQLiteDatabase myDB = null;
     Cursor c;
@@ -34,6 +38,13 @@ public class ScoutingMenu extends AppCompatActivity {
         startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
         redCheckBox = (CheckBox) findViewById(R.id.redCheckBox);
         blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
+        autoCompTeamNumberTextView = (AutoCompleteTextView) findViewById(R.id.autoCompTeamNumberTextView);
+
+        ArrayAdapter adapter = new
+                ArrayAdapter(this, android.R.layout.simple_list_item_1, teamNumber);
+
+        autoCompTeamNumberTextView.setAdapter(adapter);
+        autoCompTeamNumberTextView.setThreshold(1);
 
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
         c = myDB.rawQuery("SELECT * FROM SteamWorks ORDER BY _id DESC LIMIT 1", null);

@@ -79,7 +79,8 @@
         android:id="@+id/blueCheckBox"
         android:layout_below="@+id/teamColorTextView"
         android:layout_alignRight="@+id/teamColorTextView"
-        android:layout_alignEnd="@+id/teamColorTextView" />
+        android:layout_alignEnd="@+id/teamColorTextView"
+        android:buttonTint="#4169e1"/>
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -88,15 +89,16 @@
         android:id="@+id/redCheckBox"
         android:layout_alignTop="@+id/blueCheckBox"
         android:layout_toRightOf="@+id/teamNumberTextView"
-        android:layout_toEndOf="@+id/teamNumberTextView" />
+        android:layout_toEndOf="@+id/teamNumberTextView"
+        android:buttonTint="#ff0000"/>
 
     <AutoCompleteTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Team Number"
         android:id="@+id/autoCompTeamNumberTextView"
-        android:layout_above="@+id/startScoutingButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:ems="10"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:hint="Team Number"/>
 
 </RelativeLayout>
