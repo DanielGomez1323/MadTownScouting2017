@@ -50,6 +50,8 @@
         <activity android:name=".TeamRoster" />
         <activity android:name=".EditData" />
 
+        <activity android:name=".threevthreeAdapter"></activity>
+
     </application>
 
 </manifest>
