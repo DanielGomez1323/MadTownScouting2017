@@ -42,7 +42,7 @@ public class DataUpload extends AppCompatActivity {
     Button scrollUpButton;
     Match match;
     String query;
-    String address = "http://www.gorohi.com/1323/2017/houston/data.php";
+    String address = "http://www.gorohi.com/1323/2017/data.php";
     String _id;
     dataListAdapter listAdapter;
 
