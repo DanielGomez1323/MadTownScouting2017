@@ -39,7 +39,7 @@
             android:text="-"
             android:id="@+id/decreaseGearsPlacedButton"
             android:layout_below="@+id/gearsPlacedTextView"
-            android:layout_toRightOf="@+id/teleopPeriodTextView"
+            android:layout_toLeftOf="@+id/teleopPeriodTextView"
             android:paddingTop="5dp"/>
 
         <Button
@@ -48,7 +48,7 @@
             android:text="+"
             android:id="@+id/increaseGearsPlacedButton"
             android:layout_below="@+id/gearsPlacedTextView"
-            android:layout_toLeftOf="@+id/teleopPeriodTextView"
+            android:layout_toRightOf="@+id/teleopPeriodTextView"
             android:paddingTop="5dp"/>
 
         <TextView
