@@ -99,6 +99,8 @@ public class AutoFragment extends android.support.v4.app.Fragment {
             b.putString("robotPosition", "1");
         }else if(rightStartPeg.isChecked()){
             b.putString("robotPosition", "2");
+        }else{
+            b.putString("robotPosition", "3");
         }
         if(gearSuccessCheckBox.isChecked()){
             b.putString("autoGearSuccess", "1");

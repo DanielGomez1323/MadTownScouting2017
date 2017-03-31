@@ -64,6 +64,8 @@ public class dataListAdapter extends CursorAdapter{
             case "2":
                 robotPosition = "Right Peg";
                 break;
+            case "3":
+                robotPosition = "Did Not Show";
             default:
                 break;
         }
