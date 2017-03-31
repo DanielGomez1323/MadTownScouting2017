@@ -95,7 +95,8 @@
         android:indeterminate="false"
         android:minWidth="275dp"
         android:layout_below="@+id/autoBallTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:progressTint="#4169e1" />
 
     <TextView
         android:layout_width="wrap_content"

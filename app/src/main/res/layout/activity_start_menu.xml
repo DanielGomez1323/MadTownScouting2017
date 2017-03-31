@@ -64,7 +64,8 @@
         android:id="@+id/teamsView"
         android:drawableLeft="@drawable/ic_action_ppl"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/uploadData" />
+        android:layout_below="@+id/uploadData"
+    />
 
     <Button
         android:layout_width="105dp"
