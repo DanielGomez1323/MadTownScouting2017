@@ -35,10 +35,10 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="95dp"
+        android:layout_width="105dp"
         android:layout_height="50dp"
         android:text="Scout"
-        android:textSize="10dp"
+        android:textSize="12sp"
         android:id="@+id/scoutButton"
         android:drawableLeft="@android:drawable/ic_menu_agenda"
         android:layout_below="@+id/searchButton"
@@ -46,10 +46,10 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="95dp"
+        android:layout_width="105dp"
         android:layout_height="50dp"
         android:text="Upload"
-        android:textSize="10dp"
+        android:textSize="12sp"
         android:id="@+id/uploadData"
         android:drawableLeft="@android:drawable/ic_menu_upload"
         android:layout_below="@+id/scoutButton"
@@ -57,20 +57,20 @@
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="95dp"
+        android:layout_width="105dp"
         android:layout_height="50dp"
         android:text="Teams"
-        android:textSize="10dp"
+        android:textSize="12sp"
         android:id="@+id/teamsView"
         android:drawableLeft="@drawable/ic_action_ppl"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/uploadData" />
 
     <Button
-        android:layout_width="95dp"
+        android:layout_width="105dp"
         android:layout_height="50dp"
         android:text="Add Photo"
-        android:textSize="10dp"
+        android:textSize="12sp"
         android:id="@+id/addPhoto"
         android:drawableLeft="@android:drawable/ic_menu_camera"
         android:layout_below="@+id/teamsView"
@@ -81,10 +81,10 @@
         android:focusableInTouchMode="false" />
 
     <Button
-        android:layout_width="95dp"
+        android:layout_width="105dp"
         android:layout_height="50dp"
         android:text="View Photos"
-        android:textSize="10dp"
+        android:textSize="12sp"
         android:id="@+id/viewPhoto"
         android:drawableLeft="@android:drawable/ic_menu_gallery"
         android:layout_alignParentLeft="true"

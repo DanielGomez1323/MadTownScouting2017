@@ -11,9 +11,10 @@
 
     <TextView
         android:layout_width="150dp"
-        android:layout_height="25dp"
+        android:layout_height="35dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Team Number"
+        android:textSize="20sp"
         android:id="@+id/teamNumberTextView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -28,15 +29,17 @@
         android:ems="10"
         android:id="@+id/teamNumberEditText"
         android:hint="Ex. 1323"
+        android:layout_marginTop="5dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="150dp"
-        android:layout_height="25dp"
+        android:layout_height="35dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Match Number"
+        android:textSize="20sp"
         android:id="@+id/matchNumberTextView"
         android:layout_below="@+id/teamNumberEditText"
         android:layout_alignParentLeft="true"
@@ -47,6 +50,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
+        android:layout_marginTop="5dp"
         android:id="@+id/matchNumberEditText"
         android:layout_below="@+id/teamNumberEditText"
         android:layout_alignRight="@+id/teamNumberEditText"
@@ -55,9 +59,10 @@
 
     <TextView
         android:layout_width="150dp"
-        android:layout_height="25dp"
+        android:layout_height="35dp"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Team Color"
+        android:textSize="20sp"
         android:id="@+id/teamColorTextView"
         android:layout_below="@+id/matchNumberEditText"
         android:layout_alignParentLeft="true"
