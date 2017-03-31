@@ -67,11 +67,12 @@
         android:id="@+id/climbTimeSeekBar"
         android:layout_marginTop="20dp"
         android:max="20"
-        android:progress="0"
+        android:progress="10"
         android:indeterminate="false"
         android:minWidth="250dp"
         android:layout_below="@+id/amountGearsPlacedTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:progressTint="#4169e1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -110,7 +111,8 @@
         android:textSize="15sp"
         android:layout_below="@+id/climbCountTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:buttonTint="@color/colorPrimary"/>
 
 </RelativeLayout>
 </ScrollView>
