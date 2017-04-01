@@ -1,50 +1,64 @@
 package com.example.pollo.madtownscouting2017;
 
+import android.app.DownloadManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.json.JSONObject;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+//import
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 public class threevthreeAdapter extends AppCompatActivity {
 
-    DefaultHttpClient   httpclient = new DefaultHttpClient(new BasicHttpParams());
-    HttpPost httppost = new HttpPost(www.gorohi.com/1323/2017/silicon/teamdata.php);
-// Depends on your web service
-            httppost.setHeader("Content-type", "application/json");
+        public void main(String[] args) {
+            String url = "http://www.gorohi.com/1323/2017/pullData.php";
+            JsonObjectRequest jsObjRequest = new JsonObjectRequest
+                    (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
-    InputStream inputStream = null;
-    String result = null;
-    try {
-        HttpResponse response = httpclient.execute(httppost);
-        HttpEntity entity = response.getEntity();
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            List<MatchData> matchNumbers = new ArrayList<>();
+                            JSONArray matches = response.names();
+                            try{
+                                for (int i = 0; i < response.length(); i++) {
+                                    String matchNumber = matches.getString(i);
+                                    JSONObject jsonMatch = response.getJSONObject("matchNumber");
+                                    JSONObject jsonteamNumber = jsonMatch.getJSONObject("teamNumber");
+                                    MatchData test = new MatchData(jsonMatch.getInt("matchNumber"));
+                                    test.addAlliance(MatchData.teamColor.red,jsonteamNumber.getInt("teamNumber"),jsonteamNumber.getInt("teamNumber"),jsonteamNumber.getInt("teamNumber"));
+                                    matchNumbers.add(i,test);
+                                }
 
-        inputStream = entity.getContent();
-        // json is UTF-8 by default
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"), 8);
-        StringBuilder sb = new StringBuilder();
+                                Collections.sort(matchNumbers);
+//                                    matchNumbers.
+                            } catch (final JSONException e) {
+                            }
+                        }
+                    }, new Response.ErrorListener() {
 
-        String line = null;
-        while ((line = reader.readLine()) != null)
-        {
-            sb.append(line + "\n");
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            // TODO Auto-generated method stub
+
+                        }
+                    });
+
+
         }
-        result = sb.toString();
-    } catch (Exception e) {
-        // Oops
-    }
-    finally {
-        try{if(inputStream != null)inputStream.close();}catch(Exception squish){}
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,10 +66,5 @@ public class threevthreeAdapter extends AppCompatActivity {
         setContentView(R.layout.activity_threevthree_adapter);
 
 
-        for (int i=0; i < jArray.length(); i++)
-        {
-            try {
-                JSONObject oneObject = jArray.getJSONObject(i);
-                
     }
 }

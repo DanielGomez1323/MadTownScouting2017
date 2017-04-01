@@ -10,7 +10,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
+/**
+ * @author Taylor Anderson
+ * */
 public class TeamRoster extends AppCompatActivity {
     ListView teamrosterlistView;
     SQLiteDatabase myDB = null;

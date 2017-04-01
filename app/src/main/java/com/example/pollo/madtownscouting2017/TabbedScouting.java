@@ -182,6 +182,7 @@ public class TabbedScouting extends AppCompatActivity {
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
+     * @author Taylor Anderson
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 

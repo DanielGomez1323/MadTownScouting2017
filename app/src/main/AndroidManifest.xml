@@ -49,7 +49,8 @@
         <activity android:name=".TeamPictureSelection" />
         <activity android:name=".TeamRoster" />
         <activity android:name=".EditData" />
-        <activity android:name=".threevthreeAdapter"></activity>
+        <activity android:name=".threevthreeAdapter" />
+        <activity android:name=".ThreeVThree"></activity>
     </application>
 
 </manifest>

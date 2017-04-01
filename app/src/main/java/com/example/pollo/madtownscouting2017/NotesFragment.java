@@ -9,6 +9,9 @@ import android.widget.EditText;
 
 /**
  * Created by 19IsaacD740 on 1/18/2017.
+ *
+ * @author Taylor Anderson
+ * @author Isaac Duartevilla
  */
 public class NotesFragment extends Fragment{
 
