@@ -52,10 +52,10 @@ public class threevthreeAdapter extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             // TODO Auto-generated method stub
-
+                            error.printStackTrace();
                         }
                     });
-
+            Volley.newRequestQueue(this).add(jsObjRequest);
 
         }
 
