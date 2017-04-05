@@ -40,10 +40,9 @@ public class OurSingleton {
         return mRequestQueue;
     }
 
-    public<T> void addToRequestQueue(Request<T> req, String tag){
+    public<T> void addToRequestQueue(Request<T> request){
         // Add the specified request to the request queue
-        req.setTag(tag);
-        getRequestQueue().add(req);
+        getRequestQueue().add(request);
     }
 
 

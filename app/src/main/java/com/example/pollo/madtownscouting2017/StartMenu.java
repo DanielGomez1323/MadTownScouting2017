@@ -20,6 +20,7 @@ public class StartMenu extends AppCompatActivity {
     Button teamsView;
     Button addPhoto;
     Button viewPhoto;
+    Button threeVThree;
     SQLiteDatabase myDB = null;
 
     @Override
@@ -33,6 +34,7 @@ public class StartMenu extends AppCompatActivity {
         teamsView = (Button) findViewById(R.id.teamsView);
         addPhoto = (Button) findViewById(R.id.addPhoto);
         viewPhoto = (Button) findViewById(R.id.viewPhoto);
+        threeVThree = (Button)findViewById(R.id.threeVThree);
 
         createPicturesDatabase();
         createDatabase();
@@ -82,6 +84,14 @@ public class StartMenu extends AppCompatActivity {
                 startActivity(viewPhotoIntent);
             }
         });
+        threeVThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent threevthreeAdapterIntent = new Intent(getApplicationContext(), threevthreeAdapter.class);
+                startActivity(threevthreeAdapterIntent);
+            }
+        });
+
     }
     public void createDatabase(){
         try{

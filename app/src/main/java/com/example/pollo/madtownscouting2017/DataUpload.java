@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.nfc.Tag;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,10 +14,6 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-
-import com.android.volley.Response;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -187,7 +182,7 @@ public class DataUpload extends AppCompatActivity {
                     if (match.isLoaded()) {
                         String json = toJSon(match);
                         if (json != null) {
-                            //new MyAsyncTask().execute(json);
+                            new MyAsyncTask().execute(json);
                         }
                     } else {
                         Toast.makeText(getApplicationContext(), "Hey, select a match man.", Toast.LENGTH_SHORT).show();
@@ -212,20 +207,7 @@ public class DataUpload extends AppCompatActivity {
         });
     }
 
-        public void volleyJsonObjectRequest(String address){
-
-            final String REQUEST_TAG = "http://www.gorohi.com/1323/2017/data.php";
-
-            JsonObjectRequest jsonObjectReq = new JsonObjectRequest(address, new Response.Listener<String>() {
-                @Override
-                public void onResponse(JSONObject response) {
-                    Log.d(TAG, response.toString());
-
-                    
-                }
-            })
-        }
-        /*private class MyAsyncTask extends AsyncTask<String, Integer, Double> {
+        private class MyAsyncTask extends AsyncTask<String, Integer, Double> {
             String response = "";
 
             @Override
@@ -270,7 +252,7 @@ public class DataUpload extends AppCompatActivity {
 
             }
 
-        }*/
+        }
         @Override
         public boolean onKeyDown(int keyCode, KeyEvent event){
             if(Integer.parseInt(android.os.Build.VERSION.SDK)> 5
