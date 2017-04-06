@@ -55,7 +55,15 @@ public class threevthreeAdapter extends AppCompatActivity {
                                 JSONArray teams = m.getJSONArray("teams");
                                 for (int j = 0; j <teams.length(); j++){
                                     JSONObject t = teams.getJSONObject(j);
-                                    int teamNumber = t.
+                                    int teamNumber = t.getInt("teamNumber");
+                                    int teamColor = t.getInt("teamColor");
+                                    int robotPosition = t.getInt("robotPosition");
+                                    int autoGearSuccess = t.getInt("autoGearSuccess");
+                                    int autoHighScored = t.getInt("autoHighScored");
+                                    int gearsHung = t.getInt("gearsHung");
+                                    int climbTime = t.getInt("climbTime");
+                                    int climbSuccess = t.getInt("climbSuccess");
+                                    String tbh = t.getString("tbh");
                                 }
                                 /*JSONObject jsonMatch = response.getJSONObject("matchNumber");
                                 JSONObject jsonteamNumber = jsonMatch.getJSONObject("teamNumber");
