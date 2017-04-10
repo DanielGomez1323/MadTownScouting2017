@@ -191,8 +191,9 @@ public class UploadPicture extends AppCompatActivity {
                 dataOutputStream.writeBytes(twoHyphens + boundary + twoHyphens + lineEnd);
 
                 serverResponseCode = connection.getResponseCode();
-                final String serverResponseMessage = connection.getResponseMessage();
-
+/*/                final String serverResponseMessage = connection.getResponseMessage();/*/
+                final String serverResponseMessage = (String) connection.getContent();
+/**/
                 if(serverResponseCode == 200){
                     runOnUiThread(new Runnable() {
                         @Override

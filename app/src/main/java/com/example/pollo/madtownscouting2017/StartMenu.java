@@ -20,7 +20,7 @@ public class StartMenu extends AppCompatActivity {
     Button teamsView;
     Button addPhoto;
     Button viewPhoto;
-    Button threeVThree;
+//    Button threeVThree;
     SQLiteDatabase myDB = null;
 
     @Override
@@ -34,10 +34,11 @@ public class StartMenu extends AppCompatActivity {
         teamsView = (Button) findViewById(R.id.teamsView);
         addPhoto = (Button) findViewById(R.id.addPhoto);
         viewPhoto = (Button) findViewById(R.id.viewPhoto);
-        threeVThree = (Button)findViewById(R.id.threeVThree);
+//        threeVThree = (Button)findViewById(R.id.threeVThree);
 
         createPicturesDatabase();
         createDatabase();
+        createMatchDatabase();
 
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
@@ -84,13 +85,13 @@ public class StartMenu extends AppCompatActivity {
                 startActivity(viewPhotoIntent);
             }
         });
-        threeVThree.setOnClickListener(new View.OnClickListener() {
+/*        threeVThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent threevthreeAdapterIntent = new Intent(getApplicationContext(), threevthreeAdapter.class);
                 startActivity(threevthreeAdapterIntent);
             }
-        });
+        });*/
 
     }
     public void createDatabase(){
@@ -110,6 +111,16 @@ public class StartMenu extends AppCompatActivity {
             if (myDB != null)
                 myDB.close();
         } catch (SQLException e) {
+            Log.e("Error", "Error", e);
+        }
+    }
+    public void createMatchDatabase(){
+        try{
+            myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+            myDB.execSQL("CREATE TABLE IF NOT EXISTS MatchSchedule (_id INTEGER PRIMARY KEY AUTOINCREMENT, matchNumber int, teamNumber int, teamColor int)");
+            if (myDB != null)
+                myDB.close();
+        }   catch (SQLException e) {
             Log.e("Error", "Error", e);
         }
     }

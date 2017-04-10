@@ -86,6 +86,17 @@
         android:textSize="40sp"
         android:paddingRight="15dp"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Import Schedule"
+        android:id="@+id/importScheduleButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:paddingLeft="15dp"/>
+
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

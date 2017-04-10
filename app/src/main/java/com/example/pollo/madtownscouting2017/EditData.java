@@ -98,7 +98,7 @@ public class EditData extends AppCompatActivity {
         tNumber = cur.getString(cur.getColumnIndex("teamNumber"));
         mNumber = cur.getString(cur.getColumnIndex("matchNumber"));
         cur.close();
-        myDB.close();;
+        myDB.close();
         Intent returnIntent = new Intent();
         returnIntent.putExtra("TEAM_NUMBER", tNumber);
         returnIntent.putExtra("MATCH_NUMBER",  mNumber);
