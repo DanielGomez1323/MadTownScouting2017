@@ -14,7 +14,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -192,7 +191,7 @@ public class UploadPicture extends AppCompatActivity {
 
                 serverResponseCode = connection.getResponseCode();
 /*/                final String serverResponseMessage = connection.getResponseMessage();/*/
-                final String serverResponseMessage = (String) connection.getContent();
+                final String serverResponseMessage = connection.getResponseMessage();
 /**/
                 if(serverResponseCode == 200){
                     runOnUiThread(new Runnable() {
