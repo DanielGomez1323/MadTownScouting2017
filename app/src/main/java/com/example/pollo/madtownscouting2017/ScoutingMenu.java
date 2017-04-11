@@ -36,6 +36,7 @@ public class ScoutingMenu extends AppCompatActivity {
     Button importScheduleButton;
     CheckBox redCheckBox;
     CheckBox blueCheckBox;
+    String teamColor;
 
     SQLiteDatabase myDB = null;
     Cursor c;
@@ -59,6 +60,16 @@ public class ScoutingMenu extends AppCompatActivity {
         }else{
             matchNumberEditText.setText("1");
         }
+        myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
+        Cursor c = myDB.rawQuery("SELECT * FROM MatchSchedule WHERE teamColor = " + String.valueOf(teamColor), null);
+        if (c.getCount()> 0){
+            c.moveToFirst();
+            int teamNumber = c.getColumnIndex("teamNumber");
+            teamNumberEditText.setText(String.valueOf(teamNumber));
+
+        }else{
+
+        }
         redCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +78,6 @@ public class ScoutingMenu extends AppCompatActivity {
                 }
             }
         });
-
         blueCheckBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,7 +121,7 @@ public class ScoutingMenu extends AppCompatActivity {
     }
     public void pullSchedule(){
         String url = "http://gorohi.com/1323/test/index.php";
-        final JsonObjectRequest jsObjRequest = new JsonObjectRequest
+        JsonObjectRequest jsObjRequest = new JsonObjectRequest
                 (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
 
                     @Override
