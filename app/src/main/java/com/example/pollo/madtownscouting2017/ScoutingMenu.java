@@ -1,15 +1,12 @@
 package com.example.pollo.madtownscouting2017;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -17,37 +14,30 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.lang.reflect.Array;
-
 public class ScoutingMenu extends AppCompatActivity {
-    EditText teamNumberEditText;
+    //EditText teamNumberEditText;
+    AutoCompleteTextView teamNumberAutoEditText;
     EditText matchNumberEditText;
     Button startScoutingButton;
-    Button importScheduleButton;
     CheckBox redCheckBox;
     CheckBox blueCheckBox;
-    String teamColor;
 
     SQLiteDatabase myDB = null;
     Cursor c;
+    //String [] teamNumbers = {""};
+    String[] teamNumbers = new String[6];
+    int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scouting_menu);
-        teamNumberEditText = (EditText)findViewById(R.id.teamNumberEditText);
+        //teamNumberEditText = (EditText)findViewById(R.id.teamNumberEditText);
+        ArrayAdapter<String>adapter = new ArrayAdapter<String>(this,android.R.layout.select_dialog_item, teamNumbers);
+        teamNumberAutoEditText = (AutoCompleteTextView)findViewById(R.id.teamNumberAutoEditText);
+        teamNumberAutoEditText.setThreshold(1);//will start working from first character
+        teamNumberAutoEditText.setAdapter(adapter);//setting the adapter data into the AutoCompleteTextView
         matchNumberEditText = (EditText)findViewById(R.id.matchNumberEditText);
         startScoutingButton = (Button)findViewById(R.id.startScoutingButton);
-        importScheduleButton = (Button)findViewById(R.id.importScheduleButton);
         redCheckBox = (CheckBox) findViewById(R.id.redCheckBox);
         blueCheckBox = (CheckBox) findViewById(R.id.blueCheckBox);
 
@@ -61,13 +51,19 @@ public class ScoutingMenu extends AppCompatActivity {
             matchNumberEditText.setText("1");
         }
         myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
-        Cursor c = myDB.rawQuery("SELECT * FROM MatchSchedule WHERE teamColor = " + String.valueOf(teamColor), null);
-        if (c.getCount()> 0){
+        c = myDB.rawQuery("SELECT * FROM MatchSchedule WHERE matchNumber = " + matchNumberEditText.getText(), null);
+        if (c.getCount()> 0) {
             c.moveToFirst();
-            int teamNumber = c.getColumnIndex("teamNumber");
-            teamNumberEditText.setText(String.valueOf(teamNumber));
-
-        }else{
+            /*while(c.moveToNext()) {
+                String teamNumber = c.getString(c.getColumnIndex("teamNumber"));
+                teamNumbers[i] = teamNumber;
+                i++;*/
+            for(int i = 0 ; i < 6 ; i++) {
+                String teamNumber = c.getString(c.getColumnIndex("teamNumber"));
+                teamNumbers[i] = teamNumber;
+                c.moveToNext();
+            }
+        }else {
 
         }
         redCheckBox.setOnClickListener(new View.OnClickListener() {
@@ -86,20 +82,14 @@ public class ScoutingMenu extends AppCompatActivity {
                 }
             }
         });
-        importScheduleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pullSchedule();
-            }
-        });
         startScoutingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(teamNumberEditText.getText().toString().length() <=4){
+                if(teamNumberAutoEditText.getText().toString().length() <=4/*teamNumberEditText.getText().toString().length() <=4*/){
                     if(matchNumberEditText.getText().toString().length() > 0){
                         if((redCheckBox.isChecked() || blueCheckBox.isChecked()) && !(redCheckBox.isChecked() && blueCheckBox.isChecked())){
                             Intent autoIntent = new Intent(getApplicationContext(), TabbedScouting.class);
-                            autoIntent.putExtra("teamNumber", teamNumberEditText.getText().toString());
+                            autoIntent.putExtra("teamNumber", teamNumberAutoEditText.getText().toString()/*teamNumberEditText.getText().toString()*/);
                             autoIntent.putExtra("matchNumber", matchNumberEditText.getText().toString());
                             if(redCheckBox.isChecked()){
                                 autoIntent.putExtra("teamColor", "0");
@@ -119,52 +109,11 @@ public class ScoutingMenu extends AppCompatActivity {
             }
         });
     }
-    public void pullSchedule(){
-        String url = "http://gorohi.com/1323/test/index.php";
-        JsonObjectRequest jsObjRequest = new JsonObjectRequest
-                (Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONArray matches = response.getJSONArray("matches");
-                            for (int i = 0; i < matches.length(); i++) {
-                                JSONObject m = matches.getJSONObject(i);
-                                int matchNumber = m.getInt("matchNumber");
-                                JSONArray teams = m.getJSONArray("teams");
-                                for (int j = 0; j < teams.length(); j++) {
-                                    JSONObject t = teams.getJSONObject(j);
-                                    int teamNumber = t.getInt("teamNumber");
-                                    int teamColor = t.getInt("teamColor");
-
-
-                                    ContentValues c = new ContentValues();
-                                    myDB = openOrCreateDatabase("FRC", MODE_PRIVATE, null);
-                                        try {
-                                            myDB.insert("MatchSchedule", null, c);
-                                        }catch (SQLException s){
-                                            Toast.makeText(getApplication(), "Error saving", Toast.LENGTH_SHORT).show();
-                                        }
-                                    if (myDB != null){
-                                        myDB.close();
-                                    }
-                                }
-
-                            }
-                    } catch (final JSONException e) {
-                                    Log.d("ERROR", e.toString());
-                                }
-                            }
-                        }, new Response.ErrorListener() {
-
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                // TODO Auto-generated method stub
-                                error.printStackTrace();
-                            }
-                        });
-                        Volley.newRequestQueue(this).add(jsObjRequest);
-                }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_tabbed_scouting, menu);
+        return true;
+    }
 
 }
 

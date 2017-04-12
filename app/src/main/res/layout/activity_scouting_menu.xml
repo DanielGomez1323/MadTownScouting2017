@@ -18,19 +18,22 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/teamNumberEditText"
-        android:layout_toLeftOf="@+id/teamNumberEditText" />
+        android:layout_toStartOf="@+id/teamNumberAutoEditText"
+        android:layout_toLeftOf="@+id/teamNumberAutoEditText" />
 
-    <EditText
+
+
+    <AutoCompleteTextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/teamNumberEditText"
+        android:id="@+id/teamNumberAutoEditText"
         android:hint="Ex. 1323"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"/>
+    <requestFocus />
 
     <TextView
         android:layout_width="150dp"
@@ -38,7 +41,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Match Number"
         android:id="@+id/matchNumberTextView"
-        android:layout_below="@+id/teamNumberEditText"
+        android:layout_below="@+id/teamNumberAutoEditText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -48,9 +51,9 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/matchNumberEditText"
-        android:layout_below="@+id/teamNumberEditText"
-        android:layout_alignRight="@+id/teamNumberEditText"
-        android:layout_alignEnd="@+id/teamNumberEditText"
+        android:layout_below="@+id/teamNumberAutoEditText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:hint="Ex. 12" />
 
     <TextView
@@ -71,16 +74,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/matchNumberEditText"
         android:layout_alignEnd="@+id/matchNumberEditText" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Import Schedule"
-        android:id="@+id/importScheduleButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:paddingLeft="15dp"/>
 
     <CheckBox
         android:layout_width="wrap_content"
